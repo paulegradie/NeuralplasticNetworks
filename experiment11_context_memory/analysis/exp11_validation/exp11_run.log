@@ -1,0 +1,93 @@
+2026-05-04 07:56:59 | INFO    | Experiment 11 started
+2026-05-04 07:56:59 | INFO    | Output directory: analysis\exp11_validation
+2026-05-04 07:56:59 | INFO    | Log file: analysis\exp11_validation\exp11_run.log
+2026-05-04 07:56:59 | INFO    | Progress file: analysis\exp11_validation\progress.jsonl
+2026-05-04 07:56:59 | INFO    | Seeds=1, worlds=['A', 'B', 'C'], phases=['sequential', 'alternating', 'scaling', 'context_noise']
+2026-05-04 07:56:59 | INFO    | Large raw predictions are disabled unless --save-predictions is provided
+2026-05-04 07:56:59 | INFO    | Variants: exp11_full_context_separated_memory, exp11_world_gated_plasticity, exp11_no_world_context, exp11_no_recurrence, exp11_no_context_binding, exp11_no_inhibition, exp11_no_structural_plasticity, exp11_no_consolidation, exp11_strong_consolidation, exp11_shared_edges_only
+2026-05-04 07:56:59 | INFO    | Starting seed 1/1 (seed=0)
+2026-05-04 07:56:59 | INFO    | Job 1/40: seed=0 variant=exp11_full_context_separated_memory phase=sequential
+2026-05-04 07:57:00 | INFO    | Completed job 1/40 (2.5%) in 0.57s | elapsed 0.57s
+2026-05-04 07:57:00 | INFO    | Job 2/40: seed=0 variant=exp11_full_context_separated_memory phase=alternating
+2026-05-04 07:57:00 | INFO    | Completed job 2/40 (5.0%) in 0.35s | elapsed 0.92s
+2026-05-04 07:57:00 | INFO    | Job 3/40: seed=0 variant=exp11_full_context_separated_memory phase=scaling
+2026-05-04 07:57:01 | INFO    | Completed job 3/40 (7.5%) in 1.00s | elapsed 1.92s
+2026-05-04 07:57:01 | INFO    | Job 4/40: seed=0 variant=exp11_full_context_separated_memory phase=context_noise
+2026-05-04 07:57:02 | INFO    | Completed job 4/40 (10.0%) in 0.68s | elapsed 2.60s
+2026-05-04 07:57:02 | INFO    | Job 5/40: seed=0 variant=exp11_world_gated_plasticity phase=sequential
+2026-05-04 07:57:02 | INFO    | Completed job 5/40 (12.5%) in 0.51s | elapsed 3.11s
+2026-05-04 07:57:02 | INFO    | Job 6/40: seed=0 variant=exp11_world_gated_plasticity phase=alternating
+2026-05-04 07:57:02 | INFO    | Completed job 6/40 (15.0%) in 0.34s | elapsed 3.45s
+2026-05-04 07:57:02 | INFO    | Job 7/40: seed=0 variant=exp11_world_gated_plasticity phase=scaling
+2026-05-04 07:57:03 | INFO    | Completed job 7/40 (17.5%) in 1.02s | elapsed 4.47s
+2026-05-04 07:57:03 | INFO    | Job 8/40: seed=0 variant=exp11_world_gated_plasticity phase=context_noise
+2026-05-04 07:57:04 | INFO    | Completed job 8/40 (20.0%) in 0.77s | elapsed 5.24s
+2026-05-04 07:57:04 | INFO    | Job 9/40: seed=0 variant=exp11_no_world_context phase=sequential
+2026-05-04 07:57:04 | INFO    | Completed job 9/40 (22.5%) in 0.10s | elapsed 5.34s
+2026-05-04 07:57:04 | INFO    | Job 10/40: seed=0 variant=exp11_no_world_context phase=alternating
+2026-05-04 07:57:04 | INFO    | Completed job 10/40 (25.0%) in 0.07s | elapsed 5.41s
+2026-05-04 07:57:04 | INFO    | Job 11/40: seed=0 variant=exp11_no_world_context phase=scaling
+2026-05-04 07:57:05 | INFO    | Completed job 11/40 (27.5%) in 0.19s | elapsed 5.60s
+2026-05-04 07:57:05 | INFO    | Job 12/40: seed=0 variant=exp11_no_world_context phase=context_noise
+2026-05-04 07:57:05 | INFO    | Completed job 12/40 (30.0%) in 0.12s | elapsed 5.72s
+2026-05-04 07:57:05 | INFO    | Job 13/40: seed=0 variant=exp11_no_recurrence phase=sequential
+2026-05-04 07:57:05 | INFO    | Completed job 13/40 (32.5%) in 0.35s | elapsed 6.07s
+2026-05-04 07:57:05 | INFO    | Job 14/40: seed=0 variant=exp11_no_recurrence phase=alternating
+2026-05-04 07:57:05 | INFO    | Completed job 14/40 (35.0%) in 0.22s | elapsed 6.29s
+2026-05-04 07:57:05 | INFO    | Job 15/40: seed=0 variant=exp11_no_recurrence phase=scaling
+2026-05-04 07:57:06 | INFO    | Completed job 15/40 (37.5%) in 0.68s | elapsed 6.97s
+2026-05-04 07:57:06 | INFO    | Job 16/40: seed=0 variant=exp11_no_recurrence phase=context_noise
+2026-05-04 07:57:06 | INFO    | Completed job 16/40 (40.0%) in 0.43s | elapsed 7.40s
+2026-05-04 07:57:06 | INFO    | Job 17/40: seed=0 variant=exp11_no_context_binding phase=sequential
+2026-05-04 07:57:07 | INFO    | Completed job 17/40 (42.5%) in 0.33s | elapsed 7.73s
+2026-05-04 07:57:07 | INFO    | Job 18/40: seed=0 variant=exp11_no_context_binding phase=alternating
+2026-05-04 07:57:07 | INFO    | Completed job 18/40 (45.0%) in 0.21s | elapsed 7.95s
+2026-05-04 07:57:07 | INFO    | Job 19/40: seed=0 variant=exp11_no_context_binding phase=scaling
+2026-05-04 07:57:08 | INFO    | Completed job 19/40 (47.5%) in 0.63s | elapsed 8.58s
+2026-05-04 07:57:08 | INFO    | Job 20/40: seed=0 variant=exp11_no_context_binding phase=context_noise
+2026-05-04 07:57:08 | INFO    | Completed job 20/40 (50.0%) in 0.46s | elapsed 9.04s
+2026-05-04 07:57:08 | INFO    | Job 21/40: seed=0 variant=exp11_no_inhibition phase=sequential
+2026-05-04 07:57:09 | INFO    | Completed job 21/40 (52.5%) in 0.52s | elapsed 9.56s
+2026-05-04 07:57:09 | INFO    | Job 22/40: seed=0 variant=exp11_no_inhibition phase=alternating
+2026-05-04 07:57:09 | INFO    | Completed job 22/40 (55.0%) in 0.34s | elapsed 9.90s
+2026-05-04 07:57:09 | INFO    | Job 23/40: seed=0 variant=exp11_no_inhibition phase=scaling
+2026-05-04 07:57:10 | INFO    | Completed job 23/40 (57.5%) in 1.03s | elapsed 10.93s
+2026-05-04 07:57:10 | INFO    | Job 24/40: seed=0 variant=exp11_no_inhibition phase=context_noise
+2026-05-04 07:57:11 | INFO    | Completed job 24/40 (60.0%) in 0.68s | elapsed 11.61s
+2026-05-04 07:57:11 | INFO    | Job 25/40: seed=0 variant=exp11_no_structural_plasticity phase=sequential
+2026-05-04 07:57:11 | INFO    | Completed job 25/40 (62.5%) in 0.50s | elapsed 12.12s
+2026-05-04 07:57:11 | INFO    | Job 26/40: seed=0 variant=exp11_no_structural_plasticity phase=alternating
+2026-05-04 07:57:11 | INFO    | Completed job 26/40 (65.0%) in 0.37s | elapsed 12.49s
+2026-05-04 07:57:11 | INFO    | Job 27/40: seed=0 variant=exp11_no_structural_plasticity phase=scaling
+2026-05-04 07:57:13 | INFO    | Completed job 27/40 (67.5%) in 1.01s | elapsed 13.50s
+2026-05-04 07:57:13 | INFO    | Job 28/40: seed=0 variant=exp11_no_structural_plasticity phase=context_noise
+2026-05-04 07:57:13 | INFO    | Completed job 28/40 (70.0%) in 0.68s | elapsed 14.18s
+2026-05-04 07:57:13 | INFO    | Job 29/40: seed=0 variant=exp11_no_consolidation phase=sequential
+2026-05-04 07:57:14 | INFO    | Completed job 29/40 (72.5%) in 0.53s | elapsed 14.70s
+2026-05-04 07:57:14 | INFO    | Job 30/40: seed=0 variant=exp11_no_consolidation phase=alternating
+2026-05-04 07:57:14 | INFO    | Completed job 30/40 (75.0%) in 0.35s | elapsed 15.06s
+2026-05-04 07:57:14 | INFO    | Job 31/40: seed=0 variant=exp11_no_consolidation phase=scaling
+2026-05-04 07:57:15 | INFO    | Completed job 31/40 (77.5%) in 1.01s | elapsed 16.06s
+2026-05-04 07:57:15 | INFO    | Job 32/40: seed=0 variant=exp11_no_consolidation phase=context_noise
+2026-05-04 07:57:16 | INFO    | Completed job 32/40 (80.0%) in 0.69s | elapsed 16.75s
+2026-05-04 07:57:16 | INFO    | Job 33/40: seed=0 variant=exp11_strong_consolidation phase=sequential
+2026-05-04 07:57:16 | INFO    | Completed job 33/40 (82.5%) in 0.51s | elapsed 17.26s
+2026-05-04 07:57:16 | INFO    | Job 34/40: seed=0 variant=exp11_strong_consolidation phase=alternating
+2026-05-04 07:57:17 | INFO    | Completed job 34/40 (85.0%) in 0.34s | elapsed 17.60s
+2026-05-04 07:57:17 | INFO    | Job 35/40: seed=0 variant=exp11_strong_consolidation phase=scaling
+2026-05-04 07:57:18 | INFO    | Completed job 35/40 (87.5%) in 1.06s | elapsed 18.66s
+2026-05-04 07:57:18 | INFO    | Job 36/40: seed=0 variant=exp11_strong_consolidation phase=context_noise
+2026-05-04 07:57:18 | INFO    | Completed job 36/40 (90.0%) in 0.67s | elapsed 19.34s
+2026-05-04 07:57:18 | INFO    | Job 37/40: seed=0 variant=exp11_shared_edges_only phase=sequential
+2026-05-04 07:57:18 | INFO    | Completed job 37/40 (92.5%) in 0.10s | elapsed 19.44s
+2026-05-04 07:57:18 | INFO    | Job 38/40: seed=0 variant=exp11_shared_edges_only phase=alternating
+2026-05-04 07:57:19 | INFO    | Completed job 38/40 (95.0%) in 0.07s | elapsed 19.50s
+2026-05-04 07:57:19 | INFO    | Job 39/40: seed=0 variant=exp11_shared_edges_only phase=scaling
+2026-05-04 07:57:19 | INFO    | Completed job 39/40 (97.5%) in 0.18s | elapsed 19.69s
+2026-05-04 07:57:19 | INFO    | Job 40/40: seed=0 variant=exp11_shared_edges_only phase=context_noise
+2026-05-04 07:57:19 | INFO    | Completed job 40/40 (100.0%) in 0.12s | elapsed 19.81s
+2026-05-04 07:57:19 | INFO    | Writing CSV outputs
+2026-05-04 07:57:19 | INFO    | Raw run completed in 20.02s
+2026-05-04 07:57:19 | INFO    | Starting analysis
+2026-05-04 07:57:31 | INFO    | Analysis complete
+2026-05-04 07:57:31 | INFO    | Experiment 11 finished

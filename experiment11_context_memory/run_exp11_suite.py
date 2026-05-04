@@ -330,6 +330,8 @@ def main() -> None:
     logger = configure_logging(output_dir, args.log_level)
     logger.info("Experiment 11 started")
     logger.info("Output directory: %s", output_dir)
+    logger.info("Log file: %s", output_dir / "exp11_run.log")
+    logger.info("Progress file: %s", output_dir / "progress.jsonl")
     logger.info("Seeds=%s, worlds=%s, phases=%s", args.seeds, args.worlds, args.phases)
     logger.info("Large raw predictions are disabled unless --save-predictions is provided")
 
@@ -373,9 +375,27 @@ def main() -> None:
                 elif phase == "context_noise":
                     run_context_noise(args, logger, output_dir, variant, seed, transition, composition, metrics_rows, route_rows, failure_rows, run_rows, prediction_rows)
                 done_jobs += 1
-                event = {"event": "job_completed", "job": done_jobs, "total_jobs": total_jobs, "seed": seed, "variant": variant.name, "phase": phase, "seconds": time.time() - job_start}
+                elapsed = time.time() - global_start
+                event = {
+                    "event": "job_completed",
+                    "job": done_jobs,
+                    "total_jobs": total_jobs,
+                    "seed": seed,
+                    "variant": variant.name,
+                    "phase": phase,
+                    "seconds": time.time() - job_start,
+                    "elapsed_seconds": elapsed,
+                    "percent_complete": (100.0 * done_jobs / total_jobs) if total_jobs else 100.0,
+                }
                 write_progress(output_dir, event)
-                logger.info("Completed job %s/%s in %.2fs", done_jobs, total_jobs, event["seconds"])
+                logger.info(
+                    "Completed job %s/%s (%.1f%%) in %.2fs | elapsed %.2fs",
+                    done_jobs,
+                    total_jobs,
+                    event["percent_complete"],
+                    event["seconds"],
+                    elapsed,
+                )
 
     logger.info("Writing CSV outputs")
     pd.DataFrame(run_rows).to_csv(output_dir / "runs.csv", index=False)

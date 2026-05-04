@@ -42,6 +42,22 @@ function Invoke-PythonStep {
     }
 }
 
+function Invoke-PythonInlineStep {
+    param(
+        [Parameter(Mandatory = $true)][string]$Name,
+        [Parameter(Mandatory = $true)][string]$Code
+    )
+
+    Write-Host ""
+    Write-Host "[$Name]" -ForegroundColor Yellow
+    $Code | & $Python -
+
+    $ExitCode = $LASTEXITCODE
+    if ($ExitCode -ne 0) {
+        throw "$Name failed with exit code $ExitCode"
+    }
+}
+
 function Assert-FileExists {
     param([Parameter(Mandatory = $true)][string]$Path)
 
@@ -110,10 +126,11 @@ for name in variants:
     print(f"  - {name}")
 '@
 
-Invoke-PythonStep "Import and variant check" @("-c", $VariantCheck)
+Invoke-PythonInlineStep "Import and variant check" $VariantCheck
 
 Write-Section "Validation step 2 - all-variant smoke run"
 Write-Host "This intentionally exercises every variant, including no_context_binding and no_recurrence." -ForegroundColor Gray
+Write-Host "Validation progress will stream to the console and write to analysis/exp11_validation/exp11_run.log and analysis/exp11_validation/progress.jsonl." -ForegroundColor Gray
 
 $ValidationArgs = @(
     ".\run_exp11_suite.py",
@@ -185,7 +202,7 @@ print(f"Smoke validation completed {len(runs)} run rows and {len(metrics)} metri
 print("All expected variants and phases were exercised.")
 '@
 
-Invoke-PythonStep "Smoke result integrity check" @("-c", $SmokeOutputCheck)
+Invoke-PythonInlineStep "Smoke result integrity check" $SmokeOutputCheck
 
 Write-Host "Validation completed successfully." -ForegroundColor Green
 
@@ -195,7 +212,7 @@ if ($ValidationOnly) {
 }
 
 Write-Section "Starting full Experiment 11 run"
-Write-Host "Progress will stream to the console and write to analysis/exp11/exp11_run.log." -ForegroundColor Gray
+Write-Host "Progress will stream to the console and write to analysis/exp11/exp11_run.log and analysis/exp11/progress.jsonl." -ForegroundColor Gray
 Write-Host "Raw per-task predictions are disabled by default to keep outputs manageable." -ForegroundColor Gray
 
 $FullRunArgs = @(
