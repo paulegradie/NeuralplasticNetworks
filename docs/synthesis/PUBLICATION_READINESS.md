@@ -29,6 +29,17 @@ Source path: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/threads/experiment1
 - Fix holdout metrics and no-context-binding ablation naming/design.
 - Create final paper figures from reproducible scripts.
 - Keep biological and novelty claims narrow.
+- Verify manuscript-critical smoke/validation commands and document runtimes.
+- Run `python scripts/verify_doc_source_paths.py` before readiness handoff.
+
+Source path: `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `scripts/verify_doc_source_paths.py`.
+
+## Operational Readiness
+
+Claim: The repository is more navigable after P0/P1 cleanup but remains scientifically not submission-ready.
+Evidence: The README, manuscript spine, baseline requirements, and reproducibility audit now provide a clearer external-facing map.
+Caveat: This is documentation readiness, not new scientific evidence.
+Source path: `README.md`; `docs/manuscript/MANUSCRIPT_SPINE.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`.
 
 ## Reviewer-Risk Matrix
 

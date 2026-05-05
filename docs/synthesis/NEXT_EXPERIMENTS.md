@@ -5,9 +5,10 @@
 Purpose: Correct and harden the main Exp13 boundary claims before manuscript submission.
 
 Design goals:
-- Keep Exp13 as historical output; create a new top-level Exp13.1 directory if implemented.
+- Keep Exp13 as historical output; create a new future Exp13.1 directory under `experiments/` if implemented.
 - Preserve the main boundary questions: finite capacity, local capacity, recurrence dissociation, context corruption, primitive holdout, and consolidation pressure.
 - Make the ablation definitions reviewer-proof.
+- Use the standardized run-interface target from `docs/repo_audit/REPRODUCIBILITY_AUDIT.md` from the beginning where practical.
 
 Metric fixes:
 - Add `route_table_accuracy_all`.
@@ -32,6 +33,7 @@ Expected outputs:
 - Finalized figure panels for Figure 4, Figure 5, and Figure 6.
 
 Source thread path: `docs/threads/experiment12to13_export.md`.
+Operational source path: `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `docs/manuscript/MANUSCRIPT_TODO.md`.
 
 ## Baseline Suite
 
@@ -48,7 +50,10 @@ Why each is needed: The novelty assessment in the thread warns that no individua
 
 Expected comparison: Report accuracy, route-table memory, composition, retention, capacity use, and failure modes under the same route-memory benchmark.
 
+Recommended future organization: create a new baseline experiment directory under `experiments/`, for example `experiments/exp13_2_baseline_suite/` or `experiments/exp14_baseline_suite/`.
+
 Source thread path: `docs/threads/experiment12to13_export.md`; `docs/threads/experiment11_export`.
+Planning source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`.
 
 ## Applied Bridge
 
@@ -64,3 +69,16 @@ Limitations:
 - Applied bridge should wait until Exp13.1 and baseline work are complete.
 
 Source thread path: `docs/threads/experiment12to13_export.md`.
+
+## Immediate Order Of Operations
+
+1. Exp13.1 design and smoke implementation under `experiments/`.
+2. Exp13.1 metric cleanup and uncertainty outputs.
+3. External baseline suite.
+4. Final reproducible manuscript figures.
+5. Applied visual-state bridge only after hardening and baselines.
+
+Claim: This order prioritizes reviewer-critical weaknesses before new applied scope.
+Evidence: Exp13.1, baselines, uncertainty, and figure regeneration are listed as submission blockers.
+Caveat: The applied bridge remains useful future work, but it should not precede baseline and metric hardening.
+Source path: `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`.
