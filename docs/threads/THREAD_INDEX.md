@@ -1,0 +1,22 @@
+# Thread Index
+
+Purpose: Track exported ChatGPT analysis digests and their import status in repository-native evidence documents.
+
+Import rule used in this pass: completed-result claims were imported only when the digest either cited a local artifact now present in the repository or the claim was explicitly labeled as thread-derived with local support pending. Designs, hypotheses, manuscript framing, and future-work ideas were kept in separate categories.
+
+| Thread file | Experiments covered | Main purpose | Contains completed results | Contains designs only | Imported into summaries | Imported into claims | Notes |
+|---|---|---|---|---|---|---|---|
+| `docs/threads/experiment1to4_export.md` | Exp1-Exp4 | Intended early-experiment digest. | no | no | yes, as empty/uncertain source for Exp1-Exp4 | no | File is zero bytes as of this import; no claims were imported from it. |
+| `docs/threads/experiment5to10_export.md` | Exp1-Exp11 | Analyze Exp5, Exp7-Exp10; design Exp7-Exp11; frame early manuscript mechanisms. | yes, for Exp5, Exp7, Exp8, Exp9, Exp10 | yes, for Exp7-Exp11 design material | yes, Exp1-Exp11 with background-only treatment for Exp1-Exp4 and design-only treatment for Exp11 in this thread | yes | Exp6 has a sharper dedicated digest; Exp11 results were not analyzed in this thread. |
+| `docs/threads/experiment6_export.md` | Exp4-Exp6 | Analyze Exp6 route-audit successor follow-up and correct overclaiming from Exp5. | yes, for Exp6 | no new implementation | yes, Exp4-Exp6 | yes | Records Exp6 as negative-but-informative and identifies stale local README wording. |
+| `docs/threads/experiment11_export` | Exp11-Exp12 | Analyze Exp11 context-separated memory and design/package Exp12. | yes, for Exp11; Exp12 validation only | yes, for Exp12 full design | yes, Exp11-Exp12 | yes | Exp12 validation was a smoke test, not final evidence. Filename has no `.md` suffix. |
+| `docs/threads/experiment12to13_export.md` | Exp11-Exp14 | Analyze Exp12 and Exp13, assess novelty, define Exp13.1 and Exp14 follow-ups, and plan repo consolidation. | yes, for Exp12 and Exp13 | yes, for Exp13.1 and Exp14 | yes, Exp11-Exp13 plus synthesis docs for Exp13.1/Exp14 | yes | Novelty assessment artifact named in thread is not present as a local file; external baseline requirement is therefore a thread-derived manuscript-readiness claim. |
+| `docs/threads/THREAD_DIGEST_TEMPLATE.md` | none | Template for future thread digests. | no | yes, template only | no | no | Used as process reference only. |
+
+## Import Notes
+
+- Exp1-Exp3 were mentioned only as background in non-empty digests; no thread-derived scientific result was imported for them.
+- Exp4 was imported as a historical traversal contrast, not a central manuscript claim.
+- Exp5 and Exp6 were imported mainly as caveated predecessors that motivate later diagnostics.
+- Exp7-Exp10 contribute mechanism-building and supplementary evidence.
+- Exp11-Exp13 provide the current candidate main-result spine, with Exp13.1 and external baselines marked as required follow-up rather than completed findings.

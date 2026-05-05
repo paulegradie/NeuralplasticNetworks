@@ -1,0 +1,869 @@
+# Thread Digest: Experiment 11 Analysis, Experiment 12 Design, and Manuscript Framing
+
+## 1. Thread scope
+
+This thread focused on analyzing **Experiment 11** results for context-separated memory and non-destructive rebinding, using the uploaded Experiment 11 plots, CSVs, logs, and generated report. The analysis then motivated the design and packaging of **Experiment 12**, intended to stress-test capacity, interference, compositional generalization, continual retention, context robustness, and consolidation pressure.
+
+The thread also established the working manuscript frame:
+
+**Title:** `Context-Indexed Structural Plasticity Enables Non-Destructive Rebinding of Compositional Route Memories`
+
+**Subtitle:** `A synthetic route-memory model separates storage, contextual retrieval, and recurrent execution across incompatible worlds`
+
+Experiments 1–10 were referenced only as broader manuscript context. They were not reanalyzed in this thread.
+
+---
+
+## 2. Experiments discussed
+
+### Experiment 11 — Context-Separated Memory and Non-Destructive Rebinding
+
+Experiment 11 tested whether higher-order world context can separate multiple route systems over the same source/mode substrate. It measured old-world retention during new-world learning, alternating-world stability, multi-world scaling, and retrieval robustness under world-context bleed/dropout. The uploaded report explicitly defines this purpose and lists the major metrics and generated outputs. 
+
+Main phases discussed:
+
+* sequential A/B learning;
+* alternating worlds;
+* multi-world scaling across worlds A, B, C, D;
+* world-context bleed;
+* world-context dropout;
+* final sequential failure taxonomy.
+
+Main variants discussed:
+
+* `exp11_full_context_separated_memory`
+* `exp11_world_gated_plasticity`
+* `exp11_no_world_context`
+* `exp11_no_recurrence`
+* `exp11_no_context_binding`
+* `exp11_no_inhibition`
+* `exp11_no_structural_plasticity`
+* `exp11_no_consolidation`
+* `exp11_strong_consolidation`
+* `exp11_shared_edges_only`
+
+The run log records 30 seeds, worlds `['A', 'B', 'C', 'D']`, phases `['sequential', 'alternating', 'scaling', 'context_noise']`, and the above variants. 
+
+### Experiment 12 — Capacity, Interference, and Compositional Generalization
+
+Experiment 12 was designed and packaged in this thread as a follow-up to Experiment 11.
+
+Its purpose is to test whether the Experiment 11 mechanism survives scaling and more demanding evaluation:
+
+* many-world capacity;
+* continual retention after each newly learned world;
+* held-out compositional generalization;
+* context bleed/dropout robustness;
+* consolidation pressure.
+
+A local package was generated:
+
+* `exp12_capacity_generalization_package.zip`
+
+Contained directory:
+
+* `plastic_graph_mnist_experiment12_capacity_generalization/`
+
+The package included:
+
+* `experiment12.py`
+* `start_exp12.ps1`
+* `requirements.txt`
+* `README.md`
+* `HANDOFF.md`
+* completed validation outputs under `analysis/exp12_validation/`
+
+A brief validation pass was reported as completed successfully. The full run was not completed in this thread.
+
+### First manuscript draft
+
+A manuscript draft was requested under the title/subtitle above. A deep-research/manuscript task was initiated, but no actual manuscript draft was produced in this thread before this digest request. Therefore, manuscript content remains future work from the perspective of this thread.
+
+---
+
+## 3. Experimental designs created or modified here
+
+### Design: Experiment 12 — Capacity, Interference, and Compositional Generalization
+
+**Experiment number:** 12
+
+**Purpose:**
+Stress-test the mechanism demonstrated in Experiment 11 by scaling the number of incompatible worlds, measuring continual retention, testing held-out multi-step composition, evaluating context noise robustness, and clarifying the role of consolidation.
+
+**Hypothesis:**
+The working hypothesis was that the Experiment 11 three-layer mechanism would survive scaling:
+
+```text
+structural plasticity  -> encodes local route transitions
+world/context binding -> separates incompatible route worlds
+recurrence            -> executes multi-step compositions over the learned route field
+```
+
+More specifically:
+
+* structural plasticity should be required for route acquisition;
+* world/context binding should be required for non-destructive separation;
+* recurrence should be required for multi-step compositional execution;
+* world-gated plasticity should be the cleanest non-destructive update regime;
+* consolidation may act as a pressure/modulation factor rather than an essential mechanism.
+
+**Model variants:**
+Core variants designed for Experiment 12:
+
+* `exp12_full_context_separated_memory`
+* `exp12_world_gated_plasticity`
+* `exp12_no_consolidation`
+* `exp12_no_world_context`
+* `exp12_no_context_binding`
+* `exp12_no_recurrence`
+* `exp12_no_structural_plasticity`
+* `exp12_strong_consolidation`
+
+Additional available variants:
+
+* `exp12_no_inhibition`
+* `exp12_shared_edges_only`
+
+**Metrics:**
+
+Planned / implemented outputs included:
+
+* `composition_accuracy`
+* `route_route_table_accuracy`
+* `composition_route_gap`
+* `composition_mean_wrong_world_activation`
+* world/context margin metrics;
+* capacity summaries by world count and route length;
+* continual-retention summaries;
+* held-out generalization summaries;
+* context bleed summaries;
+* context dropout summaries;
+* consolidation pressure summaries.
+
+**Expected outcomes:**
+
+Expected validation behavior was:
+
+* full and world-gated variants should show high route-table and composition accuracy;
+* no-recurrence should preserve route-table accuracy but fail multi-step composition;
+* no-world-context should degrade as incompatible worlds accumulate;
+* no-structural-plasticity should remain near chance;
+* context bleed/dropout should reduce margins before necessarily destroying accuracy;
+* consolidation should be interpreted as a pressure/modulation study, not assumed essential.
+
+**Implementation notes:**
+
+A complete local package was generated:
+
+```text
+plastic_graph_mnist_experiment12_capacity_generalization/
+  experiment12.py
+  start_exp12.ps1
+  requirements.txt
+  README.md
+  HANDOFF.md
+  analysis/exp12_validation/
+    metrics.csv
+    runs.csv
+    progress.jsonl
+    exp12_report.md
+    exp12_final_memory_index.csv
+    capacity_final_summary.csv
+    continual_retention_summary.csv
+    heldout_generalization_summary.csv
+    context_bleed_summary.csv
+    context_dropout_summary.csv
+    consolidation_pressure_summary.csv
+    plots/*.png
+```
+
+Full profile defaults stated in the generated package:
+
+* seeds: `30`
+* world counts: `2, 4, 8, 16, 32`
+* route lengths: `1, 2, 4, 8, 12`
+* nodes: `32`
+* modes: `3`
+* context bleed: `0.0, 0.05, 0.10, 0.20, 0.35`
+* context dropout: `0.0, 0.05, 0.10, 0.20`
+* consolidation strengths: `0.0, 0.025, 0.05, 0.12, 0.25, 0.50, 0.80`
+
+Validation profile stated in the generated handoff:
+
+* seeds: `2`
+* world counts: `2, 4`
+* route lengths: `1, 2, 4`
+* nodes: `16`
+* modes: `3`
+* variants:
+
+  * `exp12_full_context_separated_memory`
+  * `exp12_world_gated_plasticity`
+  * `exp12_no_world_context`
+  * `exp12_no_recurrence`
+  * `exp12_no_structural_plasticity`
+
+**Known risks:**
+
+* The Experiment 12 validation run is only a smoke test, not a statistical result.
+* The full Experiment 12 run was not executed in this thread.
+* Experiment 12 results must not be treated as completed manuscript evidence until the full local run is executed and analyzed.
+* Capacity and generalization claims remain proposed, not proven.
+* The implementation should be reviewed after full execution for edge-case bugs, metric definitions, and possible metric leakage.
+* Experiment 12 may still be synthetic and may need stronger external baselines to support journal-level claims.
+
+---
+
+## 4. Results analyzed here
+
+### Result: Experiment 11 full model retains A and acquires B after sequential training
+
+**Claim:**
+The full context-separated model preserved old-world A while acquiring new-world B.
+
+**Evidence:**
+The Experiment 11 report records `retention_A_after_B = 1`, `acquisition_B_after_A = 1`, `route_retention_A_after_B = 1`, and `route_acquisition_B_after_A = 1` for `exp11_full_context_separated_memory`. 
+
+**Caveat:**
+This is a synthetic route-memory task. The analysis treated this as strong internal evidence, but not yet as a field-level novelty claim.
+
+**Source artifact or conversation reference:**
+`exp11_report.md`; conversation analysis of Experiment 11 sequential metrics.
+
+---
+
+### Result: Experiment 11 world-gated plasticity also retains A and acquires B
+
+**Claim:**
+World-gated plasticity provides a clean non-destructive world-specific update regime.
+
+**Evidence:**
+`exp11_world_gated_plasticity` shows `retention_A_after_B = 1`, `acquisition_B_after_A = 1`, `route_retention_A_after_B = 1`, and `route_acquisition_B_after_A = 1`. The report’s interpretation guide states that `exp11_world_gated_plasticity` is the strongest test of non-destructive world-specific updates. 
+
+**Caveat:**
+The thread did not establish that world-gated plasticity is uniquely superior across all future regimes. It was described as the cleanest mechanistic demonstration, not the only working model.
+
+**Source artifact or conversation reference:**
+`exp11_report.md`; conversation analysis of full vs world-gated results.
+
+---
+
+### Result: Experiment 11 no-recurrence preserves route-table accuracy but fails composition
+
+**Claim:**
+Recurrence is required for composed multi-step execution, not for storing local route-table transitions.
+
+**Evidence:**
+`exp11_no_recurrence` shows `retention_A_after_B = 0`, `acquisition_B_after_A = 0`, while `route_retention_A_after_B = 1` and `route_acquisition_B_after_A = 1`. 
+
+**Caveat:**
+This conclusion is specific to the current synthetic route task and metric definitions. It supports a storage/execution distinction but does not prove a general biological mechanism.
+
+**Source artifact or conversation reference:**
+`exp11_report.md`; `exp11_sequential_composition.png`; `exp11_sequential_route_table.png`; conversation conclusion: “structural plasticity encodes the navigable memory graph; recurrence animates it.”
+
+---
+
+### Result: Experiment 11 no-structural-plasticity fails both composition and route-table learning
+
+**Claim:**
+Structural plasticity is required to form usable route structure in this experiment.
+
+**Evidence:**
+`exp11_no_structural_plasticity` shows `retention_A_after_B = 0.0305764`, `acquisition_B_after_A = 0.0283208`, `route_retention_A_after_B = 0.0286232`, and `route_acquisition_B_after_A = 0.0326087`. 
+
+**Caveat:**
+The result supports necessity within this model/task. It does not alone establish biological plausibility or superiority over other ML architectures.
+
+**Source artifact or conversation reference:**
+`exp11_report.md`; `exp11_sequential_composition.png`; `exp11_sequential_route_table.png`.
+
+---
+
+### Result: Experiment 11 no-world-context and shared-edges-only show overwrite/collision pattern
+
+**Claim:**
+Without world context or with shared edges only, the model acquires B but loses much of A, consistent with destructive interference.
+
+**Evidence:**
+`exp11_no_world_context` and `exp11_shared_edges_only` both show `retention_A_after_B = 0.289474`, `acquisition_B_after_A = 1`, `route_retention_A_after_B = 0.347826`, and `route_acquisition_B_after_A = 1`. The report’s interpretation guide states that `exp11_no_world_context` and `exp11_shared_edges_only` should overwrite/collide. 
+
+**Caveat:**
+The thread interpreted this as destructive rebinding/aliasing. A more formal failure-mode analysis may be needed to distinguish overwrite, aliasing, and route-selection failure.
+
+**Source artifact or conversation reference:**
+`exp11_report.md`; `exp11_failure_taxonomy_final_sequential.png`; conversation analysis of no-world-context and shared-edges-only.
+
+---
+
+### Result: Experiment 11 no-context-binding fails both old and new world composition
+
+**Claim:**
+Context binding is required to attach route systems to the correct world namespace.
+
+**Evidence:**
+`exp11_no_context_binding` shows `retention_A_after_B = 0.0492481`, `acquisition_B_after_A = 0.0545113`, and route-table values of `0.347826` for both A and B. 
+
+**Caveat:**
+The exact mechanism of the failure was inferred from the model design and metrics. The thread did not include a low-level trace/audit of individual route activations for this variant.
+
+**Source artifact or conversation reference:**
+`exp11_report.md`; `exp11_failure_taxonomy_final_sequential.png`; conversation analysis.
+
+---
+
+### Result: Experiment 11 no-consolidation and no-inhibition remain successful
+
+**Claim:**
+In the current Experiment 11 regime, consolidation and inhibition are not essential for successful context-separated memory.
+
+**Evidence:**
+`exp11_no_consolidation` and `exp11_no_inhibition` both show `retention_A_after_B = 1`, `acquisition_B_after_A = 1`, and route retention/acquisition values of `1`. 
+
+**Caveat:**
+This does not prove consolidation or inhibition are unimportant generally. The thread concluded that the current task may not create enough pressure for these mechanisms to become necessary.
+
+**Source artifact or conversation reference:**
+`exp11_report.md`; conversation analysis of consolidation/inhibition.
+
+---
+
+### Result: Experiment 11 strong consolidation succeeds sequentially but raised concern about flexibility
+
+**Claim:**
+Strong consolidation succeeds in the sequential A/B summary but may be less flexible in broader scaling/noise contexts.
+
+**Evidence:**
+The sequential memory table shows `exp11_strong_consolidation` with `retention_A_after_B = 1`, `acquisition_B_after_A = 1`, route retention/acquisition values of `1`, but world margin values include `world_margin_A_after_B = 0.944182` and `world_margin_B_after_A = -0.0557169`.  The conversation analysis interpreted strong consolidation as potentially fragile under multi-world scaling/context bleed.
+
+**Caveat:**
+The fragility interpretation was based on visual inspection and conversation-level analysis of uploaded plots, not a separate formal statistical test in the thread.
+
+**Source artifact or conversation reference:**
+`exp11_report.md`; `exp11_scaling_final_composition.png`; `exp11_scaling_final_world_margin.png`; `exp11_context_bleed_world_margin.png`.
+
+---
+
+### Result: Experiment 11 context noise robustness
+
+**Claim:**
+Successful variants can preserve behavior under context bleed/dropout while latent margins degrade and wrong-world activation rises.
+
+**Evidence:**
+The uploaded plots included:
+
+* `exp11_context_bleed_composition.png`
+* `exp11_context_bleed_world_margin.png`
+* `exp11_context_bleed_wrong_world_activation.png`
+* `exp11_context_dropout_composition.png`
+* `exp11_context_dropout_world_margin.png`
+* `exp11_context_dropout_wrong_world_activation.png`
+
+The report lists composition mean world margin and wrong-world activation as measures of whether correct world context suppresses other route worlds. 
+
+**Caveat:**
+The thread did not compute new formal slope estimates or confidence intervals for margin degradation. The result was interpreted from plotted trends and summary artifacts.
+
+**Source artifact or conversation reference:**
+Experiment 11 context bleed/dropout plots; `exp11_report.md`; conversation analysis.
+
+---
+
+### Result: Experiment 12 validation smoke test
+
+**Claim:**
+The Experiment 12 implementation produced expected qualitative validation behavior.
+
+**Evidence:**
+The generated handoff stated that:
+
+* full model reached perfect composition and route-table accuracy at 2 and 4 worlds;
+* world-gated plasticity reached perfect composition and route-table accuracy at 2 and 4 worlds;
+* no-recurrence preserved route-table accuracy but failed multi-step composition;
+* no-world-context degraded as world count increased;
+* no-structural-plasticity stayed near chance;
+* plots and expected CSV summaries were generated.
+
+**Caveat:**
+This was a validation profile with only 2 seeds, 2/4 worlds, 1/2/4 route lengths, and a reduced set of variants. It is not a completed Experiment 12 result.
+
+**Source artifact or conversation reference:**
+Generated `HANDOFF.md`; `analysis/exp12_validation/exp12_report.md`; conversation handoff after package generation.
+
+---
+
+## 5. Key scientific conclusions supported by this thread
+
+### Claim -> Evidence -> Caveat
+
+**Claim:**
+Experiment 11 supports a three-layer computational decomposition: structural encoding, contextual separation, and recurrent execution.
+
+**Evidence:**
+No-structural-plasticity fails route-table and composition; no-world-context/shared-edges-only show A/B interference; no-recurrence preserves route-table accuracy but fails composition. 
+
+**Caveat:**
+This decomposition is strongly supported within Experiment 11 but remains synthetic and needs broader baselines/generalization tests.
+
+---
+
+**Claim:**
+Structural plasticity is required for route acquisition in the current model.
+
+**Evidence:**
+`exp11_no_structural_plasticity` performs near chance on both composition and route-table measures. 
+
+**Caveat:**
+This is a within-model ablation, not a claim about all possible memory architectures.
+
+---
+
+**Claim:**
+Recurrence is required for executing multi-step composed routes, while local route-table storage can remain intact without it.
+
+**Evidence:**
+`exp11_no_recurrence` has route retention/acquisition of `1` but composition retention/acquisition of `0`. 
+
+**Caveat:**
+Needs confirmation under held-out generalization and longer route lengths, which Experiment 12 is designed to test.
+
+---
+
+**Claim:**
+World/context binding enables non-destructive retention across incompatible worlds.
+
+**Evidence:**
+Full model and world-gated plasticity retain/acquire A/B at `1`; no-world-context and shared-edges-only retain A poorly while acquiring B perfectly. 
+
+**Caveat:**
+The distinction between overwrite, aliasing, and selection failure needs more formal analysis.
+
+---
+
+**Claim:**
+Consolidation and inhibition are not essential in the current Experiment 11 regime.
+
+**Evidence:**
+No-consolidation and no-inhibition variants retain/acquire A/B with perfect composition and route-table accuracy. 
+
+**Caveat:**
+The current task may be too easy or too clean for consolidation/inhibition effects. Experiment 12 includes a consolidation pressure test to clarify this.
+
+---
+
+**Claim:**
+Experiment 11 provides enough material to begin a first internal manuscript draft.
+
+**Evidence:**
+The thread produced a coherent mechanism story, ablation matrix, manuscript title/subtitle, and future-experiment plan.
+
+**Caveat:**
+It is not yet journal-ready. Needed work includes novelty search, related work, statistical hardening, capacity scaling, held-out generalization, and external baselines.
+
+---
+
+## 6. Important flaws, mistakes, or implementation concerns identified
+
+1. **Experiment 11 does not establish capacity limits.**
+   Four worlds are informative but insufficient for a strong scaling claim.
+
+2. **Experiment 11 does not fully separate memorization from generalization.**
+   Held-out recombination, unseen start-target pairs, and longer route compositions remain needed.
+
+3. **Experiment 11 relies mainly on internal ablations.**
+   Standard continual-learning, modular-routing, memory-augmented, or recurrent baselines were not yet included.
+
+4. **Consolidation story became weaker than expected.**
+   No-consolidation worked extremely well in Experiment 11, so the manuscript cannot claim consolidation is essential.
+
+5. **Inhibition story also became weaker than expected.**
+   No-inhibition worked in Experiment 11, so inhibition must be framed as optional or conditionally useful unless future experiments prove otherwise.
+
+6. **Strong consolidation may create flexibility costs.**
+   The conversation identified possible fragility in multi-world/context-noise settings, but this requires formal quantification.
+
+7. **World-margin and behavior can diverge.**
+   Some variants can show high behavioral accuracy even when margins are weak or asymmetric. Metrics must be interpreted separately:
+
+   * accuracy = behavioral success;
+   * margin/wrong-world activation = latent separation quality.
+
+8. **No formal confidence intervals or statistical tests were performed in the thread.**
+   Experiment 11 used 30 seeds, but this thread did not produce effect sizes, standard errors, confidence intervals, or significance tests.
+
+9. **Experiment 12 validation is not a final result.**
+   The validation run was a smoke test only. Full Experiment 12 remains to be executed locally.
+
+10. **The manuscript novelty claim is unresolved.**
+    A novelty search and field review were explicitly identified as not yet completed.
+
+11. **Biological interpretation must remain restrained.**
+    The model is biologically inspired, but the thread did not establish biological equivalence.
+
+12. **Manuscript drafting was initiated but not completed in this thread.**
+    A manuscript task was started, but no draft was delivered before this digest request.
+
+---
+
+## 7. Figures or artifacts referenced
+
+### Uploaded Experiment 11 artifacts
+
+CSV / markdown / log artifacts:
+
+* `baselines.csv`
+* `exp11_baseline_summary.csv`
+* `exp11_failure_summary.csv`
+* `exp11_final_sequential_summary.csv`
+* `exp11_memory_indices.csv`
+* `exp11_report.md`
+* `exp11_run.log`
+* `exp11_summary.csv`
+* `failure_taxonomy.csv`
+* `metrics.csv`
+* `metrics_wide.csv`
+* `progress.jsonl`
+* `runs.csv`
+
+Experiment 11 plots:
+
+* `exp11_alternating_composition.png`
+* `exp11_alternating_route_table.png`
+* `exp11_alternating_world_margin.png`
+* `exp11_context_bleed_composition.png`
+* `exp11_context_bleed_world_margin.png`
+* `exp11_context_bleed_wrong_world_activation.png`
+* `exp11_context_dropout_composition.png`
+* `exp11_context_dropout_world_margin.png`
+* `exp11_context_dropout_wrong_world_activation.png`
+* `exp11_failure_taxonomy_final_sequential.png`
+* `exp11_scaling_final_composition.png`
+* `exp11_scaling_final_route_table.png`
+* `exp11_scaling_final_world_margin.png`
+* `exp11_scaling_final_wrong_world_activation.png`
+* `exp11_sequential_composition.png`
+* `exp11_sequential_correct_margin.png`
+* `exp11_sequential_route_table.png`
+* `exp11_sequential_world_margin.png`
+* `exp11_sequential_wrong_world_activation.png`
+
+### Generated Experiment 12 artifacts
+
+Package:
+
+* `exp12_capacity_generalization_package.zip`
+
+Generated directory:
+
+* `plastic_graph_mnist_experiment12_capacity_generalization/`
+
+Source / docs:
+
+* `experiment12.py`
+* `start_exp12.ps1`
+* `requirements.txt`
+* `README.md`
+* `HANDOFF.md`
+
+Validation output files:
+
+* `analysis/exp12_validation/metrics.csv`
+* `analysis/exp12_validation/runs.csv`
+* `analysis/exp12_validation/progress.jsonl`
+* `analysis/exp12_validation/exp12_report.md`
+* `analysis/exp12_validation/exp12_final_memory_index.csv`
+* `analysis/exp12_validation/capacity_final_summary.csv`
+* `analysis/exp12_validation/continual_retention_summary.csv`
+* `analysis/exp12_validation/heldout_generalization_summary.csv`
+* `analysis/exp12_validation/context_bleed_summary.csv`
+* `analysis/exp12_validation/context_dropout_summary.csv`
+* `analysis/exp12_validation/consolidation_pressure_summary.csv`
+
+Validation plots:
+
+* `plots/exp12_capacity_composition_accuracy.png`
+* `plots/exp12_capacity_route_table_accuracy.png`
+* `plots/exp12_route_table_composition_gap.png`
+* `plots/exp12_capacity_wrong_world_activation.png`
+* `plots/exp12_heldout_generalization_by_length.png`
+* `plots/exp12_context_bleed_composition.png`
+* `plots/exp12_context_bleed_world_margin.png`
+* `plots/exp12_context_dropout_composition.png`
+* `plots/exp12_context_dropout_world_margin.png`
+* `plots/exp12_consolidation_pressure_accuracy.png`
+* `plots/exp12_consolidation_pressure_world_margin.png`
+* `plots/exp12_continual_retention_heatmap_full_model.png`
+
+---
+
+## 8. Decisions made
+
+### Experiment design choices
+
+* Design Experiment 12 as a capacity/generalization/retention stress test, not merely another ablation.
+* Include many-world scaling: `2, 4, 8, 16, 32`.
+* Include route lengths: `1, 2, 4, 8, 12`.
+* Include context bleed and context dropout sweeps.
+* Include a consolidation pressure sweep.
+* Include continual-retention summaries after newly learned worlds.
+* Include held-out compositional generalization.
+* Keep no-recurrence as a key execution/storage control.
+* Keep no-structural-plasticity as a structural-encoding control.
+* Keep no-world-context and shared-edges-only as destructive interference controls.
+* Treat world-gated plasticity as the cleanest non-destructive update variant.
+
+### Naming decisions
+
+* Manuscript title selected:
+
+  * `Context-Indexed Structural Plasticity Enables Non-Destructive Rebinding of Compositional Route Memories`
+* Manuscript subtitle selected:
+
+  * `A synthetic route-memory model separates storage, contextual retrieval, and recurrent execution across incompatible worlds`
+* Experiment 12 package named:
+
+  * `exp12_capacity_generalization_package.zip`
+* Experiment 12 directory named:
+
+  * `plastic_graph_mnist_experiment12_capacity_generalization`
+
+### Manuscript framing decisions
+
+* The central theory should be framed around three layers:
+
+  1. structural route encoding;
+  2. contextual memory separation;
+  3. recurrent route execution.
+* The strongest Experiment 11 result is not merely “the full model works,” but that the ablations separate storage, context separation, and execution.
+* Biological claims should be cautious and analogy-based until stronger evidence exists.
+* Consolidation should not be framed as essential based on current evidence.
+* Inhibition should not be framed as essential based on current evidence.
+
+### Follow-up experiment decisions
+
+* Experiment 12 should be run locally and uploaded for analysis.
+* Future manuscript hardening should focus on:
+
+  * statistical robustness;
+  * capacity curves;
+  * held-out generalization;
+  * external baselines;
+  * novelty/related work review.
+
+### Abandoned or deprioritized approaches
+
+No specific approach was formally abandoned in this thread. However:
+
+* The stronger claim that consolidation is essential was implicitly abandoned or deferred.
+* The stronger claim that inhibition is essential was also deferred.
+* Manuscript drafting was started as a research task but not completed within this thread.
+
+---
+
+## 9. Open questions created by this thread
+
+1. How many incompatible worlds can the system retain before failure?
+
+2. Does world-gated plasticity outperform the full model at higher world counts?
+
+3. Does the no-recurrence route-table/composition gap persist for held-out and longer routes?
+
+4. Does the model genuinely generalize compositionally, or is it mostly storing trained routes?
+
+5. Under what conditions, if any, does consolidation become beneficial?
+
+6. Is strong consolidation harmful because it reduces flexibility, or was the observed pattern specific to Experiment 11?
+
+7. Does inhibition matter under higher interference, context noise, or limited capacity?
+
+8. Can wrong-world activation predict future failure before accuracy collapses?
+
+9. Are world-margin metrics reliable indicators of latent separation quality?
+
+10. Which external baselines are necessary for a journal-ready manuscript?
+
+11. How does this model relate to known work in continual learning, hippocampal indexing, context gating, modular networks, attractor networks, and memory-augmented neural systems?
+
+12. What is genuinely novel after a proper field review?
+
+13. Does the model scale beyond synthetic routing into more realistic ML tasks?
+
+14. Are current metrics sufficient, or do they need cleanup and formal definitions?
+
+15. Should Experiment 12 be split into multiple smaller experiments for runtime and interpretability?
+
+---
+
+## 10. Relationship to the first manuscript
+
+### Central claim
+
+This thread directly contributes to the central claim:
+
+> Context-indexed structural plasticity enables non-destructive rebinding of compositional route memories across incompatible worlds.
+
+Experiment 11 provides the clearest support by showing that the full and world-gated models preserve A while acquiring B, and scale to multiple worlds, while specific ablations fail in interpretable ways.
+
+### Supporting claim
+
+This thread supports the stronger mechanistic decomposition:
+
+> Structural plasticity stores route structure; world/context binding separates incompatible memories; recurrence executes multi-step routes.
+
+The no-recurrence result is especially important because it separates route-table storage from composed execution.
+
+### Limitation
+
+This thread identifies major manuscript limitations:
+
+* synthetic task;
+* lack of novelty search;
+* lack of external baselines;
+* incomplete capacity scaling;
+* insufficient formal statistics;
+* consolidation/inhibition not essential in current regime;
+* biological claims remain speculative.
+
+### Future work
+
+This thread defines Experiment 12 as the next major empirical step:
+
+* capacity curves;
+* continual retention matrices;
+* held-out compositional generalization;
+* context noise stress testing;
+* consolidation pressure testing.
+
+### Supplementary material
+
+Experiment 11 plots and CSVs could become supplementary material, especially:
+
+* final sequential summaries;
+* failure taxonomy;
+* context noise plots;
+* scaling plots;
+* route-table/composition dissociation plots.
+
+Experiment 12 validation artifacts are not final results but may be useful as implementation/handoff material.
+
+---
+
+## 11. Claims-and-evidence rows contributed by this thread
+
+| Claim                                                                                  | Evidence                                                                                                                                         | Caveat                                                                | Experiment(s)   | Artifact(s)                                                                                                           | Manuscript status |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Full context-separated memory preserves A while acquiring B                            | `retention_A_after_B = 1`, `acquisition_B_after_A = 1`, route retention/acquisition both `1`                                                     | Synthetic route task; needs broader baselines                         | 11              | `exp11_report.md`, `exp11_final_sequential_summary.csv`, `exp11_memory_indices.csv`                                   | Strong            |
+| World-gated plasticity is a clean non-destructive update regime                        | Perfect A/B retention/acquisition and report interpretation guide identifies it as strongest world-specific update test                          | Not proven uniquely best across capacity regimes                      | 11              | `exp11_report.md`, scaling/context plots                                                                              | Strong            |
+| Structural plasticity is required for route acquisition                                | No-structural-plasticity near chance on composition and route-table metrics                                                                      | Within-model ablation only                                            | 11              | `exp11_report.md`, `exp11_sequential_composition.png`, `exp11_sequential_route_table.png`                             | Strong            |
+| Recurrence is required for composed execution but not local route-table storage        | No-recurrence route-table metrics `1`, composition metrics `0`                                                                                   | Needs confirmation with held-out route lengths/generalization         | 11              | `exp11_report.md`, `exp11_sequential_composition.png`, `exp11_sequential_route_table.png`                             | Strong            |
+| World context prevents destructive overwrite/collision                                 | No-world-context and shared-edges-only acquire B but poor A retention                                                                            | Failure mode needs more formal decomposition                          | 11              | `exp11_report.md`, `exp11_failure_taxonomy_final_sequential.png`                                                      | Strong            |
+| Context binding is necessary for world-specific retrieval                              | No-context-binding has poor A and B composition and only partial route-table behavior                                                            | Mechanism inferred; needs route-level audit                           | 11              | `exp11_report.md`, failure taxonomy artifacts                                                                         | Strong            |
+| Consolidation is not essential in current regime                                       | No-consolidation achieves perfect A/B composition and route-table metrics                                                                        | May become useful under pressure/noise/capacity                       | 11              | `exp11_report.md`                                                                                                     | Strong            |
+| Inhibition is not essential in current regime                                          | No-inhibition achieves perfect A/B composition and route-table metrics                                                                           | May matter under harder interference regimes                          | 11              | `exp11_report.md`                                                                                                     | Strong            |
+| Strong consolidation may reduce flexibility under broader conditions                   | Sequential success but conversation analysis noted scaling/noise fragility and asymmetric margins                                                | Needs formal quantification; visual/conversation-level interpretation | 11              | `exp11_scaling_final_composition.png`, `exp11_scaling_final_world_margin.png`, `exp11_context_bleed_world_margin.png` | Promising         |
+| Wrong-world activation and world margin should be interpreted separately from accuracy | Context-noise plots show latent measures changing even when accuracy can remain high                                                             | Needs formal metric cleanup/statistics                                | 11              | `exp11_context_bleed_*`, `exp11_context_dropout_*`                                                                    | Promising         |
+| Experiment 12 is designed to test capacity/generalization/continual retention          | Package created with capacity, heldout, context, and consolidation summaries                                                                     | Full run not yet executed                                             | 12              | `exp12_capacity_generalization_package.zip`, `README.md`, `HANDOFF.md`                                                | Preliminary       |
+| Experiment 12 validation smoke test passed expected qualitative checks                 | Validation report/handoff says full/world-gated pass, no-recurrence gap appears, no-world-context degrades, no-structural-plasticity near chance | Only 2 seeds and reduced settings; not final evidence                 | 12              | `analysis/exp12_validation/exp12_report.md`, validation CSVs/plots                                                    | Preliminary       |
+| Current work is enough to start an internal manuscript draft                           | Thread produced title, subtitle, central mechanism, ablation story, and Experiment 12 plan                                                       | Not journal-ready; needs novelty search and hardening                 | 11, 12 proposed | Conversation analysis; Experiment 11 artifacts; Experiment 12 package                                                 | Promising         |
+| Biological memory claims should remain restrained                                      | Current evidence comes from synthetic route-memory model                                                                                         | No direct biological validation                                       | 11, 12 proposed | Conversation analysis                                                                                                 | Needs baseline    |
+
+---
+
+## 12. Recommended follow-up actions
+
+1. **Run full Experiment 12 locally.**
+   Execute:
+
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\start_exp12.ps1 -InstallDependencies
+   ```
+
+2. **Upload the full `analysis/exp12` directory after completion.**
+
+3. **Analyze Experiment 12 in the same format as Experiment 11.**
+   Focus on:
+
+   * capacity curves;
+   * retention matrices;
+   * held-out generalization;
+   * route-table/composition gaps;
+   * context-noise robustness;
+   * consolidation pressure effects.
+
+4. **Generate statistical summaries for Experiment 11.**
+   Add:
+
+   * per-seed distributions;
+   * means;
+   * standard errors;
+   * confidence intervals;
+   * effect sizes;
+   * statistical comparisons across key ablations.
+
+5. **Clean up metric definitions.**
+   Explicitly define:
+
+   * `composition_accuracy`;
+   * `route_table_accuracy`;
+   * `world_margin`;
+   * `correct_route_margin`;
+   * `wrong_world_activation`;
+   * `composition_route_gap`;
+   * failure taxonomy categories.
+
+6. **Perform a route-level audit for ambiguous failures.**
+   Especially:
+
+   * `exp11_no_context_binding`;
+   * `exp11_no_world_context`;
+   * `exp11_shared_edges_only`;
+   * `exp11_strong_consolidation`.
+
+7. **Run or design external baselines.**
+   Candidate categories:
+
+   * standard MLP/RNN without structural plasticity;
+   * modular network with task labels;
+   * continual-learning methods;
+   * memory-augmented networks;
+   * context-gated networks;
+   * replay-based methods.
+
+8. **Complete novelty search and related-work review.**
+   Required areas:
+
+   * catastrophic forgetting;
+   * continual learning;
+   * context-dependent gating;
+   * hippocampal indexing theory;
+   * attractor networks;
+   * compositional generalization;
+   * modular routing;
+   * structural plasticity in neural models.
+
+9. **Draft the first manuscript as an internal preprint-style document.**
+   Use the selected title/subtitle and organize around:
+
+   * mechanism;
+   * Experiment 11 proof;
+   * Experiment 12 stress test;
+   * limitations;
+   * future work.
+
+10. **Avoid overclaiming biological equivalence.**
+    Use careful language:
+
+    * “biologically inspired”;
+    * “suggestive analogy”;
+    * “computationally separates storage, context, and execution.”
+
+11. **Decide whether Experiment 12 should remain one large experiment or be split.**
+    Possible split:
+
+    * 12A capacity;
+    * 12B held-out generalization;
+    * 12C continual retention;
+    * 12D consolidation pressure.
+
+12. **Create a manuscript evidence matrix in the repository.**
+    Track each claim, supporting experiment, artifact, metric, status, and required follow-up.
