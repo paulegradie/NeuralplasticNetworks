@@ -9,6 +9,7 @@ Your job is adversarial QA.
 Inspect:
 
 - new thread digest under `docs/threads/`
+- owning experiment README completed-runs/results section
 - experiment summary under `docs/experiments/`
 - `docs/experiments/EXPERIMENT_REGISTRY.md`
 - `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
@@ -25,17 +26,20 @@ Verify:
 
 1. Thread digest exists and is indexed.
 2. Experiment summary cites thread and local artifacts.
-3. Claims were not overstrengthened.
-4. Every claim has evidence/caveat/source path.
-5. Figure plan paths exist.
-6. Limitations include new caveats.
-7. TODOs reflect new blockers and completed work.
-8. Synthesis docs reflect current status.
-9. Path verifier passes.
-10. No generated artifact was modified destructively.
-11. No planned design is written as completed result.
-12. No external baseline is implied unless actually run.
-13. No biological or continual-learning overclaim was introduced.
+3. Owning experiment README records completed runs/results, database paths if present, key config, and summarized results.
+4. Claims were not overstrengthened.
+5. Every claim has evidence/caveat/source path.
+6. Active source paths use current `experiments/...` prefixes, or are marked planned/missing/future/local verification pending.
+7. Figure plan paths exist.
+8. Limitations include new caveats.
+9. TODOs reflect new blockers and completed work.
+10. Synthesis docs reflect current status.
+11. Path verifier passes.
+12. No generated artifact was modified destructively.
+13. No completed run was overwritten or appended into a shared historical SQLite database.
+14. No planned design is written as completed result.
+15. No external baseline is implied unless actually run.
+16. No biological or continual-learning overclaim was introduced.
 
 Create:
 

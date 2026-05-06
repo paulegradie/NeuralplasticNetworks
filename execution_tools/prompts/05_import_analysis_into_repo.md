@@ -29,6 +29,19 @@ Every claim must cite:
 If local artifact support is absent, mark:
 `local verification pending`.
 
+Source path discipline:
+- Active manuscript/evidence/source paths must use current `experiments/...` prefixes.
+- Do not cite stale root-level experiment paths such as `experiment12_capacity_generalization/...`.
+- If a referenced artifact does not exist locally, mark it planned, missing, future, or local verification pending instead of treating it as evidence.
+- Rerun and run-output paths must remain inside the owning experiment directory.
+
+
+Naming convention:
+- Do not assume a literal file named `expNN_summary.md` exists.
+- Inspect `docs/experiments/EXPERIMENT_REGISTRY.md` and existing summaries.
+- Use the repository's convention, for example `docs/experiments/exp13_summary.md`, `docs/experiments/exp13_1_summary.md`, or `docs/experiments/<experiment_id>_summary.md`.
+- If no summary exists, create one from `docs/experiments/EXPERIMENT_SUMMARY_TEMPLATE.md`.
+
 Inputs:
 - Thread digest: `docs/threads/<THREAD_DIGEST_FILENAME>.md`
 - Experiment directory: `experiments/<EXPERIMENT_DIR>/`
@@ -52,6 +65,8 @@ Tasks:
 Inspect the experiment directory and analysis outputs.
 
 Identify:
+- run ID(s);
+- per-run SQLite database or raw run record if applicable;
 - generated report;
 - validation report;
 - metrics CSVs;
@@ -64,6 +79,7 @@ Identify:
 Confirm that artifact paths mentioned in the thread digest exist.
 
 Record missing or renamed artifacts.
+Record any artifact path that does not use the current `experiments/...` prefix.
 
 ################################################################################
 # Phase 2 — Update thread index
@@ -87,7 +103,7 @@ Add the new thread digest row with:
 
 Create or update:
 
-`docs/experiments/exp<ID>_summary.md`
+`docs/experiments/<experiment_id>_summary.md`
 
 If a summary already exists, add an "Analysis import" or "Thread-derived analysis" section.
 
@@ -97,6 +113,7 @@ Include:
 
 - Local artifacts indexed:
 - Local artifacts checked for key claims:
+- Owning experiment README completed-runs/results updated:
 - Thread digest imported:
 - Human/manuscript validation pending:
 - Claims fully validated for publication:
@@ -125,6 +142,8 @@ Manuscript status:
 ## Required follow-up
 
 Do not overwrite existing useful summary content unless it is stale or contradicted by the new analysis.
+
+Also update `experiments/<EXPERIMENT_DIR>/README.md` if completed run results, run database paths, configuration notes, GPU limitations, or analysis output paths are missing from its completed-runs/results section.
 
 ################################################################################
 # Phase 4 — Update experiment registry
@@ -210,6 +229,7 @@ Reflect:
 - next recommended action.
 
 Do not mark something complete unless the artifact exists.
+Do not mark a run complete unless its owning experiment README records the run and the artifacts are present.
 
 ################################################################################
 # Phase 9 — Source data and artifact index
@@ -292,17 +312,19 @@ Run:
 python scripts/verify_doc_source_paths.py
 
 Fix active broken paths.
+Fix stale source paths that omit the `experiments/...` prefix, unless they are deliberately marked historical, future, planned, missing, or local verification pending.
 
 Do not commit.
 Do not push.
 
 Final response:
 1. Files modified.
-2. Claims changed.
-3. Figures changed.
-4. Limitations added.
-5. TODOs changed.
-6. Conflicts recorded.
-7. Path verifier result.
-8. Recommended QA prompt or next action.
+2. Owning experiment README/run log changed.
+3. Claims changed.
+4. Figures changed.
+5. Limitations added.
+6. TODOs changed.
+7. Conflicts recorded.
+8. Path verifier result.
+9. Recommended QA prompt or next action.
 ```

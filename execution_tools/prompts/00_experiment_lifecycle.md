@@ -2,6 +2,15 @@
 
 Use this workflow for every new experiment.
 
+Repository invariants:
+- New experiments and changed successor protocols live under `experiments/<experiment_dir>/`.
+- Reruns of the same scientific protocol stay inside the owning experiment directory.
+- Do not create new root-level experiment directories or extend historical experiments in place for a changed protocol.
+- Each experiment owns its code, runners, analysis scripts, `runs/`, `analysis/`, docs, and `README.md`.
+- Completed runs are immutable. If SQLite is used, create a separate database file per completed run under the owning experiment directory.
+- Active evidence paths should use current `experiments/...` prefixes, or be marked planned, missing, future, or local verification pending.
+- New experiment designs should use available GPUs by default where practical and document CPU-only or partial-GPU limitations.
+
 ## Stage 1 — Design
 
 Use `01_design_next_experiment.md`.
@@ -38,12 +47,20 @@ Expected run profiles:
 - full
 
 Every run should produce:
+- a unique run ID;
 - generated report;
 - metrics CSVs;
 - summary CSVs;
 - plots;
 - validation report;
 - run manifest.
+
+Store run artifacts under the owning experiment directory, for example:
+- `experiments/<experiment_dir>/runs/<run_id>.sqlite3` if SQLite is used;
+- `experiments/<experiment_dir>/analysis/<run_id>/metrics.csv`;
+- `experiments/<experiment_dir>/analysis/<run_id>/run_manifest.json`.
+
+After each completed run, update the experiment `README.md` completed-runs/results section.
 
 ## Stage 4 — Analyze in ChatGPT
 
@@ -64,6 +81,7 @@ docs/threads/<YYYY-MM-DD>_expNN_<short_name>_analysis.md
 Use `05_import_analysis_into_repo.md`.
 
 This updates:
+- owning experiment README run/results section if needed;
 - experiment summary;
 - experiment registry;
 - claims/evidence;

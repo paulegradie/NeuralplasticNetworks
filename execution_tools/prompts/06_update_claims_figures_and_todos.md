@@ -23,6 +23,7 @@ Inspect:
 - `docs/synthesis/NEXT_EXPERIMENTS.md`
 - the new experiment summary
 - the new thread digest
+- the owning experiment README completed-runs/results section
 - local artifacts for the new experiment
 
 Goal:
@@ -37,6 +38,7 @@ Check:
    - source thread;
    - source artifact;
    - required follow-up.
+   Source artifacts must use current `experiments/...` paths, or be marked planned/missing/future/local verification pending.
 
 2. Claim statuses are conservative:
    - Strong only for robust internal evidence with clear artifacts.
@@ -57,6 +59,11 @@ Check:
    - completed work is marked complete if appropriate;
    - new required follow-ups are added;
    - next experiment remains clear.
+
+6. Run documentation:
+   - completed runs are recorded in the owning experiment README;
+   - SQLite/database paths, if any, point to one run-specific file under the owning experiment directory;
+   - GPU/CPU limitations are documented where relevant.
 
 Create or update:
 

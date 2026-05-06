@@ -5,12 +5,20 @@ You are helping design the next experiment in the Context-Indexed Route Memory r
 
 Repository context:
 - Experiments live under `experiments/`.
+- New protocols or successor designs must get a new normalized directory under `experiments/`.
+- Reruns of the same protocol stay inside the owning experiment directory.
+- Do not create new root-level experiment directories.
+- Each experiment should own its code, runners, analysis scripts, `runs/`, `analysis/`, docs, and `README.md`.
 - Manuscript/evidence docs live under `docs/`.
 - Current canonical claim map: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`.
 - Current limitations: `docs/manuscript/LIMITATIONS_AND_THREATS.md`.
 - Current next experiments: `docs/synthesis/NEXT_EXPERIMENTS.md`.
 - Current manuscript status: promising but not submission-ready.
 - Evidence discipline: Claim -> Evidence -> Caveat -> Source path.
+- Active source paths should use current `experiments/...` prefixes, or be explicitly marked planned, missing, future, or local verification pending.
+- Completed runs are immutable. If SQLite is used, plan one database file per completed run under the owning experiment directory.
+- New experiments should use available GPUs by default where practical; use `check_gpu_status.py` as the local visibility reference and document CPU-only or partial-GPU limitations.
+- Before choosing documentation names, inspect `docs/experiments/EXPERIMENT_REGISTRY.md` and existing summaries.
 
 Your task:
 Design the next experiment as a rigorous scientific protocol.
@@ -19,10 +27,13 @@ Do not write implementation code unless explicitly asked.
 Do not overclaim expected results.
 Do not assume prior results beyond the provided repo context.
 Design the experiment so that it can be implemented as a new self-contained directory under `experiments/`.
+State whether this is a new protocol, a successor protocol, or a rerun of an existing protocol.
 
 The experiment should include:
 
 # Experiment <ID>: <short descriptive title>
+
+Proposed directory: `experiments/<experiment_dir>/`
 
 ## 1. Purpose
 
@@ -70,6 +81,7 @@ Include:
 - nodes;
 - modes;
 - seeds;
+- GPU/device plan and expected CPU/GPU split;
 - memory budget / capacity conditions if relevant;
 - context corruption conditions if relevant;
 - train/test splits;
@@ -104,12 +116,13 @@ List plots and what claim each supports.
 ## 10. Generated artifacts
 
 The implementation should produce:
-- `analysis/<run_name>/metrics.csv`
+- `experiments/<experiment_dir>/runs/<run_id>.sqlite3` if SQLite is used;
+- `experiments/<experiment_dir>/analysis/<run_id>/metrics.csv`;
 - summary CSVs;
-- plots;
-- `experiment_report.md`;
-- `validation_report.md`;
-- `run_manifest.json` or equivalent.
+- plots under `experiments/<experiment_dir>/analysis/<run_id>/plots/`;
+- `experiments/<experiment_dir>/analysis/<run_id>/experiment_report.md`;
+- `experiments/<experiment_dir>/analysis/<run_id>/validation_report.md`;
+- `experiments/<experiment_dir>/analysis/<run_id>/run_manifest.json` or equivalent.
 
 ## 11. Validation checks
 
@@ -134,7 +147,8 @@ Include:
 After analysis, which docs must be updated?
 
 Include:
-- `docs/experiments/expNN_summary.md`
+- owning experiment `README.md`, especially completed runs/results;
+- `docs/experiments/<experiment_id>_summary.md`
 - `docs/experiments/EXPERIMENT_REGISTRY.md`
 - `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
 - `docs/manuscript/FIGURE_PLAN.md`

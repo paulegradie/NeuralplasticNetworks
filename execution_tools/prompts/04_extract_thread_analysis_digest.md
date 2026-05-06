@@ -9,6 +9,8 @@ Do not add new speculation unless clearly labeled.
 Extract only what was actually discussed, designed, concluded, corrected, or analyzed in this thread.
 Distinguish completed results from design proposals.
 Use exact experiment numbers and artifact filenames when available.
+Use current repo-relative paths with the `experiments/...` prefix when local paths are known.
+If local paths are unknown, stale, or only represented by uploaded files, mark them `local verification pending`.
 
 Output markdown with the following structure:
 
@@ -22,9 +24,12 @@ What was this thread mainly about?
 
 - Experiment ID:
 - Experiment name:
+- Experiment directory:
 - Run profile:
+- Run ID:
 - Uploaded artifact bundle:
 - Main local artifact paths, if known:
+- Per-run database path, if applicable:
 
 ## 3. Experimental design discussed
 
@@ -127,6 +132,7 @@ Create a markdown table:
 
 List exact files to update:
 
+- `experiments/<experiment_dir>/README.md`
 - `docs/threads/...`
 - `docs/experiments/...`
 - `docs/manuscript/CLAIMS_AND_EVIDENCE.md`

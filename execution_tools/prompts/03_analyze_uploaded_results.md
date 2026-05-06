@@ -11,6 +11,9 @@ Do not overclaim.
 Do not assume the implementation is correct without checking artifacts.
 Do not treat planned hypotheses as completed results.
 Separate actual evidence from interpretation and speculation.
+Use current repo-relative source paths under `experiments/...` when paths are known.
+If an artifact path is absent, stale, or only present in an upload bundle, mark the source path as `local verification pending`.
+Do not cite bare `analysis/...` paths unless they are explicitly relative to an owning experiment directory.
 
 Please review:
 - generated report;
@@ -19,6 +22,9 @@ Please review:
 - summary CSVs;
 - plots;
 - run manifest/config;
+- per-run database path if SQLite was used;
+- owning experiment README completed-runs/results section if available;
+- GPU/device information if available;
 - any warnings or failed validation checks.
 
 Output the analysis with the following structure:
@@ -33,11 +39,14 @@ State the main result in 3–6 paragraphs.
 
 Check:
 - run profile;
+- run ID and output directory;
 - seed count;
 - expected phases;
 - expected variants;
 - expected metrics;
 - expected plots;
+- per-run SQLite database or other raw run record if applicable;
+- whether paths use current `experiments/...` prefixes;
 - validation PASS/WARN/FAIL;
 - missing artifacts;
 - suspicious artifacts.
@@ -151,6 +160,7 @@ Be explicit about anything that might require:
 ## 11. Recommended repository updates
 
 List exact docs that should be updated:
+- owning experiment README completed-runs/results section;
 - experiment summary;
 - experiment registry;
 - claims/evidence;
