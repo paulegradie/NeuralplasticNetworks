@@ -2,6 +2,7 @@
 
 ## Evidence status
 
+- Evidence classification: Manuscript-critical
 - Local artifacts indexed: yes
 - Local artifacts checked for key claims: partial
 - Thread digest imported: yes; Exp12 result/design threads imported
@@ -14,7 +15,7 @@
 - Analysis artifacts present: yes
 - Validation present: yes
 - Thread digest present: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`
-- Manuscript relevance: Candidate main/supplement capacity and generalization result; ceiling-effect caveat.
+- Manuscript relevance: Manuscript-candidate capacity and generalization evidence; baselines, uncertainty, and ceiling-effect caveats remain.
 
 ## Purpose
 
@@ -99,6 +100,7 @@ Source path: `experiments/experiment12_capacity_generalization/analysis/exp12/he
 
 ## What this experiment does not prove
 
+- Does not provide submission-ready evidence without baselines, uncertainty reporting, and final figure workflows.
 - Does not establish novelty by itself.
 - Does not remove the need for baseline and reproducibility review.
 

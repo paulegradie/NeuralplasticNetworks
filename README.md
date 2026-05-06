@@ -34,13 +34,16 @@ README.md     external-facing repository entry point
 
 ## Where to start
 
+- [Documentation index](docs/README.md)
 - [Claims and evidence](docs/manuscript/CLAIMS_AND_EVIDENCE.md)
+- [Source of truth](docs/manuscript/SOURCE_OF_TRUTH.md)
 - [Figure plan](docs/manuscript/FIGURE_PLAN.md)
 - [Limitations and threats](docs/manuscript/LIMITATIONS_AND_THREATS.md)
 - [Publication readiness](docs/synthesis/PUBLICATION_READINESS.md)
 - [Next experiments](docs/synthesis/NEXT_EXPERIMENTS.md)
 - [Reproducibility audit](docs/repo_audit/REPRODUCIBILITY_AUDIT.md)
 - [Experiment registry](docs/experiments/EXPERIMENT_REGISTRY.md)
+- [Historical experiment tiers](docs/experiments/HISTORICAL_EXPERIMENTS.md)
 
 ## Experiment overview
 

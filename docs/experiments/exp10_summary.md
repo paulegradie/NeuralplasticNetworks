@@ -2,10 +2,12 @@
 
 ## Evidence status
 
-- Local artifacts reviewed: README/design docs, generated reports, CSV summaries, validation outputs where present, and plot filenames
-- Thread digest reviewed: yes; reversal/consolidation thread imported
-- Claims validated: local-only first pass; human review still required
-- Needs human review: yes
+- Evidence classification: Mechanism-building / supporting
+- Local artifacts indexed: yes
+- Local artifacts checked for key claims: partial; reversal and consolidation tradeoff claims checked
+- Thread digest imported: yes; reversal/consolidation thread imported
+- Human/manuscript validation pending: yes
+- Claims fully validated for publication: no
 
 ## Status
 
@@ -13,7 +15,7 @@
 - Analysis artifacts present: yes
 - Validation present: yes
 - Thread digest present: `docs/threads/experiment5to10_export.md`
-- Manuscript relevance: Candidate stability-plasticity/consolidation supplement after review.
+- Manuscript relevance: Supporting stability-plasticity/consolidation supplement after review.
 
 ## Purpose
 
@@ -92,6 +94,7 @@ Source path: `experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_ad
 
 ## What this experiment does not prove
 
+- Does not provide publication-validated manuscript evidence by itself.
 - Does not establish novelty by itself.
 - Does not remove the need for baseline and reproducibility review.
 

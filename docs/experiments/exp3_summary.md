@@ -2,10 +2,12 @@
 
 ## Evidence status
 
-- Local artifacts reviewed: README/design docs, generated reports, CSV summaries, validation outputs where present, and plot filenames
-- Thread digest reviewed: yes; background-only thread mentions imported
-- Claims validated: local-only first pass; human review still required
-- Needs human review: yes
+- Evidence classification: Historical / exploratory
+- Local artifacts indexed: yes
+- Local artifacts checked for key claims: partial; MNIST ablation interpretation only
+- Thread digest imported: yes; background-only thread mentions imported
+- Human/manuscript validation pending: yes
+- Claims fully validated for publication: no
 
 ## Status
 
@@ -13,7 +15,7 @@
 - Analysis artifacts present: yes
 - Validation present: no
 - Thread digest present: empty `docs/threads/experiment1to4_export.md`; background mentions in `docs/threads/experiment5to10_export.md`
-- Manuscript relevance: Historical/supplemental MNIST ablation evidence.
+- Manuscript relevance: Historical/supplemental MNIST ablation evidence, not central route-memory evidence.
 
 ## Purpose
 
@@ -68,6 +70,7 @@ Source path: `experiments/experiment3/analysis/suite/suite_report.md`; `experime
 
 ## What this experiment does not prove
 
+- Does not provide publication-validated route-memory evidence by itself.
 - Does not establish novelty by itself.
 - Does not remove the need for baseline and reproducibility review.
 

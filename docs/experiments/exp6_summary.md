@@ -2,10 +2,12 @@
 
 ## Evidence status
 
-- Local artifacts reviewed: README/design docs, generated reports, CSV summaries, validation outputs where present, and plot filenames
-- Thread digest reviewed: yes; route-audit thread imported
-- Claims validated: local-only first pass; human review still required
-- Needs human review: yes
+- Evidence classification: Historical / exploratory
+- Local artifacts indexed: yes
+- Local artifacts checked for key claims: partial; corrected route-audit failure mode only
+- Thread digest imported: yes; route-audit thread imported
+- Human/manuscript validation pending: yes
+- Claims fully validated for publication: no
 
 ## Status
 
@@ -13,7 +15,7 @@
 - Analysis artifacts present: yes
 - Validation present: no
 - Thread digest present: `docs/threads/experiment6_export.md`
-- Manuscript relevance: Candidate supplement documenting corrected route-audit failure mode.
+- Manuscript relevance: Historical/supplemental route-audit failure mode.
 
 ## Purpose
 
@@ -73,6 +75,7 @@ Source path: `experiments/experiment6_route_audit_successor/analysis/exp6/exp6_c
 
 ## What this experiment does not prove
 
+- Does not provide publication-validated robust context-route memory evidence.
 - Does not establish novelty by itself.
 - Does not remove the need for baseline and reproducibility review.
 

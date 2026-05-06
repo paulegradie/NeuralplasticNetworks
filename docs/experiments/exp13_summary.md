@@ -2,6 +2,7 @@
 
 ## Evidence status
 
+- Evidence classification: Manuscript-critical
 - Local artifacts indexed: yes
 - Local artifacts checked for key claims: partial
 - Thread digest imported: yes; Exp13 result and hardening-plan thread imported
@@ -14,7 +15,7 @@
 - Analysis artifacts present: yes
 - Validation present: yes
 - Thread digest present: `docs/threads/experiment12to13_export.md`
-- Manuscript relevance: Candidate main boundary-mapping result after review.
+- Manuscript relevance: Manuscript-candidate boundary-mapping evidence; requires Exp13.1 hardening, baselines, and statistical cleanup.
 
 ## Purpose
 
@@ -100,6 +101,7 @@ Source path: `experiments/experiment13_breaking_point/analysis/validation_report
 
 ## What this experiment does not prove
 
+- Does not provide submission-ready evidence without Exp13.1, baselines, uncertainty reporting, and final figure workflows.
 - Does not establish novelty by itself.
 - Does not remove the need for baseline and reproducibility review.
 
@@ -263,6 +265,6 @@ Manuscript status: Strong internal ablation evidence
 
 ## Follow-up actions (thread-integrated)
 
-- Run Exp13.1 as a new top-level publication-hardening experiment.
+- Run Exp13.1 as a new publication-hardening experiment directory under `experiments/`.
 - Add external baselines before submission.
 - Add metric cleanup and capacity-law summaries.

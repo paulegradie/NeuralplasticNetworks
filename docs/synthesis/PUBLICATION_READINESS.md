@@ -37,9 +37,9 @@ Source path: `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `scripts/verify_doc_sou
 ## Operational Readiness
 
 Claim: The repository is more navigable after P0/P1 cleanup but remains scientifically not submission-ready.
-Evidence: The README, manuscript spine, baseline requirements, and reproducibility audit now provide a clearer external-facing map.
+Evidence: The README, docs index, manuscript spine, baseline requirements, and reproducibility audit now provide a clearer external-facing map.
 Caveat: This is documentation readiness, not new scientific evidence.
-Source path: `README.md`; `docs/manuscript/MANUSCRIPT_SPINE.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`.
+Source path: `README.md`; `docs/README.md`; `docs/manuscript/MANUSCRIPT_SPINE.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`.
 
 ## Reviewer-Risk Matrix
 

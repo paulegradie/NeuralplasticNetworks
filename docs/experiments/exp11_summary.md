@@ -2,6 +2,7 @@
 
 ## Evidence status
 
+- Evidence classification: Manuscript-critical
 - Local artifacts indexed: yes
 - Local artifacts checked for key claims: partial
 - Thread digest imported: yes; Exp11 result thread imported
@@ -14,7 +15,7 @@
 - Analysis artifacts present: yes
 - Validation present: yes
 - Thread digest present: `docs/threads/experiment5to10_export.md`; `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`
-- Manuscript relevance: Candidate main context-separated memory result after review.
+- Manuscript relevance: Manuscript-candidate context-separated memory evidence; external baselines and statistical hardening pending.
 
 ## Purpose
 
@@ -96,6 +97,7 @@ Source path: `experiments/experiment11_context_memory/analysis/exp11/exp11_memor
 
 ## What this experiment does not prove
 
+- Does not provide submission-ready evidence without baselines, uncertainty reporting, and final figure workflows.
 - Does not establish novelty by itself.
 - Does not remove the need for baseline and reproducibility review.
 

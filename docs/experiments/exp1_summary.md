@@ -2,10 +2,12 @@
 
 ## Evidence status
 
-- Local artifacts reviewed: README/design docs, generated reports, CSV summaries, validation outputs where present, and plot filenames
-- Thread digest reviewed: yes; no non-empty Exp1-specific result digest was available
-- Claims validated: local-only first pass; human review still required
-- Needs human review: yes
+- Evidence classification: Historical / exploratory
+- Local artifacts indexed: partial; README and run database are present
+- Local artifacts checked for key claims: no route-memory key claim checked
+- Thread digest imported: yes; no non-empty Exp1-specific result digest was available
+- Human/manuscript validation pending: yes
+- Claims fully validated for publication: no
 
 ## Status
 
@@ -13,7 +15,7 @@
 - Analysis artifacts present: no
 - Validation present: no
 - Thread digest present: empty `docs/threads/experiment1to4_export.md`; background mentions only
-- Manuscript relevance: Historical implementation background; not a manuscript result without analysis.
+- Manuscript relevance: Historical implementation background; not a manuscript result without renewed analysis.
 
 ## Purpose
 
@@ -64,6 +66,7 @@ Source path: `experiments/experiment1/README.md`; `experiments/experiment1/runs/
 
 ## What this experiment does not prove
 
+- Does not provide publication-validated manuscript evidence by itself.
 - Does not establish novelty by itself.
 - Does not remove the need for baseline and reproducibility review.
 

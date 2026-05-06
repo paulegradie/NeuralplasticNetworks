@@ -2,10 +2,12 @@
 
 ## Evidence status
 
-- Local artifacts reviewed: README/design docs, generated reports, CSV summaries, validation outputs where present, and plot filenames
-- Thread digest reviewed: yes; historical contrast imported
-- Claims validated: local-only first pass; human review still required
-- Needs human review: yes
+- Evidence classification: Historical / exploratory
+- Local artifacts indexed: yes
+- Local artifacts checked for key claims: partial; early traversal contrast only
+- Thread digest imported: yes; historical contrast imported
+- Human/manuscript validation pending: yes
+- Claims fully validated for publication: no
 
 ## Status
 
@@ -13,7 +15,7 @@
 - Analysis artifacts present: yes
 - Validation present: no
 - Thread digest present: `docs/threads/experiment6_export.md`; background in `docs/threads/experiment5to10_export.md`
-- Manuscript relevance: Candidate supplement for first traversal mechanism result.
+- Manuscript relevance: Historical/supplemental traversal contrast; not central context-memory evidence.
 
 ## Purpose
 
@@ -70,6 +72,7 @@ Source path: `experiments/experiment4_successor/analysis/exp4/exp4_comparison.cs
 
 ## What this experiment does not prove
 
+- Does not provide publication-validated context-memory evidence by itself.
 - Does not establish novelty by itself.
 - Does not remove the need for baseline and reproducibility review.
 

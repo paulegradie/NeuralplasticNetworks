@@ -14,6 +14,8 @@ Selected small aggregate tables also have review-friendly mirrors under `docs/so
 - Needs rerun
 - Unsupported
 - Framing only
+- Historical
+- Planned
 
 ## Evidence Table
 

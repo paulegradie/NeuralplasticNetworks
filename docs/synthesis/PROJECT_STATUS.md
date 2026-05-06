@@ -2,9 +2,9 @@
 
 ## Current State
 
-The repository contains thirteen completed experiment directories under `experiments/` plus manuscript, synthesis, source-data, and repo-audit documentation under `docs/`. Thread digests from exported ChatGPT analysis have been imported into experiment summaries, manuscript evidence documents, synthesis docs, and the thread index.
+The repository contains thirteen completed experiment directories under `experiments/` plus manuscript, synthesis, source-data, and repo-audit documentation under `docs/`. Thread digests from exported ChatGPT analysis have been imported into experiment summaries, manuscript evidence documents, synthesis docs, and the thread index. Use the docs index and source-of-truth note for navigation before editing evidence-heavy files.
 
-Source path: `docs/threads/THREAD_INDEX.md`; `docs/experiments/EXPERIMENT_REGISTRY.md`.
+Source path: `docs/README.md`; `docs/manuscript/SOURCE_OF_TRUTH.md`; `docs/threads/THREAD_INDEX.md`; `docs/experiments/EXPERIMENT_REGISTRY.md`.
 
 ## Experiments Completed
 

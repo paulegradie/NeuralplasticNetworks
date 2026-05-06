@@ -1,5 +1,14 @@
 # Next Experiments
 
+## Repository-Readiness Context
+
+P0/P1 repository-readiness work is complete enough for Exp13.1 planning: active paths use `experiments/...`, the documentation path verifier is available, README/AGENTS are aligned, and baseline/reproducibility planning docs exist.
+
+Claim: The next operational step is scientific hardening, not another repository-structure migration.
+Evidence: P0/P1 remediation QA passed and the remaining blockers are Exp13.1, baselines, uncertainty reporting, final figures, and novelty import.
+Caveat: This does not make the repository submission-ready.
+Source path: `docs/repo_audit/P0_REMEDIATION_QA.md`; `docs/repo_audit/P1_REMEDIATION_QA.md`; `docs/synthesis/PUBLICATION_READINESS.md`
+
 ## Experiment 13.1 - Publication Hardening
 
 Purpose: Correct and harden the main Exp13 boundary claims before manuscript submission.

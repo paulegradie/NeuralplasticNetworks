@@ -2,10 +2,12 @@
 
 ## Evidence status
 
-- Local artifacts reviewed: README/design docs, generated reports, CSV summaries, validation outputs where present, and plot filenames
-- Thread digest reviewed: yes; thread-derived caveats imported
-- Claims validated: local-only first pass; human review still required
-- Needs human review: yes
+- Evidence classification: Historical / exploratory
+- Local artifacts indexed: yes
+- Local artifacts checked for key claims: partial; caveated failure/precursor result only
+- Thread digest imported: yes; thread-derived caveats imported
+- Human/manuscript validation pending: yes
+- Claims fully validated for publication: no
 
 ## Status
 
@@ -13,7 +15,7 @@
 - Analysis artifacts present: yes
 - Validation present: no
 - Thread digest present: `docs/threads/experiment5to10_export.md`; `docs/threads/experiment6_export.md`
-- Manuscript relevance: Deprecated or caveated precursor; Exp6 README identifies a methodological ambiguity.
+- Manuscript relevance: Historical/caveated precursor; Exp6 README identifies a methodological ambiguity.
 
 ## Purpose
 
@@ -74,6 +76,7 @@ Source path: `experiments/experiment5_contextual_successor/analysis/exp5_suite_s
 
 ## What this experiment does not prove
 
+- Does not provide publication-validated context-conditioned composition evidence.
 - Does not establish novelty by itself.
 - Does not remove the need for baseline and reproducibility review.
 

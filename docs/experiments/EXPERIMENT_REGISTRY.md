@@ -2,6 +2,8 @@
 
 Purpose: Provide a conservative index of experiment directories, thread digests, local artifacts, manuscript roles, and evidence status after the thread-import pass.
 
+For historical/supporting/manuscript-critical tiers, see `docs/experiments/HISTORICAL_EXPERIMENTS.md`.
+
 | Experiment | Directory | Thread digest | Local artifacts | Main role in manuscript | Evidence status | Required follow-up |
 |---|---|---|---|---|---|---|
 | Exp1 | `experiments/experiment1` | `docs/threads/experiment1to4_export.md` empty; background mentions in `docs/threads/experiment5to10_export.md` | `experiments/experiment1/README.md`; `experiments/experiment1/runs/plastic_graph_mnist.sqlite3` | early exploratory | local artifacts only | Do not use for route-memory claims unless early MNIST artifacts are separately analyzed. |
@@ -24,3 +26,4 @@ Purpose: Provide a conservative index of experiment directories, thread digests,
 
 - Evidence status is intentionally conservative. `local + thread evidence aligned` means the thread interpretation is supported by at least one local artifact path, not that the claim is submission-ready.
 - `conflict between thread and artifact` for Exp13 refers to internal caveats around the no-context-binding variant, holdout metric definitions, and consolidation interpretation, not a wholesale invalidation of the Exp13 run.
+- Exp1-Exp6 should remain historical/exploratory unless a later manuscript doc explicitly elevates a specific result with current local evidence and caveats.
