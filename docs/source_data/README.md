@@ -2,7 +2,7 @@
 
 This directory contains small, review-friendly mirrors of selected aggregate evidence tables. They exist so manuscript reviewers can inspect key tables on GitHub even when the authoritative generated experiment CSVs remain in Git LFS.
 
-These files are convenience copies or docs-derived tables, not new experimental outputs. The authoritative source remains the original artifact path in the owning experiment directory. Date copied for Exp12/Exp13 mirrors: 2026-05-05. Date copied for Exp13.1 and Exp13.2 mirrors: 2026-05-07.
+These files are convenience copies or docs-derived tables, not new experimental outputs. The authoritative source remains the original artifact path in the owning experiment directory. Date copied for Exp12/Exp13 mirrors: 2026-05-05. Date copied for Exp13.1, Exp13.2, and Exp14 mirrors: 2026-05-07.
 
 | Mirror file | Source artifact path | Type | Notes |
 |---|---|---|---|
@@ -13,7 +13,7 @@ These files are convenience copies or docs-derived tables, not new experimental 
 | `exp13_true_holdout_generalization_summary.csv` | `experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv` | direct copy | Exp13 true-holdout aggregate summary. |
 | `exp13_continuous_frontend_bridge_summary.csv` | `experiments/experiment13_breaking_point/analysis/continuous_frontend_bridge_summary.csv` | direct copy | Exp13 noisy continuous-front-end bridge aggregate summary. |
 | `exp13_local_capacity_pressure_summary.csv` | `experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv` | direct copy | Exp13 local capacity-pressure aggregate summary. |
-| `exp13_local_vs_global_budget_comparison.csv` | `docs/experiments/exp13_local_vs_global_budget_comparison.md` plus `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv` and `experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv` | derived docs table | CSV form of the docs-only aggregate comparison table; not a paired seed-level analysis. |
+| `exp13_local_vs_global_budget_comparison.csv` | `docs/experiments/exp13_local_vs_global_budget_comparison.md` plus Exp13 capacity summaries | derived docs table | CSV form of the docs-only aggregate comparison table; not a paired seed-level analysis. |
 | `exp13_1_variant_metrics.csv` | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv` | direct copy | Exp13.1 variant and core ablation aggregate summary. |
 | `exp13_1_context_corruption.csv` | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_context_corruption.csv` | direct copy | Exp13.1 context corruption aggregate summary. |
 | `exp13_1_lesion_metrics.csv` | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv` | direct copy | Exp13.1 lesion diagnostic aggregate summary; targeted-lesion positive claim not supported. |
@@ -22,5 +22,12 @@ These files are convenience copies or docs-derived tables, not new experimental 
 | `exp13_2_summary.csv` | `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv` | direct copy | Exp13.2 symbolic/algorithmic baseline aggregate summary. |
 | `exp13_2_effect_sizes.csv` | `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_effect_sizes.csv` | direct copy | Exp13.2 effect-size comparison table; zero-variance ceiling/floor rows need careful rendering. |
 | `exp13_2_baseline_metrics.csv` | `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_baseline_metrics.csv` | direct copy | Exp13.2 baseline metrics table used for detailed baseline inspection. |
+| `exp14_summary.csv` | `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv` | direct copy pending/final mirror needed | Exp14 symbolic context-selection aggregate summary; required if C13 is retained as main or supplement evidence. |
+| `exp14_effect_sizes.csv` | `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_effect_sizes.csv` | direct copy pending/final mirror needed | Exp14 effect-size table; required if C13 is retained as a figure/table source. |
 
 Do not treat these mirrors as a replacement for the original artifacts. When citing evidence, cite the experiment artifact and use the mirror only as a readable convenience copy.
+
+Machine-readable manifests:
+
+- `docs/source_data/SOURCE_DATA_MANIFEST.csv`
+- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`
