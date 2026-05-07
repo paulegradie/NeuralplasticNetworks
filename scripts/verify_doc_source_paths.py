@@ -258,7 +258,23 @@ def candidates_from_csv_line(line: str) -> Iterable[str]:
             yield part
 
 
+def is_staged_import_bundle(path: str) -> bool:
+    """Return true for zip bundles used only during analysis import.
+
+    Thread digests and import reports intentionally record the source zip that was
+    staged under docs/imports/. Those bundles are handoff inputs, not durable
+    repository artifacts, so their historical references should not fail the
+    active source-path verifier.
+    """
+
+    normalized = path.replace("\\", "/")
+    return normalized.startswith("docs/imports/") and normalized.endswith(".zip")
+
+
 def classify_missing(path: str, line: str) -> tuple[str, str]:
+    if is_staged_import_bundle(path):
+        return "local_pending", "staged import bundle reference; not retained as active repo artifact"
+
     lower = line.lower()
     if any(marker in lower for marker in LOCAL_PENDING_MARKERS):
         return "local_pending", "explicitly marked missing/local verification pending"
