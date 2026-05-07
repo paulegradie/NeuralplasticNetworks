@@ -10,17 +10,17 @@ Manuscript, evidence, synthesis, and repo-audit documents live under `docs/`. Th
 
 ## Current status
 
-The internal evidence is promising, but the repository is not submission-ready. Current blockers include Exp13.1 publication hardening, an external baseline suite, seed-level uncertainty reporting, and final reproducible paper figures.
+The internal evidence is promising, but the repository is not submission-ready. After Exp13.2 and Exp14 integration, the first-manuscript spine is closer to claim-freeze readiness, but blockers remain: seed-level uncertainty reporting, final reproducible paper figures, prior-art/novelty import, command verification, a venue-dependent neural-baseline decision, Exp13 holdout metric cleanup if retained centrally, and license/citation metadata.
 
-The strongest internal result so far is benchmark-specific: context-indexed structural route memory can retain incompatible local transition systems, while recurrence is needed to turn one-step route memories into multi-step execution. This needs external comparison before submission-level claims are appropriate.
+The strongest current result is benchmark-specific: context-indexed structural route memory can retain incompatible local transition systems, recurrence is needed to turn one-step route memories into multi-step execution, symbolic/algorithmic baselines clarify what simpler lookup strategies can and cannot explain, and Exp14 shows that the active symbolic world can be selected from partial transition cues.
 
 ## Scientific question
 
 The central question is whether a system can continually store many route memories that reuse the same states and actions but require different transitions in different contexts. For example, the same symbolic action can mean different successor transitions in world A, world B, and world C.
 
-The benchmark separates three things that are easy to conflate: one-step route-table storage, selection of the right world/context, and recurrent multi-step execution over stored transitions. This lets the project ask whether failures come from storage, context interference, missing recurrence, finite capacity, corrupted context, or missing primitive transitions.
+The benchmark separates three things that are easy to conflate: one-step route-table storage, selection of the right world/context, and recurrent multi-step execution over stored transitions. This lets the project ask whether failures come from storage, context interference, missing recurrence, finite capacity, corrupted context, missing primitive transitions, or missing context-selection evidence.
 
-The narrow scientific question for the first manuscript is: in this controlled route-memory benchmark, does the conjunction of context-indexed structural plasticity and recurrent execution support non-destructive storage and compositional execution of incompatible route systems, and where does it fail?
+The narrow scientific question for the first manuscript is: in this controlled route-memory benchmark, does the conjunction of context-indexed structural plasticity and recurrent execution support non-destructive storage and compositional execution of incompatible route systems, and where does it fail relative to simpler symbolic baselines and symbolic context-cue selection?
 
 ## Repository layout
 
@@ -56,12 +56,15 @@ README.md     external-facing repository entry point
 | Exp5 | `experiments/experiment5_contextual_successor/` | Contextual successor attempt. | Caveated predecessor; useful for failure history. |
 | Exp6 | `experiments/experiment6_route_audit_successor/` | Route-audit correction of contextual successor task. | Methodological precursor; caveated. |
 | Exp7 | `experiments/experiment7_route_field_diagnostics/` | Clean route-field diagnostic. | Supports route-table versus execution distinction as diagnostic evidence. |
-| Exp8 | `experiments/experiment8_self_organizing_route_acquisition/` | Self-organizing route acquisition. | Important internal ablation evidence; needs baselines before central claims. |
+| Exp8 | `experiments/experiment8_self_organizing_route_acquisition/` | Self-organizing route acquisition. | Important internal ablation evidence; still benchmark-specific. |
 | Exp9 | `experiments/experiment9_robust_adaptive_route_plasticity/` | Robustness, context bleed, delayed/noisy feedback. | Supporting stress-test evidence; claims remain narrow. |
 | Exp10 | `experiments/experiment10_adaptive_reversal/` | Adaptive reversal and consolidation tradeoff. | Supporting evidence for stability/plasticity caveats. |
 | Exp11 | `experiments/experiment11_context_memory/` | Context-separated incompatible-world memory. | Manuscript-critical internal evidence. |
 | Exp12 | `experiments/experiment12_capacity_generalization/` | Capacity, retention, and held-out composition scaling. | Manuscript-critical internal evidence; ceiling-limited. |
-| Exp13 | `experiments/experiment13_breaking_point/` | Breaking point, context corruption, holdout boundary, continuous bridge. | Manuscript-critical boundary evidence; requires Exp13.1 hardening. |
+| Exp13 | `experiments/experiment13_breaking_point/` | Breaking point, context corruption, holdout boundary, continuous bridge. | Manuscript-critical boundary evidence; holdout and context-corruption caveats remain. |
+| Exp13.1 | `experiments/experiment13_1_publication_hardening/` | Publication-hardening ablations and mechanism audit. | Manuscript-critical internal evidence; lesion diagnostic failed expected pattern and must not be used as positive evidence without audit/rerun. |
+| Exp13.2 | `experiments/experiment13_2_baseline_suite/` | Symbolic/algorithmic baseline suite. | Partially satisfies baseline requirements; oracle context-gated lookup matches CIRM on the clean supplied-context benchmark; neural baselines and prior-art import remain open. |
+| Exp14 | `experiments/experiment14_latent_context_inference/` | Symbolic context selection from transition cues. | Promising candidate main/supplement evidence; reduces oracle-context criticism while remaining symbolic. |
 
 ## Current claim map
 
@@ -69,13 +72,14 @@ The canonical claim table is [CLAIMS_AND_EVIDENCE.md](docs/manuscript/CLAIMS_AND
 
 | Claim IDs | Current interpretation | Status |
 |---|---|---|
-| C1-C4 | Structural plasticity, world/context indexing, recurrence, and route-table/execution separation are supported inside the route-memory benchmark. | Strong internal ablation evidence; needs external baselines. |
-| C5-C7 | Exp12 shows clean-context scaling; Exp13 begins mapping finite-capacity failure. | Promising but needs uncertainty and Exp13.1 cleanup. |
-| C8 | Consolidation is best framed as a stability/plasticity bias. | Preliminary; needs dose-response. |
-| C9 | The model composes stored primitives but does not infer unseen primitive transitions. | Needs metric cleanup. |
-| C10 | Adversarial context corruption can break execution when world selection flips. | Promising; stochastic corruption remains pending. |
+| C1-C4 | Structural plasticity, world/context indexing, recurrence, and route-table/execution separation are supported inside the route-memory benchmark, with Exp13.2 adding symbolic baseline caveats. | Strong internal/mechanistic evidence; neural baselines and prior-art positioning remain venue-dependent. |
+| C5-C7 | Exp12 shows clean-context scaling; Exp13 and Exp13.1 map finite-capacity/local-budget failure. | Promising but needs uncertainty, final scripts, and capacity-law cleanup. |
+| C8 | Consolidation is best framed as a stability/plasticity bias. | Preliminary; keep supplementary unless strengthened. |
+| C9 | The model composes stored primitives but does not infer unseen primitive transitions. | Needs metric cleanup before central use. |
+| C10 | Wrong-world/context corruption can break execution when world selection flips. | Promising; not generic stochastic robustness. |
 | C11 | Continuous/noisy inputs can feed route memory through a simple decoded bridge. | Preliminary or supplementary. |
-| C12 | Baselines and prior-art positioning are required before submission readiness. | Needs baseline and novelty-source import. |
+| C12 | Symbolic/algorithmic baselines are partially satisfied by Exp13.2; prior-art import and neural-baseline decisions remain. | Partially satisfied. |
+| C13 | Exp14 shows symbolic context selection from partial transition cues before route execution. | Promising; main/supplement placement pending. |
 
 Every manuscript-facing use should retain the discipline: Claim -> Evidence -> Caveat -> Source path.
 
@@ -88,6 +92,7 @@ This repository does not yet show:
 - a complete hippocampal or biological theory;
 - end-to-end perceptual learning;
 - broad abstract rule induction;
+- raw sensory latent-world discovery;
 - inference of unseen primitive transitions.
 
 ## Reproducibility
@@ -102,7 +107,7 @@ python scripts/verify_doc_source_paths.py
 
 ## Planned next work
 
-The next planned scientific step is Exp13.1 publication hardening under a new experiment directory inside `experiments/`, followed by the external baseline suite. A richer applied visual-state bridge should wait until Exp13.1, baselines, uncertainty reporting, and final figure workflows are hardened.
+The next manuscript-readiness step is documentation and claim hardening, not a default new experiment: freeze the first-manuscript claim set, decide Exp14 and Exp13.2 main-vs-supplement placement, generate manuscript-grade CI/effect-size tables, create final reproducible figure/table scripts, import prior-art/novelty sources, and verify critical run commands. Richer non-symbolic latent-world or visual-state experiments should remain future work unless the first manuscript explicitly needs them.
 
 ## License / citation
 
