@@ -7,23 +7,26 @@ Purpose: Make the `docs/` tree navigable for humans and future local agents.
 Recommended reading order:
 
 1. `../README.md`
-2. `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
-3. `docs/synthesis/PUBLICATION_READINESS.md`
-4. `docs/manuscript/LIMITATIONS_AND_THREATS.md`
-5. `docs/experiments/EXPERIMENT_REGISTRY.md`
-6. `docs/manuscript/FIGURE_PLAN.md`
-7. `docs/synthesis/NEXT_EXPERIMENTS.md`
+2. `docs/manuscript/SOURCE_OF_TRUTH.md`
+3. `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`
+4. `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
+5. `docs/synthesis/PUBLICATION_READINESS.md`
+6. `docs/manuscript/LIMITATIONS_AND_THREATS.md`
+7. `docs/experiments/EXPERIMENT_REGISTRY.md`
+8. `docs/manuscript/FIGURE_PLAN.md`
+9. `docs/synthesis/NEXT_EXPERIMENTS.md`
 
 ## Manuscript docs
 
 | Document | Purpose | Status | When to edit |
 |---|---|---|---|
+| `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` | Frozen post-Exp14 first-manuscript claim boundary and handoff into figure/table generation. | Active phase-control doc | Edit only when the first-manuscript inclusion/exclusion decision changes with local evidence. |
 | `docs/manuscript/CLAIMS_AND_EVIDENCE.md` | Canonical claim map using Claim -> Evidence -> Caveat -> Source path. | Active source of truth | Edit whenever claim wording, status, evidence, caveat, or source paths change. |
-| `docs/manuscript/MANUSCRIPT_SPINE.md` | Provisional manuscript architecture and section plan. | Active draft scaffold | Edit when the manuscript structure changes after Exp13.1, baselines, or figure decisions. |
+| `docs/manuscript/MANUSCRIPT_SPINE.md` | Provisional manuscript architecture and section plan. | Active draft scaffold; needs refresh from the claim-freeze doc | Edit when the manuscript structure changes after claim freeze, baseline decisions, or figure decisions. |
 | `docs/manuscript/MANUSCRIPT_TODO.md` | Conservative work queue for manuscript readiness. | Active work queue | Edit when work status changes or a blocker is completed with local evidence. |
 | `docs/manuscript/FIGURE_PLAN.md` | Candidate main and supplementary figure map. | Active planning doc | Edit whenever a figure, panel, source artifact, or caveat changes. |
 | `docs/manuscript/LIMITATIONS_AND_THREATS.md` | Reviewer-risk and non-claim tracker. | Active caveat doc | Edit when a limitation is resolved or a new risk appears. |
-| `docs/manuscript/BASELINE_REQUIREMENTS.md` | Baseline suite contracts and acceptance criteria. | Planned/deferred; Exp13.2 intentionally excluded from current cleanup | Edit during the separate Exp13.2 import/alignment pass or when prior-art/baseline requirements change. |
+| `docs/manuscript/BASELINE_REQUIREMENTS.md` | Baseline suite contracts and acceptance criteria. | Active; Exp13.2 symbolic/algorithmic baselines imported, neural/prior-art work still open | Edit when baseline interpretation, neural-baseline posture, or prior-art requirements change. |
 | `docs/manuscript/SOURCE_OF_TRUTH.md` | Rules for resolving conflicts between docs, artifacts, and thread exports. | Active handoff note | Edit only when canonical-document ownership changes. |
 
 ## Experiment docs
@@ -41,15 +44,17 @@ Recommended reading order:
 
 | Document | Purpose | Status |
 |---|---|---|
+| `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md` | Documents Exp13.2 symbolic/algorithmic baseline-suite import. | Completed import record |
+| `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md` | Documents Exp14 symbolic transition-cue context-selection import. | Completed import record |
 | `docs/repo_audit/P0_REMEDIATION_REPORT.md` | Documents P0 fixes for paths, docs CSV reviewability, and path verification. | Completed repo-readiness record |
 | `docs/repo_audit/P0_REMEDIATION_QA.md` | QA result for P0 remediation. | Completed QA record |
 | `docs/repo_audit/P1_REMEDIATION_REPORT.md` | Documents P1 onboarding, reproducibility, baseline planning, and manuscript-spine cleanup. | Completed repo-readiness record |
 | `docs/repo_audit/P1_REMEDIATION_QA.md` | QA result for P1 remediation. | Completed QA record |
-| `docs/repo_audit/P2_REMEDIATION_REPORT.md` | Documents this P2 polish pass. | Active during P2, then completed record |
-| `docs/repo_audit/REPRODUCIBILITY_AUDIT.md` | Run-interface and reproducibility map. | Active audit; commands inspected, not fully rerun in P1/P2 |
+| `docs/repo_audit/P2_REMEDIATION_REPORT.md` | Documents P2 polish pass. | Completed/legacy record |
+| `docs/repo_audit/REPRODUCIBILITY_AUDIT.md` | Run-interface and reproducibility map. | Active audit; commands inspected, not freshly rerun here |
 | `docs/repo_audit/PATH_VERIFICATION_REPORT.md` | Records path-verifier expectations and prior results. | Active audit support |
 | `docs/repo_audit/MISSING_ARTIFACTS.md` | Tracks missing or local-verification-pending artifacts. | Active caveat tracker |
-| `docs/repo_audit/P0_P1_PUBLICATION_CLEANUP_REPORT.md` | Current non-Exp13.2 publication-cleanup handoff report. | Active handoff record |
+| `docs/repo_audit/P0_P1_PUBLICATION_CLEANUP_REPORT.md` | Earlier non-Exp13.2 publication-cleanup handoff report. | Legacy handoff record; superseded by post-Exp13.2/Exp14 claim-freeze docs for active manuscript planning |
 
 ## Theory docs
 
@@ -64,12 +69,13 @@ Recommended reading order:
 
 Thread exports under `docs/threads/` are source material. They may preserve historical wording, old paths, or exploratory interpretations from earlier conversations.
 
-Active claims live in `docs/manuscript/CLAIMS_AND_EVIDENCE.md`. Use thread exports as historical context unless their interpretation has been imported into current evidence docs with a local source path and caveat.
+Active first-manuscript claim inclusion decisions live in `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`. Active claim wording lives in `docs/manuscript/CLAIMS_AND_EVIDENCE.md`. Use thread exports as historical context unless their interpretation has been imported into current evidence docs with a local source path and caveat.
 
 ## Rule for future edits
 
+- Update `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` when first-manuscript inclusion status changes.
 - Update `docs/manuscript/CLAIMS_AND_EVIDENCE.md` when a claim changes.
 - Update `docs/manuscript/FIGURE_PLAN.md` when a figure changes.
 - Update `docs/manuscript/MANUSCRIPT_TODO.md` when work status changes.
-- Keep Exp13.2 claim/figure/source-data integration in a separate dedicated pass.
+- Keep source-data and statistical-readiness manifests synchronized with retained figures/claims.
 - Run `python scripts/verify_doc_source_paths.py` after source-path-heavy edits.
