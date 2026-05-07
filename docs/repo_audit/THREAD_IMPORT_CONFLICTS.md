@@ -105,3 +105,21 @@ Local artifact status: `experiments/experiment13_1_publication_hardening/analysi
 Risk: Reproducibility documentation is weaker than manuscript-grade expectations, even though GPU acceleration is not technically expected for this harness.
 Recommended resolution: Add device/runtime metadata to future manifests and keep CPU-only rationale in the README.
 Resolution status: recorded as TODO and limitation.
+
+## Conflict / uncertainty 13
+
+Issue: The Exp13.2 thread digest says the uploaded analysis bundle did not include the SQLite database, while the run manifest and validation report referenced `runs/exp13_2_full_20260507_165813.sqlite3`.
+Thread source: `docs/threads/experiment13_2_analysis_digest.md`.
+Local artifact status: The database is present locally at `experiments/experiment13_2_baseline_suite/runs/exp13_2_full_20260507_165813.sqlite3`; validation also reports the SQLite database and expected tables.
+Risk: Documentation could incorrectly mark the raw run DB as missing if it relies only on the uploaded digest bundle contents.
+Recommended resolution: Cite the DB as a locally verified repository artifact, while preserving the packaging caveat that it was absent from the uploaded digest bundle.
+Resolution status: resolved locally during Exp13.2 import; no digest/artifact conflict remains.
+
+## Conflict / uncertainty 14
+
+Issue: Exp13.2 shows the oracle context-gated transition table matches CIRM on the clean supplied-context benchmark.
+Thread source: `docs/threads/experiment13_2_analysis_digest.md`.
+Local artifact status: `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv` reports both `exp13_2_cirm_full` and `baseline_context_gated_transition_table` at `1.0000` on route-table, seen-route composition, suffix-route composition, and first-step context accuracy for the hard clean slice.
+Risk: A manuscript could overclaim raw accuracy superiority over a supplied-context oracle lookup table.
+Recommended resolution: Treat this as claim refinement: clean supplied-context symbolic route memory can be solved by oracle context-gated lookup; frame CIRM through mechanism and failure modes instead.
+Resolution status: active caveat in claims, limitations, figure plan, and synthesis docs.

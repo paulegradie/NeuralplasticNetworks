@@ -2,13 +2,13 @@
 
 Purpose: Track limitations, reviewer attack surfaces, and non-claims so the manuscript stays disciplined.
 
-## Missing External Baselines
+## Baseline Coverage Still Incomplete
 
-Claim: External baselines are required before submission-readiness can be claimed.
-Evidence: The imported Exp11, Exp12-13, and Exp13.1 thread digests flag baselines as required, and the Exp12-13 digest reports a novelty assessment that warned against treating context gating, task masks, recurrence, structural plasticity, or continual learning as individually novel.
-Caveat: The novelty assessment artifact named `Pasted text.txt` is not present locally; local verification pending. `docs/manuscript/BASELINE_REQUIREMENTS.md` is a planning document, not evidence for novelty.
-Source path: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`
-Proposed fix: Implement a baseline suite covering locally source-backed families: context-dependent gating / XdG-style comparators, SI or stabilization-plus-gating, replay, task masks / HAT, parameter isolation / PackNet / PathNet, hypernetworks, superposition, and cognitive-map / CSCG / TEM-style comparators.
+Claim: Exp13.2 partially resolves the external-baseline blocker, but baseline and prior-art coverage remain incomplete.
+Evidence: Exp13.2 adds symbolic/algorithmic shared lookup, oracle context-gated lookup, endpoint memorization, recurrent non-plastic, superposition/hash, bounded LRU/replay, and parameter-isolation controls.
+Caveat: These are not full neural baselines and do not replace prior-art/novelty import. The novelty assessment artifact named `Pasted text.txt` is not present locally; local verification pending.
+Source path: `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_baseline_metrics.csv`; `docs/threads/experiment12to13_export.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`
+Proposed fix: Decide whether the first manuscript needs additional neural baselines beyond Exp13.2, import the missing novelty/prior-art artifact, and keep baseline claims explicitly symbolic/algorithmic unless new evidence is added.
 
 ## Symbolic Benchmark Limitation
 
@@ -20,9 +20,17 @@ Proposed fix: Keep claims benchmark-specific; use the continuous/noisy bridge on
 ## Oracle Context / World-Label Limitation
 
 Why it matters: Many experiments provide world/context labels directly. This supports context-indexed storage, but not latent world inference.
-Where identified: Exp11 and Exp12-13 framing; Exp14 was proposed as a future latent-world inference bridge.
-Source thread path: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`.
+Where identified: Exp11 and Exp12-13 framing; Exp13.2 shows that an oracle context-gated transition table matches CIRM on the clean supplied-context benchmark; Exp14 was proposed as a future latent-world inference bridge.
+Source path: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`.
 Proposed fix: Add a future experiment where world/context is inferred from prediction error or partial evidence, not supplied as an oracle label.
+
+## No-Context Suffix Probe Caveat
+
+Claim: Shared no-context lookup failure should be interpreted through conflict-sensitive metrics, not suffix probes alone.
+Evidence: In Exp13.2 at `world_count=32`, `route_length=16`, and `phase=baseline_comparison`, shared no-context lookup has seen-route and first-step context accuracy `0.03125` but suffix-route accuracy `1.0000`.
+Caveat: Suffix probes can start after the disambiguating first transition, so they can make no-context lookup look stronger than it is on incompatible full-route context queries.
+Source path: `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`
+Proposed fix: Separate first-step/seen-route context-conflict panels from suffix-composition panels in manuscript figures and text.
 
 ## Metric Cleanup Requirements
 
@@ -83,3 +91,4 @@ Proposed fix: Add device/runtime metadata to future run manifests and explicitly
 - Do not claim broad abstract rule induction.
 - Do not claim end-to-end perception.
 - Do not claim consolidation is universally necessary.
+- Do not claim CIRM beats oracle context-gated lookup on clean supplied-context symbolic route memory.

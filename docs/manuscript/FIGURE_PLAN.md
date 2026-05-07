@@ -93,6 +93,17 @@ Source thread: `docs/threads/experiment12to13_export.md`.
 Status: Preliminary or supplementary.
 Caveat: Not a learned perceptual system.
 
+## Figure 9 - Baseline Suite And Claim Refinement
+
+Purpose: Show how symbolic/algorithmic baselines constrain the manuscript claim.
+Likely experiment: Exp13.2.
+Panels: CIRM versus oracle context-gated lookup; shared no-context failure on seen-route and first-step context probes; endpoint memorizer seen-vs-suffix split; no-recurrence route-table/composition dissociation; optional capacity/replay baseline curves.
+Claim supported: C2, C3, C4, C12.
+Source materials: `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_effect_sizes.csv`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_baseline_metrics.csv`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_seen_route_composition_accuracy.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_suffix_generalization_accuracy.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_route_table_accuracy.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_first_step_context_accuracy.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_capacity_pressure.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_sequential_retention.png`.
+Source thread: `docs/threads/experiment13_2_analysis_digest.md`.
+Status: Completed symbolic baseline evidence; figure-script decision pending.
+Caveat: Do not frame as CIRM outperforming oracle lookup. The context-gated baseline uses supplied oracle context labels; baselines are symbolic/algorithmic rather than full neural comparators.
+
 # Candidate Supplementary Figures
 
 | Supplement | Source artifact path | Source thread path | Claim supported | Caveat |
@@ -107,6 +118,7 @@ Caveat: Not a learned perceptual system.
 | Exp12 context-noise plots | `experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_context_bleed_composition.png`; `experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_context_dropout_composition.png` | `docs/threads/experiment12to13_export.md` | Supplementary diagnostics only, not C10 failure evidence | Thread judged curves too flat/inconclusive. |
 | Exp13 context corruption plots | `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_composition.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_world_margin.png` | `docs/threads/experiment12to13_export.md` | C10 context selection failure under adversarial evidence | Hard threshold, not stochastic robustness. |
 | Exp13.1 publication-hardening plots | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_recurrence_ablation.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_budget_consolidation.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_context_confusion.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_lesion_sensitivity.png` | `docs/threads/experiment13_1_analysis_digest.md` | C1-C4, C7, C8, C10, plus negative lesion diagnostic | Generated analysis plots only; targeted lesion plot should not be used as positive mechanism evidence. |
+| Exp13.2 baseline suite plots | `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_seen_route_composition_accuracy.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_suffix_generalization_accuracy.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_route_table_accuracy.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_first_step_context_accuracy.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_capacity_pressure.png`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/plots/exp13_2_sequential_retention.png` | `docs/threads/experiment13_2_analysis_digest.md` | C2-C4 and C12 symbolic baseline refinement | Oracle context-gated lookup matches CIRM in the clean supplied-context benchmark; final paper-specific scripts may still be needed. |
 
 # Pre-Import Figure Sketch And Artifact Inventory
 

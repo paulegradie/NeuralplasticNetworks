@@ -129,9 +129,27 @@ Source path -> `experiments/experiment13_2_baseline_suite/analysis/exp13_2_smoke
 - Key configuration: smoke profile, seeds `[0, 1]`, world counts `[4]`, route lengths `[4, 8]`, routes per world `8`.
 - Summary: hardest tested CIRM suffix-composition accuracy was `1.0000`; context-gated lookup was also `1.0000`; whole-route endpoint memorizer suffix-route accuracy was `0.0000`.
 
+### `exp13_2_full_20260507_165813`
+
+Claim -> Exp13.2 completed a full symbolic/algorithmic baseline-suite run and partially resolves the C12 baseline blocker.
+Evidence -> Validation passed with `PASS: 28`, `WARN: 0`, `FAIL: 0`; the run produced 15040 metrics rows, 748 summary rows, 624 effect-size rows, six plots, and a per-run SQLite database.
+Caveat -> This is a symbolic/algorithmic baseline suite, not a full neural baseline or prior-art comparison.
+Source path -> `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/validation_report.md`; `experiments/experiment13_2_baseline_suite/runs/exp13_2_full_20260507_165813.sqlite3`
+
+Claim -> The clean supplied-context symbolic benchmark can be solved by both CIRM and the oracle context-gated transition table.
+Evidence -> At `world_count=32`, `route_length=16`, `phase=baseline_comparison`, both `exp13_2_cirm_full` and `baseline_context_gated_transition_table` have route-table, seen-route composition, suffix composition, and first-step context accuracy of `1.0000`.
+Caveat -> Do not claim that CIRM beats the oracle context-gated table in the clean supplied-context benchmark; the result refines the claim toward mechanism and failure modes.
+Source path -> `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`
+
+Claim -> Shared no-context lookup fails conflict-sensitive context queries, endpoint memorization fails suffix composition, no-recurrence preserves route-table accuracy while composition fails, and no-structural-plasticity fails.
+Evidence -> At the same hard slice, shared no-context seen-route and first-step context accuracy are `0.03125`; endpoint memorization has seen-route accuracy `1.0000` and suffix-route accuracy `0.0000`; no-recurrence-at-eval has route-table accuracy `1.0000` but seen/suffix composition `0.0000`; no-structural-plasticity has route-table, seen, suffix, and first-step accuracy `0.0000`.
+Caveat -> Shared no-context suffix accuracy is misleadingly high because suffix probes can start after the world-disambiguating first transition; these are controlled symbolic baselines.
+Source path -> `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`
+
 ## Known limitations
 
 - These are symbolic/algorithmic baselines, not full neural baselines.
 - The context-gated lookup baseline is oracle-like because world labels are supplied.
 - This does not resolve the Exp13.1 targeted-lesion diagnostic failure.
 - This does not replace prior-art/novelty source import.
+- The uploaded digest bundle did not include the SQLite database, but the database is present in this local repository at `experiments/experiment13_2_baseline_suite/runs/exp13_2_full_20260507_165813.sqlite3`.

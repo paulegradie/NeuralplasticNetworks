@@ -4,10 +4,10 @@
 
 P0/P1 repository-readiness work is complete enough for Exp13.1 follow-up and baseline work: active paths use `experiments/...`, the documentation path verifier is available, README/AGENTS are aligned, and baseline/reproducibility planning docs exist.
 
-Claim: The next operational step is Exp13.1 lesion/uncertainty follow-up and external baselines, not another repository-structure migration.
-Evidence: P0/P1 remediation QA passed, Exp13.1 full-run artifacts were imported, and the remaining blockers are lesion audit/rerun, baselines, uncertainty reporting, final figures, and novelty import.
+Claim: The next operational step is Exp13.2 manuscript integration plus Exp13.1 lesion/uncertainty follow-up, not another repository-structure migration.
+Evidence: P0/P1 remediation QA passed, Exp13.1 and Exp13.2 full-run artifacts were imported, and the remaining blockers are baseline framing, lesion audit/rerun, uncertainty reporting, final figures, and novelty import.
 Caveat: This does not make the repository submission-ready.
-Source path: `docs/repo_audit/P0_REMEDIATION_QA.md`; `docs/repo_audit/P1_REMEDIATION_QA.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/threads/experiment13_1_analysis_digest.md`
+Source path: `docs/repo_audit/P0_REMEDIATION_QA.md`; `docs/repo_audit/P1_REMEDIATION_QA.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/threads/experiment13_1_analysis_digest.md`; `docs/threads/experiment13_2_analysis_digest.md`
 
 ## Experiment 13.1 - Publication Hardening
 
@@ -51,24 +51,32 @@ Expected outputs:
 Source thread path: `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`.
 Operational source path: `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `docs/manuscript/MANUSCRIPT_TODO.md`.
 
-## Baseline Suite
+## Experiment 13.2 - Baseline Suite
 
-Minimum baseline families:
-- Shared transition table: tests whether explicit structural plasticity adds anything over simple lookup.
-- Context-gated table or task mask: tests whether world/context indexing is just conventional gating.
-- Replay-based continual learner: tests retention under sequential worlds.
-- Parameter-isolation baseline such as PackNet/HAT-inspired masks: tests whether isolated capacity explains retention.
-- Hypernetwork or superposition-style baseline: tests compact context-conditioned storage.
-- Recurrent non-plastic baseline: tests whether recurrence alone can compose routes.
-- Optional CSCG/cloned-state cognitive-map baseline: tests relation to latent-state map models.
+Completed run:
+- Directory: `experiments/experiment13_2_baseline_suite/`.
+- Run ID: `exp13_2_full_20260507_165813`.
+- Validation: PASS 28, WARN 0, FAIL 0.
+- Thread digest: `docs/threads/experiment13_2_analysis_digest.md`.
 
-Why each is needed: The novelty assessment in the thread warns that no individual ingredient is novel; the defensible claim is the controlled conjunction of structural plasticity, context-indexed storage, and recurrent execution.
+Imported baseline families:
+- Shared transition table.
+- Oracle context-gated transition table.
+- Route endpoint memorizer.
+- Recurrent non-plastic rule.
+- Superposition/hash slots.
+- Bounded LRU with and without replay.
+- Parameter isolation.
 
-Expected comparison: Report accuracy, route-table memory, composition, retention, capacity use, and failure modes under the same route-memory benchmark.
+Manuscript result:
+Claim -> Exp13.2 partially resolves the baseline blocker and refines the clean supplied-context claim.
+Evidence -> Oracle context-gated lookup matches CIRM at ceiling in the hard clean slice; shared no-context lookup fails seen-route/first-step context probes; endpoint memorization fails suffix composition; no-recurrence preserves route-table accuracy while composition fails.
+Caveat -> Baselines are symbolic/algorithmic, not full neural baselines; oracle context labels remain a limitation.
+Source path -> `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/validation_report.md`
 
-Recommended future organization: create a new baseline experiment directory under `experiments/`, for example `experiments/exp13_2_baseline_suite/` or `experiments/exp14_baseline_suite/`.
+Remaining question: decide whether additional neural/prior-art baselines are required before submission and whether Exp13.2 belongs in a main figure or supplementary table.
 
-Source thread path: `docs/threads/experiment12to13_export.md`; `docs/threads/experiment11_export`.
+Source thread path: `docs/threads/experiment13_2_analysis_digest.md`; `docs/threads/experiment12to13_export.md`.
 Planning source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`.
 
 ## Applied Bridge
@@ -88,13 +96,14 @@ Source thread path: `docs/threads/experiment12to13_export.md`.
 
 ## Immediate Order Of Operations
 
-1. Exp13.1 lesion audit/rerun only if lesion evidence is needed.
-2. Exp13.1 uncertainty/effect-size outputs and final figure scripts.
-3. External baseline suite.
-4. Stochastic context corruption follow-up if generic robustness is claimed.
-5. Applied visual-state bridge only after hardening and baselines.
+1. Integrate Exp13.2 into manuscript claims, figure/table planning, and baseline framing.
+2. Decide whether additional neural baselines are required beyond Exp13.2.
+3. Exp13.1 lesion audit/rerun only if lesion evidence is needed.
+4. Exp13.1 uncertainty/effect-size outputs and final figure scripts.
+5. Stochastic context corruption follow-up if generic robustness is claimed.
+6. Applied visual-state bridge only after hardening and baseline framing.
 
 Claim: This order prioritizes reviewer-critical weaknesses before new applied scope.
 Evidence: Exp13.1, baselines, uncertainty, and figure regeneration are listed as submission blockers.
 Caveat: The applied bridge remains useful future work, but it should not precede baseline and metric hardening.
-Source path: `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`.
+Source path: `docs/threads/experiment13_2_analysis_digest.md`; `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`.

@@ -17,15 +17,21 @@ Source path: `docs/README.md`; `docs/manuscript/SOURCE_OF_TRUTH.md`; `docs/threa
 - Exp12: clean capacity, continual retention, and held-out composition scaling.
 - Exp13: finite-capacity breaking point, context corruption, holdout boundary, and continuous bridge.
 - Exp13.1: publication-hardening full run for recurrence, structural plasticity, context binding, budget/consolidation, freeze-plasticity, and lesion diagnostics.
+- Exp13.2: symbolic/algorithmic baseline suite and clean supplied-context claim refinement.
 
 Source path: `docs/experiments/EXPERIMENT_REGISTRY.md`.
 
 ## Main Scientific Findings So Far
 
 Claim: Structural plasticity, world/context indexing, and recurrence form the current core mechanism inside the route-memory benchmark.
-Evidence: Exp8, Exp11, Exp12, Exp13, and Exp13.1 ablations align with the thread digests and local summaries.
-Caveat: Internal ablations only; external baselines are still missing.
-Source path: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`.
+Evidence: Exp8, Exp11, Exp12, Exp13, and Exp13.1 ablations align with the thread digests and local summaries; Exp13.2 adds symbolic baseline failure modes for shared no-context lookup, endpoint memorization, no-recurrence, and no-structural-plasticity.
+Caveat: Exp13.2 baselines are symbolic/algorithmic and do not establish neural-baseline or prior-art sufficiency.
+Source path: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`; `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`.
+
+Claim: Clean supplied-context symbolic route memory can be solved by oracle context-gated lookup.
+Evidence: In Exp13.2, the oracle context-gated transition table matches CIRM at `1.0000` route-table, seen-route composition, suffix-route composition, and first-step context accuracy at the hard clean slice.
+Caveat: This is a claim refinement, not a negative result for CIRM; it means the manuscript should not claim raw accuracy superiority over supplied-context lookup.
+Source path: `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`.
 
 Claim: Route-table storage and multi-step execution are separable.
 Evidence: No-recurrence variants preserve route-table accuracy while composition fails in Exp11-Exp13.
@@ -41,13 +47,13 @@ Source path: `experiments/experiment13_breaking_point/analysis/validation_report
 
 Status: promising but not submission-ready.
 
-The strongest internal story is coherent, and Exp13.1 has now completed a first publication-hardening run. The manuscript still needs lesion audit/rerun, external baselines, uncertainty reporting, final reproducible figure scripts, and prior-art positioning before submission.
+The strongest internal story is coherent, Exp13.1 has completed a first publication-hardening run, and Exp13.2 has partially resolved the baseline blocker with symbolic/algorithmic comparators. The manuscript still needs lesion audit/rerun if lesion evidence is used, prior-art positioning, a decision on additional neural baselines, uncertainty/final figure scripts, and careful oracle-context framing before submission.
 
 Source path: `docs/synthesis/PUBLICATION_READINESS.md`; `docs/manuscript/MANUSCRIPT_SPINE.md`.
 
 ## Largest Blockers
 
-- External baselines are missing.
+- Symbolic/algorithmic baselines are now present, but additional neural/prior-art comparators may still be required.
 - Exp13 holdout metrics require seen/unseen cleanup if retained from Exp13.
 - Exp13.1 targeted lesion diagnostic failed the expected pattern.
 - Consolidation needs dose-response before becoming a central result.
@@ -59,13 +65,13 @@ Source path: `docs/synthesis/PUBLICATION_READINESS.md`; `docs/manuscript/MANUSCR
 
 1. Audit and rerun the Exp13.1 lesion diagnostic if the manuscript needs route-critical lesion evidence.
 2. Add seed-level uncertainty and final figure scripts for Exp13.1-supported claims.
-3. Implement the minimum external baseline suite in a new experiment directory under `experiments/`.
+3. Integrate Exp13.2 into manuscript figures/tables and decide whether additional neural baselines are needed.
 4. Add stochastic context corruption or explicitly limit context claims to wrong-world identity selection.
 5. Regenerate final manuscript figures from documented scripts and source-data manifests.
 6. Re-run `python scripts/verify_doc_source_paths.py` before readiness handoff.
 
 ## Recommended Next Action
 
-Proceed to an Exp13.1 lesion audit/rerun and uncertainty pass, then implement the minimum external baseline suite.
+Proceed to Exp13.2 manuscript integration and baseline-figure decisions, then run an Exp13.1 lesion audit/rerun and uncertainty pass if those claims remain in scope.
 
 Source path: `docs/synthesis/NEXT_EXPERIMENTS.md`; `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`.
