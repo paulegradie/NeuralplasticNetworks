@@ -4,8 +4,8 @@
 
 Exp1-Exp10 are not all equally central to the first manuscript. This document separates historical exploration, mechanism-building support, and manuscript-critical evidence so future edits do not accidentally upgrade old exploratory results into central claims.
 
-Claim: The current manuscript-critical spine is Exp11-Exp13 plus planned Exp13.1 hardening.
-Evidence: The experiment registry, manuscript spine, and publication-readiness docs all make Exp13.1, baselines, uncertainty, and final figures the next blockers.
+Claim: The current manuscript-critical spine is Exp11-Exp13 plus completed Exp13.1 hardening.
+Evidence: The experiment registry, manuscript spine, and publication-readiness docs all make Exp13.1 lesion audit, baselines, uncertainty, and final figures the next blockers.
 Caveat: Supporting and historical experiments may still be useful for background or supplementary context, but they should not be treated as external baselines or final manuscript evidence without renewed validation.
 Source path: `docs/experiments/EXPERIMENT_REGISTRY.md`; `docs/manuscript/MANUSCRIPT_SPINE.md`; `docs/synthesis/PUBLICATION_READINESS.md`
 
@@ -13,20 +13,20 @@ Source path: `docs/experiments/EXPERIMENT_REGISTRY.md`; `docs/manuscript/MANUSCR
 
 ## Tier A - Manuscript-critical
 
-Experiments: Exp11, Exp12, Exp13, planned Exp13.1.
+Experiments: Exp11, Exp12, Exp13, Exp13.1.
 
 Role:
 
-- Provides the current first-manuscript spine: context-separated incompatible-world memory, clean-context scaling, boundary mapping, and planned publication hardening.
+- Provides the current first-manuscript spine: context-separated incompatible-world memory, clean-context scaling, boundary mapping, and publication hardening.
 
 How it may be used:
 
 - Use for central manuscript evidence only with the caveats in `docs/manuscript/CLAIMS_AND_EVIDENCE.md`.
-- Use Exp13.1 only after it exists as a new experiment under `experiments/` and has local artifacts.
+- Use Exp13.1 with the caveats in `docs/experiments/exp13_1_summary.md`, especially the failed lesion diagnostic.
 
 How it should not be used:
 
-- Do not claim submission readiness before external baselines, uncertainty reporting, Exp13.1 cleanup, and final figures.
+- Do not claim submission readiness before external baselines, uncertainty reporting, Exp13.1 lesion audit if needed, and final figures.
 - Do not modify Exp13 in place to implement successor hardening.
 
 | Experiment | Directory | Summary doc | Manuscript role | Caveat |
@@ -34,7 +34,7 @@ How it should not be used:
 | Exp11 | `experiments/experiment11_context_memory/` | `docs/experiments/exp11_summary.md` | Candidate main context-separated memory evidence. | Oracle world context; external baselines and intervals pending. |
 | Exp12 | `experiments/experiment12_capacity_generalization/` | `docs/experiments/exp12_summary.md` | Candidate main capacity/scaling evidence. | Ceiling-limited; context-noise sweeps are diagnostic, not final robustness evidence. |
 | Exp13 | `experiments/experiment13_breaking_point/` | `docs/experiments/exp13_summary.md` | Candidate main boundary-mapping evidence. | Metric cleanup, clean ablations, stochastic context corruption, and capacity-law summaries pending. |
-| Exp13.1 | planned future `experiments/exp13_1_publication_hardening/` or equivalent | planned future `docs/experiments/exp13_1_summary.md` or equivalent | Publication hardening successor. | Not yet implemented; planned only. |
+| Exp13.1 | `experiments/experiment13_1_publication_hardening/` | `docs/experiments/exp13_1_summary.md` | Publication hardening successor. | Internal evidence only; targeted lesion diagnostic failed and baselines/uncertainty remain pending. |
 
 ## Tier B - Mechanism-building / supporting
 

@@ -34,7 +34,7 @@ Summarize what the latest experiment changed.
 ## 2. Manuscript blockers
 
 List remaining blockers:
-- Exp13.1 / metric cleanup;
+- metric cleanup;
 - baselines;
 - confidence intervals;
 - final figures;

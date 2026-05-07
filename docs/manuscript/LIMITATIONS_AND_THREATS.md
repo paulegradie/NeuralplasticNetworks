@@ -5,9 +5,9 @@ Purpose: Track limitations, reviewer attack surfaces, and non-claims so the manu
 ## Missing External Baselines
 
 Claim: External baselines are required before submission-readiness can be claimed.
-Evidence: The imported Exp11 and Exp12-13 thread digests flag baselines as required, and the Exp12-13 digest reports a novelty assessment that warned against treating context gating, task masks, recurrence, structural plasticity, or continual learning as individually novel.
+Evidence: The imported Exp11, Exp12-13, and Exp13.1 thread digests flag baselines as required, and the Exp12-13 digest reports a novelty assessment that warned against treating context gating, task masks, recurrence, structural plasticity, or continual learning as individually novel.
 Caveat: The novelty assessment artifact named `Pasted text.txt` is not present locally; local verification pending. `docs/manuscript/BASELINE_REQUIREMENTS.md` is a planning document, not evidence for novelty.
-Source path: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`
+Source path: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`
 Proposed fix: Implement a baseline suite covering locally source-backed families: context-dependent gating / XdG-style comparators, SI or stabilization-plus-gating, replay, task masks / HAT, parameter isolation / PackNet / PathNet, hypernetworks, superposition, and cognitive-map / CSCG / TEM-style comparators.
 
 ## Symbolic Benchmark Limitation
@@ -27,9 +27,17 @@ Proposed fix: Add a future experiment where world/context is inferred from predi
 ## Metric Cleanup Requirements
 
 Why it matters: Reviewers can reject claims if metric definitions hide failure modes or combine incompatible cases.
-Where identified: Exp13 holdout and no-context-binding caveats.
-Source thread path: `docs/threads/experiment12to13_export.md`.
-Proposed fix: Add holdout seen-vs-unseen metric splits; report route-table all/seen/unseen; add context corruption sensitivity; add seed-level confidence intervals; run consolidation dose-response.
+Where identified: Exp13 holdout and no-context-binding caveats; Exp13.1 confidence-interval/effect-size and final-figure gaps.
+Source thread path: `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`.
+Proposed fix: Add holdout seen-vs-unseen metric splits where relevant; report seed-level confidence intervals and effect sizes; generate final paper figures from reproducible scripts; keep Exp13.1 aggregate CSVs tied to authoritative experiment paths.
+
+## Exp13.1 Lesion Diagnostic Failure
+
+Claim: The current Exp13.1 targeted critical-edge lesion diagnostic should not be used as positive route-critical-structure evidence.
+Evidence: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv` reports targeted lesion sensitivity about 0.0808 versus random count-matched lesion sensitivity about 0.5085.
+Caveat: This may indicate a diagnostic implementation issue, a flawed critical-edge definition, or a task setting where the chosen targeted lesion does not isolate route-critical structure.
+Source path: `docs/threads/experiment13_1_analysis_digest.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv`
+Proposed fix: Audit critical-edge selection, verify matched lesion controls, and rerun before using lesion sensitivity as manuscript evidence.
 
 ## No Overclaiming Biological Theory
 
@@ -47,18 +55,26 @@ Proposed fix: Keep Figure 7 as supplementary or preliminary unless a new applied
 
 ## Context Corruption Is Not Fully Realistic Yet
 
-Claim: Exp13 adversarial context corruption is useful failure evidence but not a graded stochastic robustness test.
-Evidence: `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv` shows the full model collapses under adversarial mixture once wrong-world evidence dominates.
-Caveat: Exp11/Exp12 context-noise artifacts are diagnostics only; stochastic/graded corruption remains required.
-Source path: `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv`; `docs/threads/experiment12to13_export.md`
+Claim: Exp13 adversarial context corruption and Exp13.1 wrong-world injection are useful failure evidence but not generic stochastic robustness tests.
+Evidence: `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv` shows the full model collapses under adversarial mixture once wrong-world evidence dominates. `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_context_corruption.csv` shows wrong-world injection collapse at high corruption.
+Caveat: Exp11/Exp12 context-noise artifacts are diagnostics only; Exp13.1 context dropout and bleed did not reduce composition accuracy.
+Source path: `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_context_corruption.csv`
 Proposed fix: Add stochastic context corruption and report top-1 world selection, margins, and behavior across corruption probability.
 
 ## Consolidation Claim Is Fragile
 
-Why it matters: Easy regimes do not require consolidation, and Exp13 validation reports only a small finite-pressure consolidation delta.
-Where identified: Exp10, Exp11, Exp12, and Exp13 thread analyses.
-Source thread path: `docs/threads/experiment5to10_export.md`; `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`.
-Proposed fix: Frame consolidation as a stability-plasticity bias; run dose-response under finite capacity before central use.
+Why it matters: Easy regimes do not require consolidation, Exp13 validation reports only a small finite-pressure consolidation delta, and Exp13.1 did not show an accuracy rescue from consolidation strength under constrained budgets.
+Where identified: Exp10, Exp11, Exp12, Exp13, and Exp13.1 thread analyses.
+Source thread path: `docs/threads/experiment5to10_export.md`; `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`.
+Proposed fix: Frame consolidation as a stability-plasticity bias; use Exp13.1 freeze-plasticity only as a caveated internal diagnostic unless stronger dose-response or robustness evidence is added.
+
+## Exp13.1 Reproducibility Metadata Gap
+
+Why it matters: The run passed validation, but manuscript-grade reproducibility benefits from explicit device/runtime metadata.
+Evidence: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/validation_report.md` reports PASS 27, WARN 0, FAIL 0, while `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/run_manifest.json` records configuration but not GPU/device/runtime metadata.
+Caveat: The experiment is table-based and CPU-oriented, so missing GPU usage is not a computational failure; it is a documentation gap.
+Source path: `docs/threads/experiment13_1_analysis_digest.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/validation_report.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/run_manifest.json`
+Proposed fix: Add device/runtime metadata to future run manifests and explicitly document CPU-only rationale.
 
 ## Non-Claims
 

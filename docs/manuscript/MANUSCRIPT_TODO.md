@@ -4,32 +4,33 @@ Purpose: Maintain a conservative work queue for turning this repository into a m
 
 ## Current Next Operational Priority
 
-Start Exp13.1 publication hardening as a new self-contained experiment under `experiments/`, then use its cleaned metrics and run interface to inform the external baseline suite.
+Use the completed Exp13.1 publication-hardening run to audit lesion diagnostics, add uncertainty/final figure scripts, and then proceed to the external baseline suite.
 
-Claim: Exp13.1 is the next local-agent scientific priority.
-Evidence: Exp13 remains promising but has holdout metric, no-context-binding, stochastic context-corruption, consolidation dose-response, and capacity-law caveats.
-Caveat: This priority does not imply Exp13.1 has been implemented or run.
-Source path: `docs/synthesis/NEXT_EXPERIMENTS.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/experiments/exp13_summary.md`
+Claim: Exp13.1 is completed as an internal publication-hardening run, but not as submission-ready evidence by itself.
+Evidence: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/validation_report.md` reports PASS 27, WARN 0, FAIL 0, and `docs/threads/experiment13_1_analysis_digest.md` identifies supported internal claims and unresolved caveats.
+Caveat: Targeted lesion evidence failed the expected pattern; external baselines, CIs/effect sizes, final figure scripts, and device/runtime metadata remain open.
+Source path: `docs/threads/experiment13_1_analysis_digest.md`; `docs/experiments/exp13_1_summary.md`; `experiments/experiment13_1_publication_hardening/README.md`
 
 ## P0 - Required Before Manuscript Submission
 
 | TODO | Reason | Related experiment | Source thread | Target output |
 |---|---|---|---|---|
-| Complete Exp13.1 publication-hardening audit. | Exp13 has metric and ablation caveats that reviewers can attack. | Exp13, planned Exp13.1 | `docs/threads/experiment12to13_export.md` | Future new directory under `experiments/`, for example `experiments/exp13_1_publication_hardening/`, plus planned `docs/experiments/exp13_1_summary.md` or equivalent. |
 | Add external baseline suite. | Current evidence is mostly internal ablations. | Exp8-Exp13 | `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md` | Baseline experiment directory under `experiments/`, summary CSVs, figures, and baseline evidence rows. |
 | Add seed-level confidence intervals and effect sizes. | Many claims cite mean summaries without manuscript-grade uncertainty. | Exp8-Exp13 | `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md` | Updated analysis summaries and figure scripts. |
-| Fix holdout metrics. | Exp13 route-table accuracy must split all, seen, and unseen primitives. | Exp13, planned Exp13.1 | `docs/threads/experiment12to13_export.md` | `route_table_accuracy_all`, `route_table_accuracy_seen`, `route_table_accuracy_unseen`, and split composition CSVs. |
-| Rename or rerun no-context-binding ablation. | Exp13 `no_context_binding` may be weak-binding/oracle-clean rather than a pure ablation. | Exp13, planned Exp13.1 | `docs/threads/experiment12to13_export.md` | Clean variant definitions and updated evidence rows. |
+| Fix holdout metrics if retaining Exp13 holdout claims. | Exp13 route-table accuracy must split all, seen, and unseen primitives. | Exp13 or successor | `docs/threads/experiment12to13_export.md` | `route_table_accuracy_all`, `route_table_accuracy_seen`, `route_table_accuracy_unseen`, and split composition CSVs. |
+| Keep no-context-binding wording aligned to Exp13.1. | Exp13 `no_context_binding` may be weak-binding/oracle-clean rather than a pure ablation; Exp13.1 now supplies the cleaner context-binding evidence. | Exp13, Exp13.1 | `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md` | Avoid using stale Exp13 no-context-binding as the main source for C2. |
 | Import novelty assessment as local artifact and source baseline requirement claims. | C12 is currently thread-derived because `Pasted text.txt` is missing locally. | Manuscript-level | `docs/threads/experiment12to13_export.md` | Local verification pending: future `docs/manuscript/NOVELTY_ASSESSMENT_IMPORTED.md` or `docs/repo_audit/source_imports/NOVELTY_ASSESSMENT.md`, then update C12 and baseline requirements. |
-| Create final paper figures from reproducible scripts. | Current figure plan cites generated plots, but final panels need controlled scripts. | Exp11-Exp13, planned Exp13.1 | `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md` | `docs/manuscript/FIGURE_PLAN.md` plus figure scripts and source-data manifests. |
-| Verify manuscript-critical run commands. | Repository readiness requires commands that a new researcher can actually run. | Exp11-Exp13, planned Exp13.1 | `docs/repo_audit/REPRODUCIBILITY_AUDIT.md` | Verified smoke/validation/full command log with runtime and expected outputs. |
+| Create final paper figures from reproducible scripts. | Current figure plan cites generated plots, but final panels need controlled scripts. | Exp11-Exp13.1 | `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md` | `docs/manuscript/FIGURE_PLAN.md` plus figure scripts and source-data manifests. |
+| Verify manuscript-critical run commands. | Repository readiness requires commands that a new researcher can actually run. | Exp11-Exp13.1 | `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `docs/threads/experiment13_1_analysis_digest.md` | Verified smoke/validation/full command log with runtime and expected outputs. |
+| Audit and rerun Exp13.1 lesion diagnostic before citing it. | Targeted critical-edge lesions were less damaging than random count-matched lesions in the completed Exp13.1 run. | Exp13.1 | `docs/threads/experiment13_1_analysis_digest.md` | Implementation audit, corrected critical-edge definition if needed, and rerun artifact under `experiments/experiment13_1_publication_hardening/`. |
+| Add Exp13.1 device/runtime metadata to future manifests. | The completed run is table-based and CPU-oriented, but the manifest lacks explicit device/runtime metadata. | Exp13.1 | `docs/threads/experiment13_1_analysis_digest.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/run_manifest.json` | Future run manifest with CPU/GPU rationale and runtime metadata. |
 
 ## P1 - Strongly Recommended
 
 | TODO | Reason | Related experiment | Source thread | Target output |
 |---|---|---|---|---|
-| Add stochastic context corruption. | Exp13 adversarial corruption is a hard threshold, not a graded noise model. | Exp13.1 | `docs/threads/experiment12to13_export.md` | Context corruption summary and plots. |
-| Run consolidation dose-response. | Consolidation is currently a preliminary stability-plasticity bias claim. | Exp13.1 | `docs/threads/experiment12to13_export.md` | Dose-response CSV, retention heatmaps, and caveated claim update. |
+| Add stochastic context corruption beyond wrong-world injection. | Exp13 adversarial corruption and Exp13.1 wrong-world injection are identity/selection tests, not generic graded-noise robustness. | Exp13.1 or successor | `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md` | Context corruption summary and plots with stochastic corruption probability. |
+| Refine consolidation analysis beyond accuracy rescue. | Exp13.1 did not show constrained-budget accuracy rescue from consolidation strength. | Exp13.1 or successor | `docs/threads/experiment13_1_analysis_digest.md` | Margin/robustness summaries or a caveated decision to keep consolidation supplementary. |
 | Fit capacity laws. | Exp13 shows observed degradation curves but no fitted capacity model. | Exp13.1 | `docs/threads/experiment12to13_export.md` | Capacity-law summaries and figure panel. |
 | Upgrade local-vs-global comparison. | The current Exp13 comparison is docs-only and aggregate-level. | Exp13.1 | `docs/experiments/exp13_local_vs_global_budget_comparison.md`; `docs/threads/experiment12to13_export.md` | Paired seed-level local-vs-global table with confidence intervals. |
 | Maintain artifact and evidence indexes as new outputs are created. | Manuscript claims must remain traceable to source paths. | All future runs | `docs/threads/experiment12to13_export.md` | Updated `docs/repo_audit/ARTIFACT_INDEX.csv`, summaries, and conflict log as new artifacts are created. |
@@ -58,3 +59,4 @@ Source path: `docs/synthesis/NEXT_EXPERIMENTS.md`; `docs/synthesis/PUBLICATION_R
 | Manuscript spine expansion. | Manuscript spine now includes title options, contribution, abstract skeleton, section architecture, figure storyboard, non-claims, and blockers. | `docs/manuscript/MANUSCRIPT_SPINE.md` |
 | Synthesis cleanup. | Synthesis docs now refer to experiment directories under `experiments/` and retain not-submission-ready language. | `docs/synthesis/PROJECT_STATUS.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/synthesis/NEXT_EXPERIMENTS.md` |
 | Path verifier workflow. | Documentation path verification is part of the regular workflow and CI path check. | `scripts/verify_doc_source_paths.py`; `.github/workflows/verify-doc-paths.yml` |
+| Exp13.1 publication-hardening run imported. | Full run artifacts were validated and imported into thread index, experiment summary, README completed-run log, claims, figure plan, limitations, TODOs, synthesis docs, source-data mirrors, conflict log, and import report. | `docs/threads/experiment13_1_analysis_digest.md`; `docs/experiments/exp13_1_summary.md`; `docs/repo_audit/EXP13_1_ANALYSIS_IMPORT_REPORT.md` |

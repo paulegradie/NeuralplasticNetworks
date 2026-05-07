@@ -168,7 +168,7 @@ powershell -ExecutionPolicy Bypass -File .\start_exp13_1_validate.ps1 -RunId exp
 By default, each run writes immutable artifacts under a generated run ID:
 
 ```text
-experiments/exp13_1_publication_hardening/
+experiments/experiment13_1_publication_hardening/
   runs/
     <run_id>.sqlite3
   analysis/
@@ -289,10 +289,12 @@ This experiment is table-based and currently CPU-oriented. It does not train neu
 
 ## 14. Completed runs and results
 
-No run has been executed as part of this implementation package.
-
-When you execute a run locally, add a row like:
-
 | Run ID | Profile | SQLite path | Analysis path | Validation | Notes |
 |---|---|---|---|---|---|
-| `<run_id>` | `standard` | `runs/<run_id>.sqlite3` | `analysis/<run_id>/` | PASS/WARN/FAIL | Summary of key metrics and caveats. |
+| `exp13_1_full_20260506_214756` | `full` | `experiments/experiment13_1_publication_hardening/runs/exp13_1_full_20260506_214756.sqlite3` | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/` | PASS 27, WARN 0, FAIL 0 | Full model solved clean composition across tested lengths; no-recurrence-at-eval kept route-table accuracy 1.0 but composition fell to about 0.0413 at route length 12; no-structural-plasticity fell to about 0.0307 composition; wrong-world injection collapsed composition at high corruption; local budget pressure was much more damaging than global budget pressure; targeted critical-edge lesions were less damaging than random count-matched lesions, so lesion evidence needs audit/rerun. |
+
+Run configuration notes: full profile, seeds 0-19, world count 32 for variant comparison, route lengths 1, 2, 4, 8, 12, and 16, budget world count 48, lesion world count 24, and context corruption levels 0.0, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, and 0.99. Source path: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/run_manifest.json`.
+
+Key analysis outputs: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_context_corruption.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_budget_consolidation.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_freeze_plasticity.csv`.
+
+Import status: analyzed in `docs/threads/experiment13_1_analysis_digest.md` and summarized in `docs/experiments/exp13_1_summary.md`. The run is internal-ablation evidence only; external baselines, seed-level uncertainty, final figure scripts, and a lesion diagnostic audit remain required before manuscript promotion.

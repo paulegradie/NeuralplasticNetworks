@@ -11,6 +11,7 @@ Import rule used in this pass: completed-result claims were imported only when t
 | `docs/threads/experiment6_export.md` | Exp4-Exp6 | Analyze Exp6 route-audit successor follow-up and correct overclaiming from Exp5. | yes, for Exp6 | no new implementation | yes, Exp4-Exp6 | yes | Records Exp6 as negative-but-informative and identifies stale local README wording. |
 | `docs/threads/experiment11_export` | Exp11-Exp12 | Analyze Exp11 context-separated memory and design/package Exp12. | yes, for Exp11; Exp12 validation only | yes, for Exp12 full design | yes, Exp11-Exp12 | yes | Exp12 validation was a smoke test, not final evidence. Filename has no `.md` suffix. |
 | `docs/threads/experiment12to13_export.md` | Exp11-Exp14 | Analyze Exp12 and Exp13, assess novelty, define Exp13.1 and Exp14 follow-ups, and plan repo consolidation. | yes, for Exp12 and Exp13 | yes, for Exp13.1 and Exp14 | yes, Exp11-Exp13 plus synthesis docs for Exp13.1/Exp14 | yes | Novelty assessment artifact named in thread is not present as a local file; external baseline requirement is therefore a thread-derived manuscript-readiness claim. |
+| `docs/threads/experiment13_1_analysis_digest.md` | Exp13.1 | Analyze completed publication-hardening full run and identify manuscript-safe claims, caveats, and failed diagnostics. | yes, for Exp13.1 full run | no | yes, Exp13.1 summary, README, registry, synthesis docs | yes, as conservative updates to existing claims | Targeted-lesion expected pattern failed; external baselines, CIs/effect sizes, GPU/device metadata, and focused rerun remain required. |
 | `docs/threads/THREAD_DIGEST_TEMPLATE.md` | none | Template for future thread digests. | no | yes, template only | no | no | Used as process reference only. |
 
 ## Import Notes
@@ -19,4 +20,4 @@ Import rule used in this pass: completed-result claims were imported only when t
 - Exp4 was imported as a historical traversal contrast, not a central manuscript claim.
 - Exp5 and Exp6 were imported mainly as caveated predecessors that motivate later diagnostics.
 - Exp7-Exp10 contribute mechanism-building and supplementary evidence.
-- Exp11-Exp13 provide the current candidate main-result spine, with Exp13.1 and external baselines marked as required follow-up rather than completed findings.
+- Exp11-Exp13 provide the current candidate main-result spine. Exp13.1 now adds completed publication-hardening evidence for recurrence, structural plasticity, context binding, local-budget damage, and freeze-plasticity diagnostics, while also marking lesion and baseline gaps as unresolved.

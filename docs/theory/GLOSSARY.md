@@ -247,7 +247,7 @@ Related docs: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/synthesis/PUBLICAT
 Definition: Associating route memories with a context or world signal during storage and retrieval.
 Plain-language interpretation: Tying the route to the context that makes it correct.
 Manuscript usage: Use as a mechanism description when the experiment uses `no_context_binding` or related ablations.
-Caveat: Exp13 `no_context_binding` may not be a clean pure ablation and needs Exp13.1 cleanup.
+Caveat: Exp13 `no_context_binding` may not be a clean pure ablation; use Exp13.1 as the cleaner context-binding evidence source where possible.
 Related docs: `docs/manuscript/MANUSCRIPT_TODO.md`; `experiments/experiment13_breaking_point/analysis/validation_report.md`
 
 ## Correct margin

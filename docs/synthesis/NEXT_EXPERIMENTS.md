@@ -2,22 +2,28 @@
 
 ## Repository-Readiness Context
 
-P0/P1 repository-readiness work is complete enough for Exp13.1 planning: active paths use `experiments/...`, the documentation path verifier is available, README/AGENTS are aligned, and baseline/reproducibility planning docs exist.
+P0/P1 repository-readiness work is complete enough for Exp13.1 follow-up and baseline work: active paths use `experiments/...`, the documentation path verifier is available, README/AGENTS are aligned, and baseline/reproducibility planning docs exist.
 
-Claim: The next operational step is scientific hardening, not another repository-structure migration.
-Evidence: P0/P1 remediation QA passed and the remaining blockers are Exp13.1, baselines, uncertainty reporting, final figures, and novelty import.
+Claim: The next operational step is Exp13.1 lesion/uncertainty follow-up and external baselines, not another repository-structure migration.
+Evidence: P0/P1 remediation QA passed, Exp13.1 full-run artifacts were imported, and the remaining blockers are lesion audit/rerun, baselines, uncertainty reporting, final figures, and novelty import.
 Caveat: This does not make the repository submission-ready.
-Source path: `docs/repo_audit/P0_REMEDIATION_QA.md`; `docs/repo_audit/P1_REMEDIATION_QA.md`; `docs/synthesis/PUBLICATION_READINESS.md`
+Source path: `docs/repo_audit/P0_REMEDIATION_QA.md`; `docs/repo_audit/P1_REMEDIATION_QA.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/threads/experiment13_1_analysis_digest.md`
 
 ## Experiment 13.1 - Publication Hardening
 
-Purpose: Correct and harden the main Exp13 boundary claims before manuscript submission.
+Purpose: Correct and harden the main Exp13 boundary claims before manuscript submission. A first full Exp13.1 run has completed and is imported; follow-up should focus on caveats exposed by that run.
 
-Design goals:
-- Keep Exp13 as historical output; create a new future Exp13.1 directory under `experiments/` if implemented.
-- Preserve the main boundary questions: finite capacity, local capacity, recurrence dissociation, context corruption, primitive holdout, and consolidation pressure.
-- Make the ablation definitions reviewer-proof.
-- Use the standardized run-interface target from `docs/repo_audit/REPRODUCIBILITY_AUDIT.md` from the beginning where practical.
+Completed run:
+- Directory: `experiments/experiment13_1_publication_hardening/`.
+- Run ID: `exp13_1_full_20260506_214756`.
+- Validation: PASS 27, WARN 0, FAIL 0.
+- Thread digest: `docs/threads/experiment13_1_analysis_digest.md`.
+
+Follow-up goals:
+- Audit targeted critical-edge lesion selection and rerun if lesion evidence is needed.
+- Add seed-level confidence intervals, effect sizes, and final figure scripts.
+- Add explicit device/runtime metadata to future manifests, with CPU-only rationale if applicable.
+- Preserve the main boundary questions: finite capacity, local capacity, recurrence dissociation, wrong-world context corruption, and consolidation pressure.
 
 Metric fixes:
 - Add `route_table_accuracy_all`.
@@ -28,20 +34,21 @@ Metric fixes:
 - Add seed-level confidence intervals and effect sizes.
 
 Stochastic context corruption:
-- Replace or supplement the hard adversarial threshold with stochastic corruption.
+- Exp13.1 wrong-world injection supports identity/selection sensitivity, while dropout/bleed did not reduce composition accuracy.
+- Replace or supplement hard adversarial/wrong-world thresholds with stochastic corruption if generic robustness is claimed.
 - Report top-1 world selection, world margin, wrong-world activation, and downstream composition.
 
 Consolidation dose-response:
-- Sweep graded consolidation strengths under finite sequential capacity.
-- Report old-vs-new retention heatmaps and summary curves.
+- Exp13.1 did not show constrained-budget accuracy rescue from consolidation strength.
+- Report margin/robustness effects if using consolidation centrally.
 - Treat results as stability-plasticity bias unless behavioral necessity is clear.
 
 Expected outputs:
-- New run database(s) under the Exp13.1 directory.
-- CSV summaries for capacity law, context corruption, holdout splits, and consolidation dose-response.
+- New rerun database(s), if needed, under the Exp13.1 directory.
+- CSV summaries for corrected lesion diagnostics, uncertainty/effect sizes, stochastic context corruption if run, and final figure source data.
 - Finalized figure panels for Figure 4, Figure 5, and Figure 6.
 
-Source thread path: `docs/threads/experiment12to13_export.md`.
+Source thread path: `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`.
 Operational source path: `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `docs/manuscript/MANUSCRIPT_TODO.md`.
 
 ## Baseline Suite
@@ -81,10 +88,10 @@ Source thread path: `docs/threads/experiment12to13_export.md`.
 
 ## Immediate Order Of Operations
 
-1. Exp13.1 design and smoke implementation under `experiments/`.
-2. Exp13.1 metric cleanup and uncertainty outputs.
+1. Exp13.1 lesion audit/rerun only if lesion evidence is needed.
+2. Exp13.1 uncertainty/effect-size outputs and final figure scripts.
 3. External baseline suite.
-4. Final reproducible manuscript figures.
+4. Stochastic context corruption follow-up if generic robustness is claimed.
 5. Applied visual-state bridge only after hardening and baselines.
 
 Claim: This order prioritizes reviewer-critical weaknesses before new applied scope.

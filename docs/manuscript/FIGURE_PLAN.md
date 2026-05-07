@@ -19,11 +19,11 @@ Caveat: Conceptual figure must not imply biological completeness or latent-world
 ## Figure 2 - Core Mechanism / Ablation Decomposition
 
 Purpose: Show that structural plasticity, world context, and recurrence play separable roles.
-Likely experiments: Exp11, Exp12, Exp13.
-Panels: full model; no structural plasticity; no world context; no recurrence; route-table vs composition dissociation.
+Likely experiments: Exp11, Exp12, Exp13, Exp13.1.
+Panels: full model; no structural plasticity; no world context/context binding; no recurrence; route-table vs composition dissociation.
 Claim supported: C1, C2, C3, C4.
-Source materials: `experiments/experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv`; `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`; `experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_route_table_composition_gap.png`; `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`.
-Source thread: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`.
+Source materials: `experiments/experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv`; `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`; `experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_route_table_composition_gap.png`; `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_recurrence_ablation.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_composition_accuracy.png`.
+Source thread: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`.
 Status: Strong internal evidence.
 Caveat: Internal ablations require external baselines before submission.
 
@@ -41,29 +41,29 @@ Caveat: Exp12 context-bleed/dropout curves were judged inconclusive; do not use 
 ## Figure 4 - Breaking Point Under Finite Structural Capacity
 
 Purpose: Show the observed finite-budget performance degradation curve.
-Likely experiment: Exp13.
+Likely experiment: Exp13 and Exp13.1.
 Panels: global budget curve; local budget curve; route-table/composition divergence; local damage effect on long-route execution.
 Claim supported: C6, C7.
-Source materials: `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv`; `docs/experiments/exp13_local_vs_global_budget_comparison.md`; `experiments/experiment13_breaking_point/analysis/plots/exp13_budget_breaking_curve_full_vs_consolidation.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_capacity_accuracy_route_len_12.png`.
-Source thread: `docs/threads/experiment12to13_export.md`.
-Status: C6 promising; C7 preliminary.
-Caveat: Docs-only local-vs-global comparison exists; formal paired seed-level comparison and capacity-law fitting remain pending.
+Source materials: `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv`; `docs/experiments/exp13_local_vs_global_budget_comparison.md`; `experiments/experiment13_breaking_point/analysis/plots/exp13_budget_breaking_curve_full_vs_consolidation.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_capacity_accuracy_route_len_12.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_budget_consolidation.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_budget_consolidation.png`.
+Source thread: `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`.
+Status: C6 promising; C7 promising internally.
+Caveat: Seed-level confidence intervals, final figure scripts, and capacity-law fitting remain pending.
 
 ## Figure 5 - Consolidation as Stability-Plasticity Bias
 
 Purpose: Reframe consolidation as a retention bias under pressure rather than an essential accuracy mechanism.
-Likely experiments: Exp12, Exp13, planned Exp13.1.
-Panels: consolidation pressure margin; old-vs-new retention heatmaps; TODO dose-response panel.
+Likely experiments: Exp12, Exp13, Exp13.1.
+Panels: consolidation pressure margin; old-vs-new retention heatmaps; Exp13.1 constrained-budget consolidation accuracy panel.
 Claim supported: C8.
-Source materials: `experiments/experiment12_capacity_generalization/analysis/exp12/consolidation_pressure_summary.csv`; `experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_consolidation_pressure_world_margin.png`; `experiments/experiment13_breaking_point/analysis/validation_report.md`; `experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_full_context_separated_memory_budget_0.5.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_consolidation_budget_0.5.png`.
-Source thread: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`.
+Source materials: `experiments/experiment12_capacity_generalization/analysis/exp12/consolidation_pressure_summary.csv`; `experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_consolidation_pressure_world_margin.png`; `experiments/experiment13_breaking_point/analysis/validation_report.md`; `experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_full_context_separated_memory_budget_0.5.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_consolidation_budget_0.5.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_budget_consolidation.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_freeze_plasticity.csv`.
+Source thread: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_1_analysis_digest.md`.
 Status: Preliminary.
-Caveat: Exp13 validation reports only a small consolidation delta; dose-response is P0 follow-up.
+Caveat: Exp13.1 did not show an accuracy rescue from consolidation strength; keep as a caveated stability-plasticity bias.
 
 ## Figure 6 - Held-Out Composition Boundary
 
 Purpose: Separate composition over stored primitives from unseen primitive-transition inference.
-Likely experiments: Exp12, Exp13, planned Exp13.1.
+Likely experiments: Exp12 and Exp13; Exp13.1 successor only if holdout splits are reintroduced.
 Panels: seen-primitives composition; unseen primitive failure; route-table accuracy split TODO.
 Claim supported: C9.
 Source materials: `experiments/experiment12_capacity_generalization/analysis/exp12/heldout_generalization_summary.csv`; `experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv`; `experiments/experiment13_breaking_point/analysis/plots/exp13_holdout_compositions_from_seen_primitives.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_holdout_one_step_unseen_primitives.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_holdout_routes_requiring_unseen_primitives.png`.
@@ -73,14 +73,14 @@ Caveat: Do not describe as broad abstract rule generalization.
 
 ## Figure 7 - Context Corruption Failure Boundary
 
-Purpose: Show adversarial context corruption as the main local failure evidence for context selection.
-Likely experiment: Exp13.
-Panels: adversarial mixture composition; top-1 world accuracy or world margin across mixture level; caveat panel distinguishing diagnostic Exp11/Exp12 noise plots.
+Purpose: Show adversarial/wrong-world context corruption as the main local failure evidence for context selection.
+Likely experiment: Exp13 and Exp13.1.
+Panels: adversarial or wrong-world mixture composition; top-1 world accuracy or world margin across mixture level; caveat panel distinguishing diagnostic bleed/dropout noise plots.
 Claim supported: C10.
-Source materials: `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv`; `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_composition.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_top1_world.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_world_margin.png`.
-Source thread: `docs/threads/experiment12to13_export.md`; `docs/threads/experiment11_export`.
+Source materials: `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv`; `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_composition.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_top1_world.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_world_margin.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_context_corruption.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_context_confusion.png`.
+Source thread: `docs/threads/experiment12to13_export.md`; `docs/threads/experiment11_export`; `docs/threads/experiment13_1_analysis_digest.md`.
 Status: Promising.
-Caveat: Exp13 adversarial corruption is threshold-like; Exp11/Exp12 context bleed/dropout artifacts are supplementary diagnostics only.
+Caveat: Exp13 adversarial corruption and Exp13.1 wrong-world injection are identity/selection tests; Exp13.1 dropout/bleed did not reduce composition accuracy.
 
 ## Figure 8 - Continuous / Perceptual Bridge
 
@@ -106,6 +106,7 @@ Caveat: Not a learned perceptual system.
 | Exp11 context-noise plots | `experiments/experiment11_context_memory/analysis/exp11/exp11_context_bleed_world_margin.png`; `experiments/experiment11_context_memory/analysis/exp11/exp11_context_dropout_wrong_world_activation.png` | `docs/threads/experiment11_export` | Supplementary diagnostics only, not C10 failure evidence | No formal slope/confidence interval yet. |
 | Exp12 context-noise plots | `experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_context_bleed_composition.png`; `experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_context_dropout_composition.png` | `docs/threads/experiment12to13_export.md` | Supplementary diagnostics only, not C10 failure evidence | Thread judged curves too flat/inconclusive. |
 | Exp13 context corruption plots | `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_composition.png`; `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_world_margin.png` | `docs/threads/experiment12to13_export.md` | C10 context selection failure under adversarial evidence | Hard threshold, not stochastic robustness. |
+| Exp13.1 publication-hardening plots | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_recurrence_ablation.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_budget_consolidation.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_context_confusion.png`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/plots/exp13_1_lesion_sensitivity.png` | `docs/threads/experiment13_1_analysis_digest.md` | C1-C4, C7, C8, C10, plus negative lesion diagnostic | Generated analysis plots only; targeted lesion plot should not be used as positive mechanism evidence. |
 
 # Pre-Import Figure Sketch And Artifact Inventory
 

@@ -24,7 +24,8 @@ Issue: Exp13 `no_context_binding` may not be a pure no-context-binding ablation;
 Thread source: `docs/threads/experiment12to13_export.md`.
 Local artifact status: Exp13 run artifacts exist, but the ablation-definition caveat is not resolved by the summary CSVs alone.
 Risk: A reviewer could reject no-context-binding claims as mislabeled.
-Recommended resolution: Rename the current condition conservatively and rerun a true no-context-binding condition in Exp13.1.
+Recommended resolution: Use Exp13.1 as the cleaner context-binding evidence source and avoid using stale Exp13 no-context-binding as the main support for C2.
+Resolution status: partially resolved by Exp13.1 import; Exp13 historical caveat remains.
 
 ## Conflict / uncertainty 4
 
@@ -32,7 +33,8 @@ Issue: Exp13 holdout route-table metrics appear to mix all transitions rather th
 Thread source: `docs/threads/experiment12to13_export.md`.
 Local artifact status: `experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv` exists, but split route-table metrics are not present.
 Risk: The manuscript could overstate generalization or hide unseen-transition failure.
-Recommended resolution: Add `route_table_accuracy_all`, `route_table_accuracy_seen`, `route_table_accuracy_unseen`, `composition_accuracy_seen_routes`, and `composition_accuracy_unseen_required_routes` in Exp13.1.
+Recommended resolution: Add `route_table_accuracy_all`, `route_table_accuracy_seen`, `route_table_accuracy_unseen`, `composition_accuracy_seen_routes`, and `composition_accuracy_unseen_required_routes` in a successor or targeted rerun if Exp13 holdout claims remain central.
+Resolution status: unresolved; Exp13.1 did not import holdout split artifacts.
 
 ## Conflict / uncertainty 5
 
@@ -49,7 +51,8 @@ Issue: Exp13 consolidation interpretation is promising in thread heatmap discuss
 Thread source: `docs/threads/experiment12to13_export.md`.
 Local artifact status: `experiments/experiment13_breaking_point/analysis/validation_report.md` reports `no_consolidation=0.7661`, `strong=0.7676`, `delta=0.0016`; retention heatmaps exist.
 Risk: Manuscript could overstate consolidation as behaviorally necessary.
-Recommended resolution: Frame consolidation as preliminary stability-plasticity bias and run dose-response in Exp13.1.
+Recommended resolution: Frame consolidation as preliminary stability-plasticity bias; Exp13.1 supports the conservative wording because it did not show an accuracy rescue from consolidation strength.
+Resolution status: partially resolved in active claim map; consolidation remains caveated and supplementary.
 
 ## Conflict / uncertainty 7
 
@@ -82,5 +85,23 @@ Issue: Local-vs-global capacity damage in Exp13 is compelling but lacks a dedica
 Thread source: `docs/threads/experiment12to13_export.md`.
 Local artifact status: `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`, `experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv`, and `docs/experiments/exp13_local_vs_global_budget_comparison.md` exist.
 Risk: The local-budget claim could still be too strong without a formal paired seed-level comparison and confidence intervals.
-Recommended resolution: Use the docs-only comparison for transparency, keep C7 preliminary, and generate a formal paired comparison in Exp13.1.
-Resolution status: partially resolved. The aggregate comparison artifact was added, but paired seed-level analysis remains deferred.
+Recommended resolution: Use the docs-only Exp13 comparison for transparency and the Exp13.1 aggregate budget-consolidation CSV as the stronger internal source; still add uncertainty/final figure scripts before submission.
+Resolution status: partially resolved. C7 is now promising internal evidence, but seed-level intervals/effect sizes remain deferred.
+
+## Conflict / uncertainty 11
+
+Issue: Exp13.1 targeted critical-edge lesion diagnostic failed the expected pattern; targeted lesion sensitivity was lower than random count-matched lesion sensitivity.
+Thread source: `docs/threads/experiment13_1_analysis_digest.md`.
+Local artifact status: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv` exists and reports targeted lesion sensitivity about 0.0808 versus random count-matched lesion sensitivity about 0.5085.
+Risk: A manuscript could overstate route-critical structural evidence if the lesion plot is used as positive support.
+Recommended resolution: Audit critical-edge selection and matched lesion controls; rerun before using lesion sensitivity as mechanism evidence.
+Resolution status: active caveat. The claim map and figure plan now mark lesion evidence as negative/diagnostic only.
+
+## Conflict / uncertainty 12
+
+Issue: Exp13.1 validation passed, but the run manifest lacks explicit GPU/device/runtime metadata.
+Thread source: `docs/threads/experiment13_1_analysis_digest.md`.
+Local artifact status: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/run_manifest.json` exists; `experiments/experiment13_1_publication_hardening/README.md` documents the implementation as table-based and CPU-oriented.
+Risk: Reproducibility documentation is weaker than manuscript-grade expectations, even though GPU acceleration is not technically expected for this harness.
+Recommended resolution: Add device/runtime metadata to future manifests and keep CPU-only rationale in the README.
+Resolution status: recorded as TODO and limitation.
