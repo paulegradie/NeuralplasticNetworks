@@ -107,9 +107,9 @@ Result: PASS.
 Summary:
 
 - Files scanned: 114
-- OK paths: 5,592
+- OK paths: 5,601
 - Missing active paths: 0
 - Skipped planned/future paths: 13
-- Skipped local-verification-pending paths: 45
+- Skipped local-verification-pending paths: 46
 
 Remaining local-verification-pending paths are pre-existing or explicitly marked, including `Pasted text.txt` for prior-art/novelty import. No requested Exp15 local artifact path remains missing.
