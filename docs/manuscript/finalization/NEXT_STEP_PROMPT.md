@@ -30,9 +30,7 @@ Important controlling docs to inspect first:
 
 Primary deliverable:
 
-Create the planned self-contained experiment directory:
-
-`experiments/experiment15_neural_baseline_comparator/`
+Create planned directory `experiments/experiment15_neural_baseline_comparator/`.
 
 Do not run the full experiment. Implement it, run only minimal syntax/import checks or a tiny smoke path if safe, and document exactly how Paul should run validation and full profiles locally.
 
