@@ -1,0 +1,96 @@
+{
+  "analysis_dir": "analysis\\exp15_full_20260508_092811",
+  "command": "recovered after Exp15 completed all units but failed during final SQLite manifest write",
+  "completed_route_lengths": [
+    4,
+    8,
+    12
+  ],
+  "completed_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "completed_variants": [
+    "neural_gru_endpoint_context",
+    "neural_gru_endpoint_no_context",
+    "neural_gru_rollout_context",
+    "neural_gru_rollout_no_context",
+    "neural_transformer_sequence_context",
+    "neural_transition_mlp_context",
+    "neural_transition_mlp_no_context",
+    "neural_transition_mlp_replay_context",
+    "neural_transition_mlp_world_heads_context"
+  ],
+  "completed_world_counts": [
+    2,
+    8,
+    16,
+    32
+  ],
+  "cpu_count": 12,
+  "cuda_version": "12.1",
+  "duration_seconds": 17096.851,
+  "end_time_utc": "2026-05-08T14:13:08.642486+00:00",
+  "experiment": "exp15_neural_baseline_comparator",
+  "git_branch": "main",
+  "git_commit": "4120a3dce763f75081ee873f1565171dab4e4544",
+  "gpu_available": true,
+  "gpu_name": "NVIDIA TITAN X (Pascal)",
+  "metric_rows": 5400,
+  "numpy_version": "2.4.3",
+  "pandas_version": "2.3.2",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "processor": "Intel64 Family 6 Model 63 Stepping 2, GenuineIntel",
+  "profile": "full",
+  "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "ram_gb": 31.914,
+  "recovered_after_failed_sqlite_tail": true,
+  "recovery_note": "Training/evaluation completed. CSV artifacts were preserved. Manifest was reconstructed without rerunning.",
+  "requested_route_lengths": [
+    4,
+    8,
+    12
+  ],
+  "requested_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "requested_variants": [
+    "neural_gru_endpoint_context",
+    "neural_gru_endpoint_no_context",
+    "neural_gru_rollout_context",
+    "neural_gru_rollout_no_context",
+    "neural_transformer_sequence_context",
+    "neural_transition_mlp_context",
+    "neural_transition_mlp_no_context",
+    "neural_transition_mlp_replay_context",
+    "neural_transition_mlp_world_heads_context"
+  ],
+  "requested_world_counts": [
+    2,
+    8,
+    16,
+    32
+  ],
+  "run_id": "exp15_full_20260508_092811",
+  "runtime_rows": 1080,
+  "schema_version": "exp15_neural_metrics_v1",
+  "start_time_utc": "2026-05-08T09:28:11.790217+00:00",
+  "torch_version": "2.5.1+cu121"
+}

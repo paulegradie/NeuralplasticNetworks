@@ -1,0 +1,219 @@
+{
+  "counts": {
+    "FAIL": 0,
+    "PASS": 42,
+    "WARN": 0
+  },
+  "results": [
+    {
+      "level": "PASS",
+      "message": "Found README.md.",
+      "name": "source_file:README.md"
+    },
+    {
+      "level": "PASS",
+      "message": "Found run_experiment15.py.",
+      "name": "source_file:run_experiment15.py"
+    },
+    {
+      "level": "PASS",
+      "message": "Found analyze_experiment15.py.",
+      "name": "source_file:analyze_experiment15.py"
+    },
+    {
+      "level": "PASS",
+      "message": "Found validate_experiment15.py.",
+      "name": "source_file:validate_experiment15.py"
+    },
+    {
+      "level": "PASS",
+      "message": "Found start_exp15_validation.ps1.",
+      "name": "source_file:start_exp15_validation.ps1"
+    },
+    {
+      "level": "PASS",
+      "message": "Found start_exp15_full.ps1.",
+      "name": "source_file:start_exp15_full.ps1"
+    },
+    {
+      "level": "PASS",
+      "message": "Found run_manifest.json.",
+      "name": "artifact:run_manifest.json"
+    },
+    {
+      "level": "PASS",
+      "message": "Found exp15_config.json.",
+      "name": "artifact:exp15_config.json"
+    },
+    {
+      "level": "PASS",
+      "message": "Found progress.jsonl.",
+      "name": "artifact:progress.jsonl"
+    },
+    {
+      "level": "PASS",
+      "message": "Found exp15_seed_metrics.csv.",
+      "name": "artifact:exp15_seed_metrics.csv"
+    },
+    {
+      "level": "PASS",
+      "message": "Found metrics.csv.",
+      "name": "artifact:metrics.csv"
+    },
+    {
+      "level": "PASS",
+      "message": "Found exp15_summary.csv.",
+      "name": "artifact:exp15_summary.csv"
+    },
+    {
+      "level": "PASS",
+      "message": "Found exp15_effect_sizes.csv.",
+      "name": "artifact:exp15_effect_sizes.csv"
+    },
+    {
+      "level": "PASS",
+      "message": "Found exp15_model_runtime.csv.",
+      "name": "artifact:exp15_model_runtime.csv"
+    },
+    {
+      "level": "PASS",
+      "message": "Found exp15_report.md.",
+      "name": "artifact:exp15_report.md"
+    },
+    {
+      "level": "PASS",
+      "message": "Found experiment_report.md.",
+      "name": "artifact:experiment_report.md"
+    },
+    {
+      "level": "PASS",
+      "message": "Found plots/exp15_seen_vs_suffix_composition.png.",
+      "name": "artifact:plots/exp15_seen_vs_suffix_composition.png"
+    },
+    {
+      "level": "PASS",
+      "message": "Found plots/exp15_context_conflict_accuracy.png.",
+      "name": "artifact:plots/exp15_context_conflict_accuracy.png"
+    },
+    {
+      "level": "PASS",
+      "message": "Found plots/exp15_retention_after_sequential_worlds.png.",
+      "name": "artifact:plots/exp15_retention_after_sequential_worlds.png"
+    },
+    {
+      "level": "PASS",
+      "message": "Found plots/exp15_route_length_scaling.png.",
+      "name": "artifact:plots/exp15_route_length_scaling.png"
+    },
+    {
+      "level": "PASS",
+      "message": "Found plots/exp15_world_count_scaling.png.",
+      "name": "artifact:plots/exp15_world_count_scaling.png"
+    },
+    {
+      "level": "PASS",
+      "message": "Runtime/hardware manifest fields are present.",
+      "name": "manifest:required_fields"
+    },
+    {
+      "level": "PASS",
+      "message": "All required variants are present in seed metrics.",
+      "name": "metrics:required_variants"
+    },
+    {
+      "level": "PASS",
+      "message": "All required metric names are present.",
+      "name": "metrics:required_metric_names"
+    },
+    {
+      "level": "PASS",
+      "message": "All metric values are finite and within [0, 1].",
+      "name": "metrics:valid_range"
+    },
+    {
+      "level": "PASS",
+      "message": "All requested seeds completed and are present in metrics.",
+      "name": "seeds:all_requested_completed"
+    },
+    {
+      "level": "PASS",
+      "message": "Split metadata column split_id exists and is populated.",
+      "name": "split_metadata:split_id"
+    },
+    {
+      "level": "PASS",
+      "message": "Split metadata column train_eval_split_metadata_present exists and is populated.",
+      "name": "split_metadata:train_eval_split_metadata_present"
+    },
+    {
+      "level": "PASS",
+      "message": "Split metadata column suffix_holdout_protocol exists and is populated.",
+      "name": "split_metadata:suffix_holdout_protocol"
+    },
+    {
+      "level": "PASS",
+      "message": "Seen full-route and suffix probes are explicitly distinguishable.",
+      "name": "probe_type:seen_suffix_distinguishable"
+    },
+    {
+      "level": "PASS",
+      "message": "Context and no-context variants are distinguishable in config columns.",
+      "name": "config:context_vs_no_context"
+    },
+    {
+      "level": "PASS",
+      "message": "replay_enabled explicitly records true for at least one variant.",
+      "name": "config:replay_recorded"
+    },
+    {
+      "level": "PASS",
+      "message": "parameter_isolated explicitly records true for at least one variant.",
+      "name": "config:parameter_isolation_recorded"
+    },
+    {
+      "level": "PASS",
+      "message": "Summary contains 540 rows.",
+      "name": "summary:nonempty"
+    },
+    {
+      "level": "PASS",
+      "message": "Summary contains mean/sd/sem/ci95/n_seeds columns.",
+      "name": "summary:statistical_columns"
+    },
+    {
+      "level": "PASS",
+      "message": "Runtime table contains 1080 rows.",
+      "name": "runtime:nonempty"
+    },
+    {
+      "level": "PASS",
+      "message": "Runtime column training_seconds exists.",
+      "name": "runtime:training_seconds"
+    },
+    {
+      "level": "PASS",
+      "message": "Runtime column evaluation_seconds exists.",
+      "name": "runtime:evaluation_seconds"
+    },
+    {
+      "level": "PASS",
+      "message": "Runtime column runtime_seconds exists.",
+      "name": "runtime:runtime_seconds"
+    },
+    {
+      "level": "PASS",
+      "message": "Runtime column device exists.",
+      "name": "runtime:device"
+    },
+    {
+      "level": "PASS",
+      "message": "Config documents suffix holdout protocol.",
+      "name": "config:suffix_protocol_documented"
+    },
+    {
+      "level": "PASS",
+      "message": "Optional neural key-value baseline omission is explicitly recorded.",
+      "name": "config:optional_kv_decision_recorded"
+    }
+  ]
+}
