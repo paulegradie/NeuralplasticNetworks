@@ -20,7 +20,10 @@ Legend:
 - [x] Add finalization checklist.
 - [x] Replace the old Exp15 implementation prompt with a post-Exp15 hardening prompt.
 - [x] Update next-step prompt for V2 manuscript capture and post-Exp15 finalization hardening.
-- [ ] Link finalization folder from `docs/README.md` or manuscript index if desired.
+- [x] Update next-step prompt for Analysis Pass 15A: retained-claim selection and statistical/source-data hardening.
+- [x] Link finalization folder from `docs/README.md`.
+- [x] Update `docs/manuscript/SOURCE_OF_TRUTH.md` for post-Exp15/post-V2 document authority.
+- [x] Update `docs/manuscript/finalization/README.md` for current finalization posture.
 
 ---
 
@@ -138,7 +141,7 @@ Legend:
 - [ ] Generate final Figure 4 finite-budget/local-vs-global script/source data, if retained.
 - [ ] Generate final Figure 5 Exp14 symbolic context-selection script/source data, if retained.
 - [x] Decide Exp15 placement for V2: compact main-text Table 4, with supplement relocation left as a later venue/human decision.
-- [x] Generate source-data-backed Exp15 neural comparator table/figure, if retained.
+- [x] Generate source-data-backed Exp15 neural comparator table, if retained.
 - [x] Add `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`, if Exp15 Table 4 is retained.
 - [x] Add `docs/manuscript/tables/table_04_exp15_neural_comparator.md`, if Exp15 Table 4 is retained.
 - [ ] Add source-data files for every final panel/table.
@@ -177,7 +180,7 @@ Legend:
 - [x] Document Exp15 runtime/hardware metadata and reconstructed-manifest caveat.
 - [ ] Add `LICENSE` after human license choice.
 - [ ] Add `CITATION.cff`.
-- [ ] Update README current-status section after Exp13.2/Exp14/Exp15 state is final.
+- [~] Update README/current-status indexes after Exp13.2/Exp14/Exp15/V2 state is final. `docs/README.md` and finalization/source-of-truth indexes are aligned; root README status still needs separate review if desired.
 - [ ] Add final reproducibility instructions.
 - [ ] Decide whether to tag a release.
 - [ ] Decide whether to archive on Zenodo after preprint/manuscript stabilization.
