@@ -1,12 +1,14 @@
 # Manuscript Finalization Plan
 
-Purpose: convert the current limitation/threat register into a practical post-Exp15 manuscript-finalization plan.
+Purpose: convert the current limitation/threat register into a practical post-Exp15/post-15A manuscript-finalization plan.
 
 Controlling inputs:
 
-- `docs/manuscript/draft/MANUSCRIPT_V1.md`
+- `docs/manuscript/draft/MANUSCRIPT_V2.md`
 - `docs/manuscript/LIMITATIONS_AND_THREATS.md`
 - `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`
+- `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`
+- `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`
 - `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
 - `docs/manuscript/BASELINE_REQUIREMENTS.md`
 - `docs/experiments/exp13_2_summary.md`
@@ -22,19 +24,26 @@ Do not try to solve every limitation before submission. Split the remaining work
 |---|---|---|
 | A. Claim and manuscript hygiene | Prevent overclaiming and keep the manuscript scoped as a controlled symbolic/mechanistic benchmark. | Yes |
 | B. Metric/statistical cleanup | Ensure every central claim has clean seed-level uncertainty, effect-size, source-data, and figure provenance. | Yes |
-| C. Exp15 neural comparator integration | Integrate the completed minimal neural comparator without overclaiming it as exhaustive neural benchmarking. | Yes for manuscript posture; broader neural experiments remain venue-dependent. |
+| C. Baseline/prior-art positioning | Keep Exp15 minimal neural comparator evidence in scope while completing citation/prior-art hygiene. | Yes |
 | D. Optional boundary experiments | Address lesion, stochastic robustness, consolidation, applied bridge, or memory-augmented neural baselines only if those claims are elevated. | No |
 
-Recommended immediate next action: **post-Exp15 manuscript hardening and final figure/table planning**.
+Recommended immediate next action: **post-15A citation/prior-art hardening and human review of generated Figures 1-5 and Tables 1-4**.
 
 The manuscript should continue to avoid claims of solved continual learning, broad neural-network superiority, raw sensory latent-world discovery, end-to-end perception, broad biological proof, broad abstract rule induction, or unseen primitive inference.
 
-## 1. Baseline Coverage
+## 1. Retained Claim Posture After Analysis Pass 15A
+
+Claim -> Analysis Pass 15A has completed the retained-claim decision and source-CSV mapping, but it has not made the statistical package final.
+Evidence -> `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md` records the retained main scientific spine as C1, C2, C3, C4, C5, C6, and C13; C12 as a discussion/table baseline claim; C7, C8, C10, and C11 as boundary or supplement only; and C9, Exp13.1 positive lesion evidence, Exp15 replay collapse, broad neural-superiority, raw latent-world discovery, and biological validation as out-of-main/non-claims.
+Caveat -> Candidate Table 3 and generated Figures 1-5 still need human review of grouping, captions, caveats, and main-vs-supplement placement.
+Source path -> `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/manuscript/tables/table_03_statistical_summary.md`.
+
+## 2. Baseline Coverage
 
 Claim -> Baseline coverage is no longer absent, but remains incomplete for broad ML-comparison or submission-readiness claims.
 Evidence -> Exp13.2 provides symbolic/algorithmic baselines. Exp15 provides a completed minimal neural comparator with validation PASS, 10 seeds, 9 variants, 5,400 seed metric rows, and 1,080 runtime rows.
-Caveat -> Exp15 is fixed-profile and non-exhaustive, omits memory-augmented/key-value neural baselines, and includes replay/provenance caveats.
-Source path -> `docs/threads/experiment15_analysis_digest.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`.
+Caveat -> Exp15 is fixed-profile and non-exhaustive, omits memory-augmented/key-value neural baselines, and includes replay/provenance caveats. Analysis Pass 15A keeps C12 as a discussion/table baseline claim rather than a broad readiness claim.
+Source path -> `docs/threads/experiment15_analysis_digest.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`.
 
 Observed Exp15 consequences:
 
@@ -47,11 +56,11 @@ Observed Exp15 consequences:
 
 Required next decisions:
 
-- Decide whether Exp15 should be a compact main-text baseline table or a supplementary neural comparator table/figure.
+- Decide whether Exp15 remains a compact main-text baseline table or moves to supplement for the target venue.
 - Decide whether a memory-augmented/key-value neural baseline is required for the target venue.
 - Keep broad CIRM-over-neural-model claims out of the manuscript.
 
-## 2. Symbolic Benchmark Limitation
+## 3. Symbolic Benchmark Limitation
 
 Claim -> The benchmark remains synthetic and symbolic.
 Evidence -> Exp11-Exp15 use symbolic nodes, modes, worlds, routes, contexts, or transition cues.
@@ -64,33 +73,33 @@ Safe language:
 
 No new experiment is required unless the manuscript attempts to make applied or perceptual claims.
 
-## 3. Oracle Context And Symbolic Context Selection
+## 4. Oracle Context And Symbolic Context Selection
 
 Claim -> Exp14 partially reduces the oracle-world-label limitation by selecting symbolic context from transition cues.
 Evidence -> Exp14 validation and summary artifacts support symbolic transition-cue context selection; Exp13.2 oracle context-gated lookup remains a clean supplied-context upper bound.
 Caveat -> Exp14 is not raw sensory latent-world discovery, and oracle context gating should not be described as a defeated competitor.
-Source path -> `docs/threads/experiment14_analysis_digest.md`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`.
+Source path -> `docs/threads/experiment14_analysis_digest.md`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`.
 
 Required asset work:
 
-- Decide main-text vs supplement placement for Exp14.
-- Create final source-data-backed Exp14 figure/table if retained.
+- Human-review whether Exp14 remains main-narrow Figure 5 or moves to supplement.
 - Caption it as symbolic transition-cue context selection.
+- Preserve the oracle-context-gated table as an upper-bound caveat.
 
-## 4. Metric And Statistical Hardening
+## 5. Metric And Statistical Hardening
 
 Claim -> Central claims still need final manuscript-grade statistics and source-data-backed figures/tables.
-Evidence -> Current docs have candidate assets and many generated analysis summaries, but not all retained claims have final figure scripts, reviewed effect-size groupings, or source-data manifests.
+Evidence -> Current docs have candidate assets and many generated analysis summaries, but not all retained claims have final reviewed effect-size groupings or approved source-data manifests/captions.
 Caveat -> Candidate analysis plots are not final manuscript figures.
-Source path -> `docs/manuscript/FIGURE_PLAN.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`.
+Source path -> `docs/manuscript/FIGURE_PLAN.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`.
 
 Required outputs:
 
-- `docs/source_data/SOURCE_DATA_MANIFEST.csv` updated for every final panel/table.
-- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` updated.
+- Human-reviewed grouping for retained-claim CIs/effect sizes.
+- Human-reviewed Figures 1-5 and Tables 1-4 captions.
+- `docs/source_data/SOURCE_DATA_MANIFEST.csv` synchronized with final panel/table decisions.
+- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` synchronized with retained claims.
 - `docs/manuscript/tables/table_03_statistical_summary.md` reviewed and aligned.
-- Final figure/table scripts or documented generation path.
-- Final source-data CSVs for retained panels.
 
 Acceptance criteria for every retained central claim:
 
@@ -104,7 +113,7 @@ Acceptance criteria for every retained central claim:
 
 C9 must stay out of the main claim set unless seen/unseen/all route-table and composition split metrics are cleaned.
 
-## 5. Known Retained Scope Boundaries
+## 6. Known Retained Scope Boundaries
 
 Keep these as explicit limitations unless new evidence is added:
 
@@ -118,7 +127,7 @@ Keep these as explicit limitations unless new evidence is added:
 | Exp15 replay variant | Audit before citing as scientific evidence about replay. |
 | Exp15 neural scope | Minimal fixed-profile comparator, not architecture search. |
 
-## 6. Reproducibility And Provenance
+## 7. Reproducibility And Provenance
 
 Claim -> Exp15 includes runtime/hardware metadata, but has a manifest/SQLite provenance caveat.
 Evidence -> `run_manifest.json` records runtime/hardware fields and `recovered_after_failed_sqlite_tail: true`; local SQLite inspection found an empty `run_manifest` table.
@@ -149,7 +158,7 @@ Future manifests should preserve explicit runtime/hardware metadata:
 }
 ```
 
-## 7. License, Citation, And Release Metadata
+## 8. License, Citation, And Release Metadata
 
 Before public release or manuscript submission:
 
@@ -163,21 +172,23 @@ License selection must remain a human decision.
 
 ## Recommended Work Order
 
-1. Decide retained post-Exp15 main and supplementary claims.
-2. Decide whether Exp15 is a compact main-text baseline table or supplementary neural comparator figure/table.
-3. Run manuscript statistical hardening.
-4. Generate final figure/table scripts and source-data manifests.
-5. Import prior-art/novelty sources and verify related-work citations.
-6. Add runtime metadata standards, license, and citation metadata.
-7. Revisit whether optional memory-augmented neural baseline or Exp16-Exp20 work is still necessary.
+1. Verify V1/V2 citation placeholders against real BibTeX metadata.
+2. Import, recreate, or explicitly retire the missing novelty/prior-art source artifact.
+3. Human-review generated Figures 1-5 and Tables 1-4 for caption wording, caveats, and main-vs-supplement placement.
+4. Finalize retained-claim CI/effect-size grouping for Table 3.
+5. Decide whether Exp15 remains a compact main-text baseline table or moves to supplement for the target venue.
+6. Decide whether optional memory-augmented/key-value neural baselines are required for the target venue.
+7. Add runtime metadata standards, license, and citation metadata.
+8. Revisit whether optional Exp16-Exp20 work is still necessary.
 
 ## Numbering Posture
 
 | Work item | Name | Required now? | Notes |
 |---|---|---|---|
 | Experiment 15 | Minimal Neural Baseline Comparator | Completed minimal evidence | Integrated with non-exhaustive, replay, and provenance caveats. |
-| Analysis Pass 15A | Manuscript Statistical Hardening | Yes | Next analysis/documentation item; not a new experiment. |
-| Repository Pass 15B | Submission Metadata and Reproducibility Hardening | Yes | Not a new experiment. |
+| Analysis Pass 15A | Manuscript Statistical Hardening | Completed as control pass | Retained claims and source CSVs are mapped; final human-reviewed CI/effect-size grouping remains pending. |
+| Post-15A pass | Citation, prior-art, and figure/table review | Yes | Current next documentation/manuscript-readiness item; not a new experiment. |
+| Repository Pass 15B | Submission Metadata and Reproducibility Hardening | Yes, after citation/figure review | Not a new experiment. |
 | Optional neural baseline successor | Memory-augmented/key-value neural comparator | Venue-dependent | Only if target venue/reviewer posture requires broader neural coverage. |
 | Experiment 16 | Lesion Diagnostic Audit | No | Only if positive lesion evidence is desired. |
 | Experiment 17 | Perceptual / Continuous Applied Bridge | No | Future applied bridge. |
@@ -187,4 +198,4 @@ License selection must remain a human decision.
 
 ## Bottom Line
 
-Exp15 is complete as minimal neural evidence. Do not start additional new experiments by default. Most remaining limitations should be handled as scope discipline, statistical hardening, final source-data-backed figures/tables, prior-art import, and future-work framing rather than new experimental obligations.
+Exp15 and Analysis Pass 15A are complete as finalization control steps. Do not start additional new experiments by default. Most remaining limitations should be handled as citation/prior-art hardening, human figure/table review, final statistical grouping, source-data/caption discipline, and future-work framing rather than new experimental obligations.

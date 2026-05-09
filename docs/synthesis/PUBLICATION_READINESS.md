@@ -2,25 +2,32 @@
 
 ## Summary Judgment
 
-Status: ready for claim hardening and final figure/table planning, but not submission-ready.
+Status: post-Analysis-Pass-15A; ready for citation/prior-art hardening and human figure/table review, but not submission-ready.
 
-The current internal spine is defensible but narrow: in a controlled symbolic route-memory benchmark, context-indexed structural plasticity stores incompatible local transition systems, recurrent execution composes stored one-step transitions into multi-step routes, Exp13.2 supplies symbolic/algorithmic baseline coverage, Exp14 shows that the active symbolic world can be selected from partial transition cues, and Exp15 supplies a minimal neural comparator. Exp11, Exp12, Exp13, Exp13.1, Exp13.2, Exp14, and Exp15 support this story with important caveats.
+The current internal spine is defensible but narrow: in a controlled symbolic route-memory benchmark, context-indexed structural plasticity stores incompatible local transition systems, recurrent execution composes stored one-step transitions into multi-step routes, Exp13.2 supplies symbolic/algorithmic baseline coverage, Exp14 shows that the active symbolic world can be selected from partial transition cues, Exp15 supplies a minimal neural comparator, and Analysis Pass 15A records the retained claim set and source-CSV mapping. Exp11, Exp12, Exp13, Exp13.1, Exp13.2, Exp14, and Exp15 support this story with important caveats.
+
+Current retained V2 posture:
+
+- Main scientific spine: C1, C2, C3, C4, C5, C6, and C13.
+- Discussion/table baseline claim: C12.
+- Boundary or supplement only: C7, C8, C10, and C11.
+- Out of the main claim set or non-claims: C9, Exp13.1 positive lesion evidence, Exp15 replay collapse, broad CIRM-over-neural claims, raw sensory latent-world discovery, and biological validation.
 
 Exp13.2 should now be treated as imported symbolic/algorithmic baseline evidence, and Exp15 should now be treated as imported minimal neural comparator evidence. Together they partially satisfy C12 for a controlled symbolic/mechanistic manuscript, but Exp15 remains fixed-profile and non-exhaustive and neither import replaces prior-art/novelty import.
 
-Source path: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/LIMITATIONS_AND_THREATS.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`.
+Source path: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/LIMITATIONS_AND_THREATS.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`.
 
 ## Manuscript Asset Pipeline Status
 
 Status: reproducible candidate assets generated, but not final submission-ready figures.
 
-Claim -> The first-manuscript claim freeze now has a local reproducible asset pipeline for candidate figures, source data, and source tables.
+Claim -> The first-manuscript claim freeze has a local reproducible asset pipeline for candidate figures, source data, and source tables. Analysis Pass 15A keeps these as candidate/human-review assets rather than automatically final figures.
 
-Evidence -> `python scripts/manuscript_assets/build_manuscript_assets.py` generates candidate Figures 1-5, source-data CSVs under `docs/manuscript/source_data/`, manuscript tables under `docs/manuscript/tables/`, `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`, and `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`.
+Evidence -> `python scripts/manuscript_assets/build_manuscript_assets.py` generates candidate Figures 1-5, source-data CSVs under `docs/manuscript/source_data/`, manuscript tables under `docs/manuscript/tables/`, `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`, and `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`. Exp15 Table 4 is present as a compact source-data-backed V2 comparator table.
 
-Caveat -> Human review is still required for caption wording, journal formatting, Exp14 main-vs-supplement placement, Exp15 baseline-table/figure placement, prior-art positioning, and target-venue baseline posture. The generated assets do not remove the non-exhaustive neural-baseline or novelty-import caveats.
+Caveat -> Human review is still required for caption wording, journal formatting, Exp14 main-vs-supplement placement, Exp15 table placement, prior-art positioning, and target-venue baseline posture. The generated assets do not remove the non-exhaustive neural-baseline or novelty-import caveats.
 
-Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`.
+Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`; `docs/manuscript/tables/table_04_exp15_neural_comparator.md`.
 
 ## Strongest Evidence
 
@@ -35,43 +42,45 @@ Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manus
 ## Weakest Evidence
 
 - Neural baseline coverage is minimal and non-exhaustive. Exp15 used fixed small models/hyperparameters, omitted memory-augmented/key-value neural baselines, omitted route length 16 from the default full profile, and includes manifest/SQLite provenance caveats. Source path: `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/README.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/run_manifest.json`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_config.json`.
-- Prior-art/novelty evidence remains incomplete. Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`; local verification pending for `Pasted text.txt`.
+- Prior-art/novelty evidence remains incomplete; the missing novelty/prior-art source artifact still needs import, recreation, or explicit retirement. Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/manuscript/NOVELTY_POSITIONING.md`.
 - Consolidation as a stability-plasticity bias is preliminary because Exp13 validation shows only a small finite-pressure delta and Exp13.1 did not show constrained-budget accuracy rescue. Source path: `experiments/experiment13_breaking_point/analysis/validation_report.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_budget_consolidation.csv`.
 - Exp13.1 targeted lesion evidence failed the expected pattern and should not be used as positive mechanism evidence. Source path: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv`.
 - Primitive holdout needs metric cleanup if retained centrally. Source path: `experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv`.
 - Continuous/noisy input is only a front-end bridge, not end-to-end perception. Source path: `experiments/experiment13_breaking_point/analysis/continuous_frontend_bridge_summary.csv`.
 - Exp14 is symbolic transition-cue inference, not raw sensory latent-world discovery; the oracle context-gated table remains an upper bound. Source path: `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`; `docs/threads/experiment14_analysis_digest.md`.
 
-## Required Before Manuscript Draft
+## Required Before Manuscript Draft Finalization
 
-- Use `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` as the handoff for final figure/table generation and manuscript drafting.
-- Decide whether Exp14/C13 is a main-text result or supplementary result.
-- Decide whether Exp15 is a compact main-text baseline table or supplementary comparator, and whether the first submission target requires an optional memory-augmented neural baseline.
-- Refresh `docs/manuscript/MANUSCRIPT_SPINE.md` from the claim-freeze document.
+- Verify V1/V2 citation placeholders against real BibTeX metadata.
+- Import, recreate, or explicitly retire the missing novelty/prior-art source artifact.
+- Human-review generated Figures 1-5 and Tables 1-4 for caption wording, caveats, and main-vs-supplement placement.
+- Decide whether Exp14/C13 remains a main-text result or moves to supplement.
+- Decide whether Exp15 remains a compact main-text baseline table or moves to supplement, and whether the first submission target requires an optional memory-augmented neural baseline.
+- Refresh `docs/manuscript/MANUSCRIPT_SPINE.md` from the post-15A finalization state if the manuscript structure changes.
 
 ## Required Before Submission
 
-- Add seed-level confidence intervals and effect sizes for retained core claims.
+- Finalize seed-level confidence intervals and effect sizes for retained core claims.
 - Human-review and finalize the generated candidate paper figures from the reproducible manuscript asset script.
 - Add source-data/final figures for Exp14 if retained.
-- Add a source-data-backed Exp15 baseline table/figure if retained.
-- Import prior-art/novelty evidence as local source artifacts.
+- Keep Exp15 as compact Table 4 unless a human/venue decision moves it to supplement.
+- Import prior-art/novelty evidence as local source artifacts or cite verified source metadata directly.
 - Verify manuscript-critical smoke/validation/full commands and document runtimes/hardware.
 - Add human-chosen `LICENSE` and `CITATION.cff`.
-- Fix holdout metrics if C9 remains central.
+- Fix holdout metrics if C9 becomes central.
 - Audit/rerun Exp13.1 lesion diagnostic only if positive lesion evidence will be cited.
 - Keep biological, novelty, continual-learning, perception, and generalization claims narrow.
 - Run `python scripts/verify_doc_source_paths.py` before readiness handoff.
 
 ## Operational Readiness
 
-Claim: The repository is more navigable after this cleanup, but remains scientifically not submission-ready.
+Claim: The repository is more navigable after the post-15A cleanup, but remains scientifically not submission-ready.
 
-Evidence: The README/docs index, source-of-truth note, claim-freeze document, manuscript TODO, figure plan, reproducibility audit, source-data manifest, and statistical-readiness table now describe the post-Exp13.2/post-Exp14 state.
+Evidence: The README/docs index, source-of-truth note, post-Exp15 addendum, retained-claims hardening document, manuscript TODO, figure plan, reproducibility audit, source-data manifest, and statistical-readiness table now describe the post-Exp13.2/post-Exp14/post-Exp15/post-15A state.
 
 Caveat: This is documentation readiness, not new scientific evidence.
 
-Source path: `README.md`; `docs/README.md`; `docs/manuscript/SOURCE_OF_TRUTH.md`; `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `docs/source_data/SOURCE_DATA_MANIFEST.csv`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`.
+Source path: `README.md`; `docs/README.md`; `docs/manuscript/SOURCE_OF_TRUTH.md`; `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`; `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `docs/source_data/SOURCE_DATA_MANIFEST.csv`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`.
 
 ## Reviewer-Risk Matrix
 
