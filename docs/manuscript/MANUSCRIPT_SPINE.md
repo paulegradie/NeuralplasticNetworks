@@ -2,79 +2,94 @@
 
 Purpose: Define the provisional structure of the first manuscript and keep every section tied to explicit evidence rather than thread memory.
 
+Status: refreshed after Exp13.2, Exp14, Exp15, and `MANUSCRIPT_V2.md` capture. This is a scaffold and navigation aid; the active prose draft is `docs/manuscript/draft/MANUSCRIPT_V2.md`.
+
 ## Working title
 
-Conservative title options:
+Current V2 working title:
 
-- Context-Indexed Structural Plasticity for Continual Compositional Route Memory
-- Context-Indexed Route Memory in a Continual Compositional Benchmark
+- Context-Indexed Structural Route Memory for Compositional Recall in Interfering Transition Systems
+
+Conservative alternatives:
+
+- Storage, Context, and Execution in a Synthetic Route-Memory Benchmark
+- Context-Indexed Route Memory Separates Storage and Execution under Transition Interference
+- Recurrent Route Execution over Context-Indexed Transition Memory
+- A Controlled Benchmark for Structural Route Memory, Context Selection, and Compositional Recall
 
 ## One-sentence contribution
 
-In a controlled symbolic route-memory benchmark, context-indexed structural plasticity stores incompatible local transition systems while recurrent execution composes stored one-step transitions into multi-step routes.
+In a controlled symbolic route-memory benchmark, the project separates context-indexed transition storage, recurrent execution, endpoint memorization, symbolic context selection, finite-capacity pressure, and minimal neural comparator behavior under incompatible transition systems.
 
 ## Provisional abstract skeleton
 
-- Problem: continual route-memory tasks require multiple incompatible transition systems to be retained over the same state/action space.
-- Gap: internal ablations alone do not establish broad continual-learning novelty, but they can isolate storage, context selection, recurrence, capacity, and primitive-holdout failure modes.
-- Method: benchmark context-indexed structural route memory with recurrent execution across Exp11-Exp13 and completed Exp13.1 hardening.
-- Key result: internal evidence supports non-destructive benchmark-specific storage under clean context and a route-table/composition dissociation when recurrence is removed.
-- Boundary/limitation: the model does not infer unseen primitive transitions, does not learn perception end to end, and still needs baselines, confidence intervals, and final figure regeneration.
-- Contribution: a conservative benchmark and evidence map for studying context-indexed structural route memory under continual compositional pressure.
+- Problem: route-memory tasks can require multiple incompatible transition systems over the same state/action space.
+- Gap: aggregate endpoint accuracy can hide whether a system learned reusable one-step transitions, memorized endpoints, selected context, or recurrently composed transitions.
+- Method: benchmark context-indexed route memory with supplied-context experiments, symbolic transition-cue context selection, symbolic/algorithmic baselines, and minimal fixed-profile neural comparators.
+- Key result: internal CIRM-family ablations support a benchmark-specific storage/context/recurrence decomposition; Exp13.2 shows oracle context-gated lookup matches the clean supplied-context benchmark; Exp14 shows symbolic transition cues can select active context; Exp15 shows context-conditioned transition MLP and world-head transition MLP variants solve the clean hard slice while endpoint neural variants expose endpoint-vs-composition dissociations.
+- Boundary/limitation: no solved continual learning, no broad CIRM-over-neural-model claim, no raw sensory latent-world discovery, no end-to-end perception, no biological validation, and no general conclusion from Exp15 replay collapse without audit.
+- Contribution: a conservative benchmark and evidence map for studying route-memory mechanisms under symbolic contextual interference.
 
 ## Main claim
 
-Claim: A synthetic continual compositional route-memory benchmark shows that context-indexed structural plasticity can store incompatible local transition systems without destructive overwriting, while recurrent dynamics are required to convert one-step route memories into multi-step execution.
+Claim: A synthetic compositional route-memory benchmark separates storage, context indexing, recurrence, endpoint memorization, finite-capacity pressure, symbolic context selection, and minimal neural transition-learning baselines under interfering transition systems.
 
-Evidence: C1-C5 in the central evidence map are supported by Exp8/Exp11/Exp12/Exp13/Exp13.1 internal ablation and capacity artifacts.
-Caveat: External baselines, statistical hardening, Exp13.1 lesion audit if needed, and prior-art source import remain pending.
-Source path: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `experiments/experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv`; `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`; `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv`
+Evidence: C1-C7, C12, and C13 in the central evidence map are supported by Exp11, Exp12, Exp13, Exp13.1, Exp13.2, Exp14, and Exp15 artifacts.
+
+Caveat: This is a controlled symbolic/mechanistic benchmark. Exp15 explicitly rules out broad neural-superiority wording because context-conditioned transition MLP and world-head transition MLP variants solve the clean hard slice. Prior-art import, retained-claim CI/effect-size review, final figure/table approval, command verification, and license/citation metadata remain pending.
+
+Source path: `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/tables/table_04_exp15_neural_comparator.md`.
 
 ## Non-claims
 
 - The manuscript should not claim solved continual learning.
 - The manuscript should not claim context gating is novel by itself.
+- The manuscript should not claim broad CIRM superiority over neural models.
 - The manuscript should not claim a complete hippocampal or biological theory.
+- The manuscript should not claim raw sensory latent-world discovery.
 - The manuscript should not claim end-to-end perceptual learning.
 - The manuscript should not claim broad abstract rule induction.
 - The manuscript should not claim inference of unseen primitive transitions.
+- The manuscript should not cite Exp15 replay collapse as scientific evidence unless audited.
 
 ## Section outline
 
 | Section | Purpose | Key claims | Source docs/artifacts | Caveats | Missing work |
 |---|---|---|---|---|---|
-| 1. Introduction | Motivate continual compositional route memory and the need for careful evidence boundaries. | Benchmark-specific route-memory problem; narrow contribution. | `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/synthesis/PUBLICATION_READINESS.md` | Do not imply broad continual-learning solution. | Final framing after baselines and prior-art import. |
-| 2. Related work / positioning | Position context gating, recurrence, structural plasticity, replay, masks, and cognitive maps without inventing novelty. | C12: baselines and prior art are required. | `docs/manuscript/NOVELTY_POSITIONING.md`; `docs/theory/PRIOR_ART_MAP.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md` | Novelty assessment artifact is local verification pending. | Import novelty assessment and add actual citations. |
-| 3. Benchmark: Continual Compositional Route Memory | Define worlds, nodes, modes, one-step transitions, held-out routes, and incompatibility. | Route-memory benchmark separates storage, context, and execution. | `experiments/experiment11_context_memory/EXPERIMENT_11_CONTEXT_MEMORY.md`; `experiments/experiment12_capacity_generalization/README.md`; `experiments/experiment13_breaking_point/README.md` | Synthetic symbolic benchmark. | Clean benchmark spec and final notation. |
-| 4. Model: context-indexed structural plasticity and recurrent execution | Describe mechanism components and ablation dimensions. | C1-C4 mechanism decomposition. | `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/theory/CORE_THEORY.md` | Mechanism description must not become biological proof. | Final method diagrams and implementation summary. |
-| 5. Experimental regime | Explain Exp11-Exp13.1 roles, seeds, profiles, outputs, and validation. | Internal evidence is organized by incompatible worlds, scaling, boundary mapping, and publication hardening. | `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `docs/experiments/EXPERIMENT_REGISTRY.md`; `docs/experiments/exp13_1_summary.md` | Commands inspected historically; Exp13.1 run manifest lacks device/runtime metadata. | Smoke/full command verification and runtime documentation. |
-| 6. Results | Present core ablations, capacity, retention, and route-table/composition dissociation. | C1-C5 with conservative wording. | `experiments/experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv`; `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`; `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv` | Internal ablations only. | Confidence intervals, effect sizes, baselines, and final figures. |
-| 7. Boundary mapping and failure modes | Show finite capacity, context corruption, holdout boundary, continuous bridge, and failed lesion diagnostic. | C6-C11 as promising/preliminary boundary claims. | `experiments/experiment13_breaking_point/analysis/validation_report.md`; `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv`; `experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv`; `experiments/experiment13_breaking_point/analysis/continuous_frontend_bridge_summary.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv` | Exp13.1 lesion diagnostic failed; context corruption remains identity/selection-focused. | Lesion audit/rerun if needed; stochastic context corruption if generic robustness is claimed. |
-| 8. Baselines and comparisons | Compare against simpler and external alternatives. | C12; planned baseline suite. | `docs/manuscript/BASELINE_REQUIREMENTS.md` | Planning document only; no baseline results yet. | Implement baseline suite and add baseline results artifacts. |
-| 9. Biological framing | Keep indexing/remapping/recurrent/structural-plasticity language as computational inspiration. | Biological framing is limited and caveated. | `docs/theory/BIOLOGICAL_FRAMING.md`; `docs/manuscript/LIMITATIONS_AND_THREATS.md` | No complete hippocampal theory. | Prior-art citations and careful discussion language. |
-| 10. Limitations | State reviewer-risk boundaries clearly. | Non-claims; symbolic benchmark; oracle context; no end-to-end perception; failed lesion diagnostic. | `docs/manuscript/LIMITATIONS_AND_THREATS.md`; `docs/synthesis/PUBLICATION_READINESS.md` | Must remain explicit in abstract and discussion. | Update after baselines and any Exp13.1 rerun. |
-| 11. Discussion | Interpret mechanism conjunction, failure modes, and why boundaries matter. | Narrow contribution plus failure map. | `docs/manuscript/RESULTS_STORYBOARD.md`; `docs/manuscript/FIGURE_PLAN.md` | Avoid strengthening beyond evidence. | Draft after final figures and baselines. |
-| 12. Future work | Define latent context inference, applied visual-state bridge, scaling, and richer tasks. | Future directions only. | `docs/synthesis/NEXT_EXPERIMENTS.md`; `docs/manuscript/MANUSCRIPT_TODO.md` | Future work is not evidence. | Prioritize after lesion/uncertainty cleanup and baselines. |
+| 1. Introduction | Motivate interfering symbolic route-memory systems and the need for mechanism-sensitive evaluation. | Benchmark-specific route-memory problem; narrow contribution. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/synthesis/PUBLICATION_READINESS.md` | Do not imply broad continual-learning solution or neural superiority. | Final polish after retained-claim/statistical hardening. |
+| 2. Related work / positioning | Position context gating, recurrence, structural plasticity, replay, masks, memory-augmented systems, and cognitive maps without inventing novelty. | C12: baselines and prior art are required. | `docs/theory/PRIOR_ART_MAP.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md` | Novelty assessment artifact is local verification pending. | Import novelty assessment and add verified citations/BibTeX. |
+| 3. Benchmark: route memory under contextual interference | Define worlds, nodes, modes, one-step transitions, route execution, suffix probes, first-step conflict, and retention. | Benchmark separates storage, context, endpoint memorization, and execution. | `experiments/experiment11_context_memory/EXPERIMENT_11_CONTEXT_MEMORY.md`; `experiments/experiment12_capacity_generalization/README.md`; `experiments/experiment13_breaking_point/README.md`; `experiments/experiment15_neural_baseline_comparator/README.md` | Synthetic symbolic benchmark. | Final notation cleanup. |
+| 4. Model and mechanism | Describe context-indexed structural route memory, recurrent execution, supplied context, and symbolic cue-selected context. | C1-C4 and C13 mechanism decomposition. | `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/theory/CORE_THEORY.md`; `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md` | Mechanism description must not become biological proof or universal neural claim. | Final method diagrams and implementation summary. |
+| 5. Experimental regime | Explain Exp11-Exp15 roles, seeds, profiles, outputs, and validation. | Evidence organized by incompatible worlds, scaling, boundary mapping, baselines, symbolic context selection, and neural comparators. | `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`; `docs/experiments/EXPERIMENT_REGISTRY.md`; `docs/experiments/exp15_summary.md` | Commands inspected/imported historically; fresh command verification pending. | Fresh command verification and runtime documentation. |
+| 6. Results: storage/context/recurrence decomposition | Present core ablations and route-table/composition dissociation. | C1-C4. | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`; `docs/manuscript/figures/figure_02_structural_plasticity_recurrence_ablation.png` | Benchmark-specific; not universal structural-plasticity proof. | CI/effect-size review and final captions. |
+| 7. Results: capacity and boundary mapping | Present clean scaling, finite structural budget degradation, and local/global pressure if retained. | C5-C7. | `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`; `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_budget_consolidation.csv` | No fitted capacity law; local/global paired analysis still pending. | Retained-claim statistical hardening. |
+| 8. Results: symbolic context selection | Present Exp14 as symbolic transition-cue context selection. | C13, C2/C10 caveats. | `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`; `docs/threads/experiment14_analysis_digest.md`; candidate Figure 5 assets | Not raw sensory latent-world discovery; oracle context-gated table remains upper bound. | Decide main vs supplement and finalize caption/source data. |
+| 9. Results: symbolic and neural baselines | Present Exp13.2 symbolic/algorithmic baselines and Exp15 minimal neural comparator table. | C12 plus C1/C2/C4 narrowing. | `docs/experiments/exp13_2_summary.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`; `docs/manuscript/tables/table_04_exp15_neural_comparator.md` | Exp15 is fixed-profile and non-exhaustive; no memory-augmented/key-value neural baseline. | Decide whether target venue requires optional successor neural baseline. |
+| 10. Limitations | State reviewer-risk boundaries clearly. | Non-claims; symbolic benchmark; oracle context; minimal neural comparator; no end-to-end perception; failed lesion diagnostic. | `docs/manuscript/LIMITATIONS_AND_THREATS.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md` | Must remain explicit in abstract and discussion. | Update after retained-claim decisions. |
+| 11. Discussion | Interpret mechanism decomposition, failure modes, baseline implications, and future scope. | Narrow contribution plus failure map. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/FIGURE_PLAN.md`; `docs/synthesis/NEXT_EXPERIMENTS.md` | Avoid strengthening beyond evidence. | Final polish after statistics and citations. |
+| 12. Future work | Define optional memory-augmented neural baseline, replay audit, lesion audit, stochastic corruption, applied bridge, and richer context inference. | Future directions only. | `docs/synthesis/NEXT_EXPERIMENTS.md`; `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md` | Future work is not evidence. | Prioritize only after retained-claim/statistical hardening. |
 
 ## Results storyboard
 
-| Figure | Story role | Source path | Current status | Caveat |
+| Figure/table | Story role | Source path | Current status | Caveat |
 |---|---|---|---|---|
-| Figure 1 conceptual architecture/task | Define benchmark, context index, one-step route table, and recurrent execution. | `docs/manuscript/FIGURE_PLAN.md`; `experiments/experiment11_context_memory/EXPERIMENT_11_CONTEXT_MEMORY.md` | Framing. | Must not imply biological completeness or latent-world inference. |
-| Figure 2 ablations/core mechanism | Show structural plasticity, world context, and recurrence as separable internal components. | `docs/manuscript/FIGURE_PLAN.md`; `experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_route_table_composition_gap.png` | Strong internal evidence. | Needs external baselines. |
-| Figure 3 capacity/retention | Show Exp12 clean-context scaling and retention before failure pressure. | `docs/manuscript/FIGURE_PLAN.md`; `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv` | Strong but ceiling-limited. | Needs uncertainty reporting. |
-| Figure 4 breaking point | Show Exp13 global/local finite-budget degradation. | `docs/manuscript/FIGURE_PLAN.md`; `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv` | Promising. | Needs Exp13.1 capacity-law and paired local/global cleanup. |
-| Figure 5 consolidation | Present consolidation as stability/plasticity bias. | `docs/manuscript/FIGURE_PLAN.md`; `experiments/experiment13_breaking_point/analysis/validation_report.md` | Preliminary. | Dose-response pending. |
-| Figure 6 held-out composition boundary | Separate composition over stored primitives from unseen primitive-transition inference. | `docs/manuscript/FIGURE_PLAN.md`; `experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv` | Needs metric cleanup. | Seen/unseen route-table splits pending. |
-| Figure 7 context corruption | Show context-selection failure under adversarial corruption. | `docs/manuscript/FIGURE_PLAN.md`; `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv` | Promising. | Stochastic graded corruption pending. |
-| Figure 8 continuous bridge / supplement | Show noisy continuous decoding feeding route memory. | `docs/manuscript/FIGURE_PLAN.md`; `experiments/experiment13_breaking_point/analysis/continuous_frontend_bridge_summary.csv` | Preliminary or supplementary. | Not end-to-end perception. |
+| Figure 1 conceptual architecture/task | Define benchmark, context index, one-step route table, and recurrent execution. | `docs/manuscript/figures/figure_01_conceptual_route_memory.png`; `docs/manuscript/source_data/figure_01_conceptual_route_memory.csv` | Generated candidate schematic. | Conceptual only; not empirical evidence. |
+| Figure 2 ablations/core mechanism | Show structural storage, context indexing, and recurrence as separable internal components. | `docs/manuscript/figures/figure_02_structural_plasticity_recurrence_ablation.png`; `docs/manuscript/source_data/figure_02_structural_plasticity_recurrence_ablation.csv` | Generated candidate main figure. | Internal symbolic ablation; uncertainty/effect-size review pending. |
+| Figure 3 clean capacity scaling | Show clean supplied-context scaling through tested world counts. | `docs/manuscript/figures/figure_03_capacity_scaling.png`; `docs/manuscript/source_data/figure_03_capacity_scaling.csv` | Generated candidate main figure. | Ceiling-limited; no fitted capacity law. |
+| Figure 4 finite budget/local-global pressure | Show observed finite-budget degradation and possible local/global pressure difference. | `docs/manuscript/figures/figure_04_finite_structural_budget_local_global.png`; `docs/manuscript/source_data/figure_04_finite_structural_budget_local_global.csv` | Generated candidate narrow-main/supplement figure. | Paired seed-level local/global inference remains deferred. |
+| Figure 5 symbolic context selection | Show Exp14 symbolic transition-cue context selection. | `docs/manuscript/figures/figure_05_symbolic_context_selection.png`; `docs/manuscript/source_data/figure_05_symbolic_context_selection.csv` | Generated candidate main-or-supplement figure. | Symbolic cues only; oracle upper bound remains. |
+| Table 1 claim evidence | Compact evidence map for retained claims. | `docs/manuscript/tables/table_01_claim_evidence.md` | Generated candidate table. | Needs final retained-claim review. |
+| Table 2 run integrity | Provenance summary for manuscript-relevant runs. | `docs/manuscript/tables/table_02_run_integrity.md` | Generated candidate table. | Older runs lack uniform manifests. |
+| Table 3 statistical summary | Statistical source table for figure/baseline claims. | `docs/manuscript/tables/table_03_statistical_summary.md` | Present but needs hardening. | Effect-size grouping and retained-claim mapping need review. |
+| Table 4 Exp15 neural comparator | Minimal neural hard-slice comparator table. | `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv` | Present for V2. | Fixed-profile comparator; replay row not interpreted without audit. |
 
 ## Submission blockers
 
-- Exp13.1 publication-hardening audit.
-- External baseline suite.
-- Seed-level confidence intervals and effect sizes.
-- Final reproducible figures and source-data manifests.
-- Novelty assessment import.
-- Prior-art citations and positioning.
-- Verified smoke/standard/full or validation/full commands for manuscript-critical experiments.
+- Retained main-claim decision after V2 and post-Exp15 narrowing.
+- Manuscript-grade seed-level confidence intervals and effect sizes.
+- Human review of generated candidate figures/tables and captions.
+- Final source-data manifests for every retained panel/table.
+- Prior-art/novelty import and verified citations/BibTeX.
+- Fresh command verification with runtime/hardware logs.
+- License and citation metadata.
+- Optional venue-dependent decisions: memory-augmented neural baseline, Exp15 replay audit, Exp13.1 lesion audit, C9 metric cleanup, stochastic context corruption, consolidation dose-response, or non-symbolic applied bridge.
