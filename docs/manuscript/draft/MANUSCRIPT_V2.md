@@ -317,7 +317,7 @@ Exp13.2 reports that endpoint memorization can solve seen full-route endpoints w
 
 This matters because endpoint recall is not the same as transition composition. A model can memorize “from this start, under this route, output this endpoint” without learning reusable one-step transitions. Suffix-route probes help distinguish endpoint memorization from route execution.
 
-[Table 4 here: Exp15 minimal neural comparator hard-slice summary. Source table: `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; source data: `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`; authoritative source artifact: `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`.]
+**Table 4 placeholder.** Exp15 minimal neural comparator hard-slice summary. Source table: `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; source data: `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`; authoritative source artifact: `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`. Caption caveat: fixed-profile and non-exhaustive; endpoint models, transition learners, no-context variants, and world-head isolation should be interpreted as distinct computational contracts.
 
 Table 4 is maintained as a separate source-data-backed manuscript artifact:
 
