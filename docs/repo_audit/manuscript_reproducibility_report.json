@@ -1,0 +1,1203 @@
+{
+  "metadata": {
+    "branch": "implement-manuscript-reproducibility-driver",
+    "command": "python scripts/reproduce_manuscript.py --profile foundation",
+    "commit_sha": "d4763149e8700881460739926c9ae07fc82de23d",
+    "generated_at": "2026-05-11T12:29:16+00:00",
+    "jobs": 1,
+    "machine": "x86_64",
+    "platform": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "python": "3.11.15 (main, Mar  3 2026, 16:10:12) [GCC 13.3.0]",
+    "repository_root": "."
+  },
+  "overall_status": "WARN",
+  "profiles": [
+    {
+      "caveats": [
+        "This profile validates committed artifacts and schemas; it does not rerun expensive experiments.",
+        "Boundary and non-claim rows are checked but not promoted to manuscript evidence."
+      ],
+      "checks": [
+        {
+          "claim_id": "",
+          "details": {},
+          "message": "Claim map has 10 rows and required columns.",
+          "name": "claim_map_schema",
+          "path": "docs/manuscript/source_data/manuscript_claim_artifact_map.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/validation_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/validation_results.json",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {
+            "command": "experiments/experiment13_1_publication_hardening/start_exp13_1_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment13_1_publication_hardening/start_exp13_1_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {
+            "command": "experiments/experiment13_1_publication_hardening/start_exp13_1_validate.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment13_1_publication_hardening/start_exp13_1_validate.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {
+            "command": "experiments/experiment13_2_baseline_suite"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment13_2_baseline_suite",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C1",
+          "details": {
+            "command": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_seed_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_seed_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "CSV parsed with 9 rows and 7 columns.",
+          "name": "csv_parse",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "Required columns are present.",
+          "name": "csv_required_columns",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/validation_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {
+            "command": "experiments/experiment14_latent_context_inference/start_exp14_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment14_latent_context_inference/start_exp14_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C2",
+          "details": {
+            "command": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C3",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C3",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C3",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C3",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C3",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/validation_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C3",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C3",
+          "details": {
+            "command": "experiments/experiment13_1_publication_hardening/start_exp13_1_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment13_1_publication_hardening/start_exp13_1_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C3",
+          "details": {
+            "command": "experiments/experiment13_1_publication_hardening/start_exp13_1_validate.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment13_1_publication_hardening/start_exp13_1_validate.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "CSV parsed with 9 rows and 7 columns.",
+          "name": "csv_parse",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "Required columns are present.",
+          "name": "csv_required_columns",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {
+            "command": "experiments/experiment14_latent_context_inference/start_exp14_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment14_latent_context_inference/start_exp14_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C4",
+          "details": {
+            "command": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C5",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C5",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C5",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment12_capacity_generalization/analysis/exp12/metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C5",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment12_capacity_generalization/analysis/exp12/metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C5",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment12_capacity_generalization/analysis/exp12/exp12_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C5",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment12_capacity_generalization/analysis/exp12_validation/exp12_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C5",
+          "details": {
+            "command": "experiments/experiment12_capacity_generalization/start_exp12.ps1 -Profile full -OutDir analysis/exp12"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment12_capacity_generalization/start_exp12.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C5",
+          "details": {
+            "command": "experiments/experiment12_capacity_generalization/start_exp12.ps1 -Profile validate -OutDir analysis/exp12_validation"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment12_capacity_generalization/start_exp12.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C6",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C6",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C6",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_breaking_point/analysis/metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C6",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_breaking_point/analysis/metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C6",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment13_breaking_point/analysis/exp13_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C6",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment13_breaking_point/analysis/validation_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C6",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment13_breaking_point/analysis/validation_results.json",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C6",
+          "details": {
+            "command": "experiments/experiment13_breaking_point/start_exp13.ps1 -Profile standard -Clean"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment13_breaking_point/start_exp13.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C6",
+          "details": {
+            "command": "experiments/experiment13_breaking_point/start_exp13.ps1 -Profile smoke -Clean"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment13_breaking_point/start_exp13.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_effect_sizes.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_effect_sizes.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "docs/manuscript/source_data/figure_05_symbolic_context_selection.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "CSV parsed with 112 rows and 24 columns.",
+          "name": "csv_parse",
+          "path": "docs/manuscript/source_data/figure_05_symbolic_context_selection.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "Required columns are present.",
+          "name": "csv_required_columns",
+          "path": "docs/manuscript/source_data/figure_05_symbolic_context_selection.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/validation_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/validation_results.json",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {
+            "command": "experiments/experiment14_latent_context_inference/start_exp14_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment14_latent_context_inference/start_exp14_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C13",
+          "details": {
+            "command": "experiments/experiment14_latent_context_inference/start_exp14_validation.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment14_latent_context_inference/start_exp14_validation.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_effect_sizes.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_effect_sizes.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_effect_sizes.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_effect_sizes.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "CSV parsed with 9 rows and 7 columns.",
+          "name": "csv_parse",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "Required columns are present.",
+          "name": "csv_required_columns",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {
+            "command": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C12",
+          "details": {
+            "command": "experiments/experiment15_neural_baseline_comparator/start_exp15_validation.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/start_exp15_validation.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C7",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "docs/source_data/exp13_local_vs_global_budget_comparison.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C7",
+          "details": {},
+          "message": "CSV parsed with 4 rows and 6 columns.",
+          "name": "csv_parse",
+          "path": "docs/source_data/exp13_local_vs_global_budget_comparison.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C7",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C7",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C7",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C7",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C7",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment13_breaking_point/analysis/validation_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "C7",
+          "details": {
+            "command": "experiments/experiment13_breaking_point/start_exp13.ps1 -Profile standard -Clean"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment13_breaking_point/start_exp13.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "Exp15-replay",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "Exp15-replay",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "Exp15-replay",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "primary_source_artifacts_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_seed_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "Exp15-replay",
+          "details": {},
+          "message": "CSV parsed with 2 rows and 1 columns.",
+          "name": "csv_parse",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_seed_metrics.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "Exp15-replay",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "Exp15-replay",
+          "details": {},
+          "message": "Artifact exists.",
+          "name": "validation_artifacts_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "Exp15-replay",
+          "details": {
+            "command": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1"
+          },
+          "message": "Documented command path exists.",
+          "name": "command_path_exists",
+          "path": "experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "source-data",
+          "details": {},
+          "message": "CSV parsed with 9 rows and 7 columns.",
+          "name": "csv_parse",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "source-data",
+          "details": {},
+          "message": "Required columns are present.",
+          "name": "csv_required_columns",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "source-data",
+          "details": {},
+          "message": "CSV parsed with 4 rows and 8 columns.",
+          "name": "csv_parse",
+          "path": "docs/manuscript/source_data/table_03_compact_final_safe.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "source-data",
+          "details": {},
+          "message": "Required columns are present.",
+          "name": "csv_required_columns",
+          "path": "docs/manuscript/source_data/table_03_compact_final_safe.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "source-data",
+          "details": {},
+          "message": "CSV parsed with 112 rows and 24 columns.",
+          "name": "csv_parse",
+          "path": "docs/manuscript/source_data/figure_05_symbolic_context_selection.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "source-data",
+          "details": {},
+          "message": "Required columns are present.",
+          "name": "csv_required_columns",
+          "path": "docs/manuscript/source_data/figure_05_symbolic_context_selection.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "source-data",
+          "details": {},
+          "message": "CSV parsed with 50 rows and 24 columns.",
+          "name": "csv_parse",
+          "path": "docs/manuscript/source_data/figure_03_capacity_scaling.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "source-data",
+          "details": {},
+          "message": "Required columns are present.",
+          "name": "csv_required_columns",
+          "path": "docs/manuscript/source_data/figure_03_capacity_scaling.csv",
+          "status": "PASS"
+        }
+      ],
+      "elapsed_seconds": 0.009436377000000107,
+      "finished_at": "2026-05-11T12:29:16+00:00",
+      "profile": "validate-artifacts",
+      "started_at": "2026-05-11T12:29:16+00:00",
+      "status": "PASS"
+    },
+    {
+      "caveats": [
+        "This profile runs the manuscript asset build script from committed artifacts.",
+        "Generated file differences should be reviewed before committing regenerated assets."
+      ],
+      "checks": [
+        {
+          "claim_id": "",
+          "details": {
+            "output_tail": "Traceback (most recent call last):\n  File \"/home/runner/work/context-indexed-route-memory/context-indexed-route-memory/scripts/manuscript_assets/build_manuscript_assets.py\", line 10, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'",
+            "returncode": 1
+          },
+          "message": "Manuscript asset build did not complete in this environment; install experiment/asset dependencies and rerun locally.",
+          "name": "asset_build",
+          "path": "scripts/manuscript_assets/build_manuscript_assets.py",
+          "status": "WARN"
+        },
+        {
+          "claim_id": "",
+          "details": {},
+          "message": "Expected manuscript asset output exists.",
+          "name": "asset_output_exists",
+          "path": "docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {},
+          "message": "Expected manuscript asset output exists.",
+          "name": "asset_output_exists",
+          "path": "docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {},
+          "message": "Expected manuscript asset output exists.",
+          "name": "asset_output_exists",
+          "path": "docs/manuscript/tables/table_04_exp15_neural_comparator.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {},
+          "message": "Expected manuscript asset output exists.",
+          "name": "asset_output_exists",
+          "path": "docs/manuscript/tables/table_03_compact_final_safe.md",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {},
+          "message": "Expected manuscript asset output exists.",
+          "name": "asset_output_exists",
+          "path": "docs/manuscript/source_data/table_04_exp15_neural_comparator.csv",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {},
+          "message": "Expected manuscript asset output exists.",
+          "name": "asset_output_exists",
+          "path": "docs/manuscript/source_data/table_03_compact_final_safe.csv",
+          "status": "PASS"
+        }
+      ],
+      "elapsed_seconds": 0.0385858460000037,
+      "finished_at": "2026-05-11T12:29:16+00:00",
+      "profile": "rebuild-manuscript-assets",
+      "started_at": "2026-05-11T12:29:16+00:00",
+      "status": "WARN"
+    },
+    {
+      "caveats": [
+        "The smoke profile currently records the execution plan only.",
+        "Full execution is intentionally opt-in so preserved historical outputs are not overwritten."
+      ],
+      "checks": [
+        {
+          "claim_id": "",
+          "details": {
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File experiments/experiment11_context_memory/start_exp11.ps1 -ValidationOnly",
+            "experiment": "Exp11",
+            "reason": "Validation-only launcher documented in reproducibility audit."
+          },
+          "message": "Command path exists; execution is opt-in.",
+          "name": "planned_command",
+          "path": "experiments/experiment11_context_memory/start_exp11.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File experiments/experiment12_capacity_generalization/start_exp12.ps1 -Profile validate -OutDir analysis/exp12_validation",
+            "experiment": "Exp12",
+            "reason": "Validate profile documented in reproducibility audit."
+          },
+          "message": "Command path exists; execution is opt-in.",
+          "name": "planned_command",
+          "path": "experiments/experiment12_capacity_generalization/start_exp12.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File experiments/experiment13_breaking_point/start_exp13.ps1 -Profile smoke -Clean",
+            "experiment": "Exp13",
+            "reason": "Smoke profile documented in reproducibility audit."
+          },
+          "message": "Command path exists; execution is opt-in.",
+          "name": "planned_command",
+          "path": "experiments/experiment13_breaking_point/start_exp13.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File experiments/experiment13_1_publication_hardening/start_exp13_1_validate.ps1 -RunId latest",
+            "experiment": "Exp13.1",
+            "reason": "Validation wrapper documented in reproducibility audit."
+          },
+          "message": "Command path exists; execution is opt-in.",
+          "name": "planned_command",
+          "path": "experiments/experiment13_1_publication_hardening/start_exp13_1_validate.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File experiments/experiment14_latent_context_inference/start_exp14_validation.ps1",
+            "experiment": "Exp14",
+            "reason": "Validation wrapper documented in reproducibility audit."
+          },
+          "message": "Command path exists; execution is opt-in.",
+          "name": "planned_command",
+          "path": "experiments/experiment14_latent_context_inference/start_exp14_validation.ps1",
+          "status": "PASS"
+        },
+        {
+          "claim_id": "",
+          "details": {
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File experiments/experiment15_neural_baseline_comparator/start_exp15_validation.ps1",
+            "experiment": "Exp15",
+            "reason": "Validation wrapper documented in reproducibility audit."
+          },
+          "message": "Command path exists; execution is opt-in.",
+          "name": "planned_command",
+          "path": "experiments/experiment15_neural_baseline_comparator/start_exp15_validation.ps1",
+          "status": "PASS"
+        }
+      ],
+      "elapsed_seconds": 0.00047232900000437894,
+      "finished_at": "2026-05-11T12:29:16+00:00",
+      "profile": "smoke",
+      "started_at": "2026-05-11T12:29:16+00:00",
+      "status": "PASS"
+    }
+  ]
+}
