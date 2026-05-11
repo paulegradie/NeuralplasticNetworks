@@ -77,7 +77,7 @@ A reviewer should be able to run one command that checks:
 - source-data mirrors match their authoritative experiment artifacts;
 - historical/non-claim artifacts are not accidentally promoted.
 
-Recommended command to implement:
+Planned future command to implement:
 
 ```bash
 python scripts/reproduce_manuscript.py --profile validate-artifacts
@@ -87,7 +87,7 @@ python scripts/reproduce_manuscript.py --profile validate-artifacts
 
 A reviewer should be able to rebuild candidate manuscript figures/tables from committed artifacts without rerunning expensive experiments.
 
-Recommended command to implement:
+Planned future command to implement:
 
 ```bash
 python scripts/reproduce_manuscript.py --profile rebuild-manuscript-assets
@@ -103,7 +103,7 @@ Expected outputs:
 
 A reviewer should be able to run a quick smoke profile that verifies the executable path for manuscript-critical experiments.
 
-Recommended command to implement:
+Planned future command to implement:
 
 ```bash
 python scripts/reproduce_manuscript.py --profile smoke
@@ -115,7 +115,7 @@ This should not run the expensive full experiment suite. It should confirm that 
 
 The authors should run a fresh-checkout rerun of manuscript-critical experiments before submission.
 
-Recommended command to implement:
+Planned future command to implement:
 
 ```bash
 python scripts/reproduce_manuscript.py --profile rerun-critical --jobs 1
@@ -127,7 +127,7 @@ This should write new timestamped outputs and compare claim-level summaries to c
 
 A motivated reviewer or future author should be able to run the full critical suite, but this should not be the default CI path.
 
-Recommended command to implement:
+Planned future command to implement:
 
 ```bash
 python scripts/reproduce_manuscript.py --profile full-critical --jobs 1
@@ -137,11 +137,11 @@ python scripts/reproduce_manuscript.py --profile full-critical --jobs 1
 
 Do not build one giant undifferentiated matrix across all 15 experiments. Build a claim-scoped reproducibility summary.
 
-Recommended outputs:
+Planned future outputs:
 
-- `docs/manuscript/source_data/reproducibility_claim_summary.csv`
-- `docs/manuscript/source_data/seed_level_core_claim_metrics.csv`
-- `docs/manuscript/tables/table_reproducibility_claim_summary.md`
+- reproducibility claim summary CSV;
+- seed-level core-claim metrics CSV;
+- reproducibility claim summary Markdown table.
 
 For each retained claim, report:
 
@@ -178,9 +178,9 @@ The repository currently has preserved artifacts and several validation reports,
 ## Definition of done for reproducibility before V3 submission
 
 - `docs/manuscript/source_data/manuscript_claim_artifact_map.csv` is complete and source-path verified.
-- `scripts/reproduce_manuscript.py --profile validate-artifacts` passes from a clean checkout.
-- `scripts/reproduce_manuscript.py --profile rebuild-manuscript-assets` regenerates the manuscript figures/tables from committed artifacts.
-- `scripts/reproduce_manuscript.py --profile smoke` confirms manuscript-critical experiment entry points.
-- A fresh `docs/repo_audit/MANUSCRIPT_REPRODUCIBILITY_REPORT.md` records commit SHA, hardware, environment, commands, runtimes, and pass/fail.
+- The planned future validate-artifacts profile passes from a clean checkout.
+- The planned future rebuild-manuscript-assets profile regenerates the manuscript figures/tables from committed artifacts.
+- The planned future smoke profile confirms manuscript-critical experiment entry points.
+- A fresh manuscript reproducibility report records commit SHA, hardware, environment, commands, runtimes, and pass/fail.
 - Claim-scoped statistical summaries exist for retained claims.
 - V3 manuscript claims match only the reproducibility-backed retained claim set.
