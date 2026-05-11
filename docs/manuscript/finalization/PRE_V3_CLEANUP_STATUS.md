@@ -2,7 +2,7 @@
 
 Date: 2026-05-11
 
-Purpose: record the repository cleanup/consolidation pass before drafting `MANUSCRIPT_V3.md`.
+Purpose: record the repository cleanup/consolidation pass before drafting the planned future V3 manuscript.
 
 ## Status
 
@@ -54,7 +54,7 @@ Create a V3 drafting branch from `main` after this cleanup PR merges. The first 
 
 1. Remove `docs/manuscript/draft/bkup.orig` if local Git deletion is available.
 2. Normalize the duplicate Table 4 placeholder.
-3. Draft `docs/manuscript/draft/MANUSCRIPT_V3.md` from V2 with cleaner flow and fewer process notes.
+3. Draft the planned future V3 manuscript from V2 with cleaner flow and fewer process notes.
 4. Preserve the conservative claim posture.
 5. Keep venue/citation/license decisions explicit and human-gated.
 6. Run `python scripts/verify_doc_source_paths.py` after the cleanup/draft pass.
