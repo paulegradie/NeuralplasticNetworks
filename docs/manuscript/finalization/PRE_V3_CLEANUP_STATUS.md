@@ -45,16 +45,14 @@ These are retained because they document important decisions and source-path ver
 
 ## Non-canonical debris / cleanup targets
 
-- `docs/manuscript/draft/bkup.orig` is a stale backup draft. It is explicitly non-canonical and should be removed with local Git access before or during the V3 drafting branch.
-- `docs/manuscript/draft/MANUSCRIPT_V2.md` still contains a duplicate in-section Table 4 placeholder using older bracketed wording. It is not a source-path blocker but should be normalized in the V3 drafting/flow-review pass.
+- The stale backup draft `docs/manuscript/draft/bkup.orig` has been removed.
+- The duplicate in-section Table 4 placeholder in `docs/manuscript/draft/MANUSCRIPT_V2.md` has been normalized.
 
 ## Next recommended action
 
 Create a V3 drafting branch from `main` after this cleanup PR merges. The first V3 pass should:
 
-1. Remove `docs/manuscript/draft/bkup.orig` if local Git deletion is available.
-2. Normalize the duplicate Table 4 placeholder.
-3. Draft the planned future V3 manuscript from V2 with cleaner flow and fewer process notes.
-4. Preserve the conservative claim posture.
-5. Keep venue/citation/license decisions explicit and human-gated.
-6. Run `python scripts/verify_doc_source_paths.py` after the cleanup/draft pass.
+1. Draft the planned future V3 manuscript from V2 with cleaner flow and fewer process notes.
+2. Preserve the conservative claim posture.
+3. Keep venue/citation/license decisions explicit and human-gated.
+4. Run `python scripts/verify_doc_source_paths.py` after the cleanup/draft pass.
