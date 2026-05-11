@@ -93,9 +93,7 @@ Generated reproducible first-manuscript candidate figures, source-data CSVs, and
 
 ## Verification result
 
-Command run: `python scripts/verify_doc_source_paths.py`
-
-Result: PASS. Files scanned: 105. OK paths: 5220. Missing active paths: 0. Skipped planned/future paths: 11. Skipped local-verification-pending paths: 43.
+Path verifier not yet run in this build invocation. Run `python scripts/verify_doc_source_paths.py` after build and update this section if needed.
 
 ## Recommended next action
 

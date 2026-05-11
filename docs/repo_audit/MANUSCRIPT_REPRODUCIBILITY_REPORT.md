@@ -1,62 +1,24 @@
 # Manuscript Reproducibility Report
 
-Generated at: 2026-05-11T12:29:16+00:00
+Generated at: 2026-05-11T13:33:39+00:00
 
-Overall status: **WARN**
+Overall status: **PASS**
 
 ## Environment
 
-- commit_sha: `d4763149e8700881460739926c9ae07fc82de23d`
-- branch: `implement-manuscript-reproducibility-driver`
-- python: `3.11.15 (main, Mar  3 2026, 16:10:12) [GCC 13.3.0]`
-- platform: `Linux-6.17.0-1010-azure-x86_64-with-glibc2.39`
-- machine: `x86_64`
-- processor: `x86_64`
-- command: `python scripts/reproduce_manuscript.py --profile foundation`
+- commit_sha: `bf483e70b6909e80f22151fbc0c0d66610e6b712`
+- branch: `main`
+- python: `3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]`
+- platform: `Windows-10-10.0.19045-SP0`
+- machine: `AMD64`
+- processor: `Intel64 Family 6 Model 63 Stepping 2, GenuineIntel`
+- command: `python scripts/reproduce_manuscript.py --profile smoke`
 
 ## Profile Summary
 
 | Profile | Status | PASS | WARN | FAIL | Elapsed seconds |
 |---|---:|---:|---:|---:|---:|
-| validate-artifacts | PASS | 122 | 0 | 0 | 0.01 |
-| rebuild-manuscript-assets | WARN | 6 | 1 | 0 | 0.04 |
 | smoke | PASS | 6 | 0 | 0 | 0.00 |
-
-## Profile: validate-artifacts
-
-Status: **PASS**
-
-Caveats:
-
-- This profile validates committed artifacts and schemas; it does not rerun expensive experiments.
-- Boundary and non-claim rows are checked but not promoted to manuscript evidence.
-
-### Check counts
-
-- PASS: 122
-- WARN: 0
-- FAIL: 0
-
-## Profile: rebuild-manuscript-assets
-
-Status: **WARN**
-
-Caveats:
-
-- This profile runs the manuscript asset build script from committed artifacts.
-- Generated file differences should be reviewed before committing regenerated assets.
-
-### Warnings and failures
-
-| Status | Check | Claim | Path | Message |
-|---|---|---|---|---|
-| WARN | asset_build | - | `scripts/manuscript_assets/build_manuscript_assets.py` | Manuscript asset build did not complete in this environment; install experiment/asset dependencies and rerun locally. |
-
-### Check counts
-
-- PASS: 6
-- WARN: 1
-- FAIL: 0
 
 ## Profile: smoke
 

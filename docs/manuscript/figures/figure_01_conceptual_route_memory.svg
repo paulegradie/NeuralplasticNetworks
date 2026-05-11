@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-05-08T16:23:31.387581</dc:date>
+    <dc:date>2026-05-11T23:33:20.136464</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -36,7 +36,7 @@ L 118.8 58.220437
 L 29.52 58.220437 
 L 29.52 95.642437 
 z
-" clip-path="url(#p19841f1a9e)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p8024add3b9)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 145.584 95.642437 
@@ -45,7 +45,7 @@ L 248.256 58.220437
 L 145.584 58.220437 
 L 145.584 95.642437 
 z
-" clip-path="url(#p19841f1a9e)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p8024add3b9)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 275.04 95.642437 
@@ -54,7 +54,7 @@ L 364.32 58.220437
 L 275.04 58.220437 
 L 275.04 95.642437 
 z
-" clip-path="url(#p19841f1a9e)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p8024add3b9)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 176.832 182.960437 
@@ -63,7 +63,7 @@ L 301.824 145.538437
 L 176.832 145.538437 
 L 176.832 182.960437 
 z
-" clip-path="url(#p19841f1a9e)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p8024add3b9)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 328.608 182.960437 
@@ -72,7 +72,7 @@ L 422.352 145.538437
 L 328.608 145.538437 
 L 328.608 182.960437 
 z
-" clip-path="url(#p19841f1a9e)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p8024add3b9)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- World/context cues -->
@@ -1057,7 +1057,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p19841f1a9e">
+  <clipPath id="p8024add3b9">
    <rect x="7.2" y="20.798437" width="446.4" height="249.48"/>
   </clipPath>
  </defs>

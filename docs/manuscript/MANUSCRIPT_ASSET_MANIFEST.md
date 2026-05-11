@@ -4,7 +4,7 @@
 
 `python scripts/manuscript_assets/build_manuscript_assets.py`
 
-Generated at: `2026-05-08T06:23:37.850719+00:00`.
+Generated at: `2026-05-11T13:33:27.944320+00:00`.
 
 ## Generated figures
 
